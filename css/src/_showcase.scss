@@ -1,0 +1,239 @@
+
+
+.showcase {
+	@include clearfix;
+	position: relative;
+	overflow: hidden;
+	transition: height 300ms ease-in-out;
+	background: #eee;
+	z-index: 0;
+	height: 450px;
+
+	@include respond-to( 1024px ) {
+		height: 500px;
+	}
+
+	@include respond-to( 1220px ) {
+		height: 650px;
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		transition: opacity 400ms ease-in-out, padding 400ms ease-in-out;
+		height: 100%;
+		background: center center no-repeat;
+		background-size: cover;
+		z-index: 5;
+		padding: 0 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: url(../img/overlay-showcase-shadow.png) center left no-repeat;
+			background-size: cover;
+
+			@include respond-to( $bp-l ) {
+				background-size: contain;
+			}
+		}
+
+		@include respond-to( $bp-m ) {
+			padding: 0 60px;
+		}
+
+		@include respond-to( $bp-l ) {
+			padding: 0 35% 0 60px;
+		}
+
+		@include respond-to( $bp-xl ) {
+			padding: 0 50% 0 80px;
+		}
+
+		&.visible {
+			opacity: 1;
+			z-index: 6;
+		}
+
+		.slide-content {
+			flex: 1;
+			position: relative;
+			z-index: 20;
+
+			h2 {
+				@include font-bold;
+				color: white;
+				text-transform: uppercase;
+				padding: 0;
+				transition: font-size 400ms ease-in-out, line-height 400ms ease-in-out;
+				text-shadow: 0 0 20px rgba( black, .5 );
+
+				font-size: 30px;
+				line-height: 35px;
+
+				@include respond-to( 768px ) {
+					font-size: 40px;
+					line-height: 50px;
+				}
+			}
+
+			p {
+				color: white;
+				text-shadow: 0 0 20px rgba( black, .5 );
+			}
+		}
+
+			
+		h1.slide-title {
+			@include font-bold;
+			position: absolute;
+			text-align: center;
+			color: white;
+			text-transform: uppercase;
+			padding: 0;
+			transition: font-size 400ms ease-in-out, line-height 400ms ease-in-out;
+		
+			left: 0;
+			right: 0;
+			top: 30%;
+
+			font-size: 30px;
+			line-height: 40px;
+
+			@include respond-to( 768px ) {
+				font-size: 50px;
+				line-height: 70px;
+			}
+
+			@include respond-to( 1024px ) {
+				font-size: 70px;
+				line-height: 90px;
+			}
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				background: url(../img/gold-border.png) center center no-repeat;
+				background-size: contain;
+				left: 0;
+				right: 0;
+				height: 5px;
+
+				@include respond-to( 820px ) {
+					height: 8px;
+				}
+
+				@include respond-to( 1100px ) {
+					height: 10px;
+				}
+			}
+
+			&:before {
+				top: -10px;
+			}
+
+			&:after {
+				bottom: -10px;
+			}
+		}
+
+	}
+
+	.showcase-nav a {
+		position: absolute;
+		top: 50%;
+		margin-top: -40px;
+		cursor: pointer;
+		width: 50px;
+		height: 80px;
+		text-indent: -300px;
+		overflow: hidden;
+		opacity: .3;
+		color: black;
+		z-index: 500;
+
+		&:hover {
+			opacity: .6;
+		}
+
+		&.previous {
+			left: 0;
+			background: transparent url(../img/slider-arrow-left.png) right center no-repeat;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&.next {
+			right: 0;
+			background: transparent url(../img/slider-arrow-right.png) left center no-repeat;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+
+
+.showcase-subnav {
+	@include respond-to( 768px ) {
+		position: relative;
+		top: -100px;
+		opacity: .9;
+		margin-bottom: -100px;
+	}
+
+	ul {
+		@include respond-to( 768px ) {
+			display: flex;
+		}
+
+		li {
+			@include respond-to( 768px ) {
+				flex: 1;
+			}
+
+			a {
+				background: $grey;
+				font-size: 14px;
+				padding: 15px;
+				display: block;
+				color: white;
+				text-transform: uppercase;
+				@include font-bold;
+				letter-spacing: 1px;
+				text-align: center;
+				transition: all 400ms ease-in-out;
+
+				@include respond-to( 768px ) {
+					line-height: 100px;
+					text-decoration: none;
+					padding: 0;
+				}
+
+				&:hover {
+					opacity: .9;
+					text-decoration: none;
+				}
+			}
+
+			&.navy a { background: $navy; }
+			&.teal a { background: $teal; }
+			&.lime a { background: $lime; }
+			&.forest a { background: $forest; }
+			&.seafoam a { background: $seafoam; }
+			&.grey-dark a { background: $grey-dark; }
+			&.gold a { background: $gold; }
+			&.grey-dark a { background: $grey-dark; }
+		}
+	}
+}

@@ -1,0 +1,24 @@
+
+
+.home {
+	.content-pad {
+		@include respond-to( 768px ) {
+			display: flex;
+		}
+	}
+
+	.articles {
+		@include respond-to( 768px ) {
+			flex: 1;
+			flex-basis: 66.6666%;
+		}
+	}
+
+	.events {
+		@include respond-to( 768px ) {
+			flex: 1;
+			flex-basis: 33.3333%;
+		}
+	}
+}
+

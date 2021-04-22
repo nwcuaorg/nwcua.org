@@ -1,0 +1,188 @@
+
+
+.people {
+	padding: 20px 0;
+}
+
+
+.people-search {
+	padding: 10px;
+	border: 3px solid $grey-light;
+	margin-bottom: 20px;
+
+	input[type=text] {
+		@include font-title;
+		display: block;
+		width: 100%;
+		padding: 0 0 0 40px;
+		border: 0;
+		background: url(../img/icon-search.webp) left center no-repeat;
+		background-size: contain;
+		font-size: 1.1em;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+
+.people.cards .person-entry {
+	box-shadow: 0 0 20px rgba( black, .2 );
+
+	img {
+		width: 100%;
+	}
+
+	.person-info {
+		padding: 10px 20px 20px;
+
+		h4 {
+			padding-bottom: 0;
+		}
+
+		.person-title {
+			padding: 3px 0;
+		}
+
+		.person-email {
+			padding: 0;
+			font-size: .9em;
+			text-transform: lowercase;
+		}
+	}
+}
+
+
+.people.list .person-entry {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+
+	.person-thumbnail {
+		flex: 1;
+		flex-basis: 30%;
+		max-width: 120px;
+	}
+
+	.person-info {
+		flex: 1;
+		flex-basis: 70%;
+		padding-left: 15px;
+
+		h4 {
+			padding: 0;
+			text-transform: uppercase;
+		}
+
+		p {
+			padding: 0;
+			font-size: .9em;
+		}
+
+		.person-title {
+			@include font-bold-italic;
+		}
+	}
+}
+
+
+.person-single .person-entry {
+	@include respond-to( 500px ) {
+		float: right;
+		width: 250px;
+		margin: 0 0 15px 15px;
+	}
+}
+
+
+.guide .librarian .person-single .person-entry {
+	@include respond-to( 500px ) {
+		float: none;
+		width: auto;
+	}
+}
+
+
+.people.cards .people-listing {
+	@include respond-to( 500px ) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -2%;
+	}
+
+	@include respond-to( 900px ) {
+		margin-right: -1.333%;
+	}
+
+	@include respond-to( 1220px ) {
+		margin-right: -2%;
+	}
+
+	.person-entry {
+		display: none;
+		@extend .person-entry;
+
+		&.visible {
+			display: block;
+		}
+
+		@include respond-to( 500px ) {
+			flex: 1;
+			flex-basis: 48%;
+			flex-grow: 0;
+			margin: 0 2% 20px 0;
+		}
+
+		@include respond-to( 900px ) {
+			flex-basis: 32%;
+			margin-right: 1.3333%;
+		}
+
+		@include respond-to( 1220px ) {
+			flex-basis: 23%;
+			margin-right: 2%;
+		}
+
+		@include respond-to( 1440px ) {
+			flex-basis: 18%;
+			margin-right: 2%;
+		}
+	}
+}
+
+
+.bio {
+	.sidebar {
+		box-shadow: 0 0 20px rgba( black, .2 );
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		.person-info {
+			padding: 20px;
+
+			h5 {
+				padding-bottom: 3px;
+			}
+
+			p {
+				padding: 3px 0;
+				color: $grey;
+			}
+
+			.btn {
+				margin-top: 20px;
+				padding: 10px 20px;
+			}
+		}
+	}
+
+	.bio-content {
+		@extend .content-style;
+	}
+}
+
