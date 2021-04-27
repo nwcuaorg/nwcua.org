@@ -23,7 +23,7 @@ the_page_title();
 		?>
 
 		<div class="widget widget_media_image">
-			<a href="#"><img src="http://test.nwcua.test/wp-content/uploads/2021/04/ad-glia-300x300.png" class="image wp-image-79  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="http://test.nwcua.test/wp-content/uploads/2021/04/ad-glia-300x300.png 300w, http://test.nwcua.test/wp-content/uploads/2021/04/ad-glia-150x150.png 150w, http://test.nwcua.test/wp-content/uploads/2021/04/ad-glia-500x500.png 500w, http://test.nwcua.test/wp-content/uploads/2021/04/ad-glia.png 635w" sizes="(max-width: 300px) 100vw, 300px"></a>
+			<a href="#"><img src="<?php bloginfo( 'template_url' ) ?>/img/ad-glia.png"></a>
 		</div>
 
 
