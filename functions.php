@@ -5,6 +5,10 @@
 define( 'PURE', true );
 
 
+// a prefix to use for all custom fields.
+define( 'CMB_PREFIX', '_p_' );
+
+
 // set up the colors
 global $colors;
 $colors = array(

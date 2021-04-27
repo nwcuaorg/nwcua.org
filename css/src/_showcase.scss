@@ -187,7 +187,7 @@
 .showcase-subnav {
 	@include respond-to( 768px ) {
 		position: relative;
-		top: -100px;
+		top: -120px;
 		opacity: .9;
 		margin-bottom: -100px;
 	}
@@ -215,7 +215,7 @@
 				transition: all 400ms ease-in-out;
 
 				@include respond-to( 768px ) {
-					line-height: 100px;
+					line-height: 120px;
 					text-decoration: none;
 					padding: 0;
 				}

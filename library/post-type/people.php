@@ -84,10 +84,6 @@ register_taxonomy( 'people_cat',
 add_action( 'cmb2_admin_init', 'person_metaboxes' );
 function person_metaboxes() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_p_';
-
-
     // area of interest information
     $person_box = new_cmb2_box( array(
         'id' => 'person_info',
@@ -99,48 +95,48 @@ function person_metaboxes() {
     ) );
     $person_box->add_field( array(
         'name' => 'First Name',
-        'id' => 'person_fname',
+        'id' => CMB_PREFIX . 'person_fname',
         'type' => 'text_medium'
     ) );
     $person_box->add_field( array(
         'name' => 'Last Name',
-        'id' => 'person_lname',
+        'id' => CMB_PREFIX . 'person_lname',
         'type' => 'text_medium'
     ) );
     $person_box->add_field( array(
         'name' => 'Title',
-        'id' => 'person_title',
+        'id' => CMB_PREFIX . 'person_title',
         'type' => 'text'
     ) );
     $person_box->add_field( array(
         'name' => 'Office Number',
-        'id' => 'person_office',
+        'id' => CMB_PREFIX . 'person_office',
         'type' => 'text_medium'
     ) );
     $person_box->add_field( array(
         'name' => 'Phone Number',
-        'id' => 'person_phone',
+        'id' => CMB_PREFIX . 'person_phone',
         'type' => 'text_medium'
     ) );
     $person_box->add_field( array(
         'name' => 'Phone Number (Toll-free)',
-        'id' => 'person_tollfree',
+        'id' => CMB_PREFIX . 'person_tollfree',
         'type' => 'text_medium'
     ) );
     $person_box->add_field( array(
         'name' => 'Email Address',
-        'id' => 'person_email',
+        'id' => CMB_PREFIX . 'person_email',
         'type' => 'text_email'
     ) );
     $person_box->add_field( array(
         'name' => 'Website',
-        'id' => 'person_website',
+        'id' => CMB_PREFIX . 'person_website',
         'type' => 'text',
         'desc' => 'Include the Full URL (including "http(s)") to this People members website.'
     ) );
     $person_box->add_field( array(
         'name' => 'CV/Resume',
-        'id' => 'person_cv',
+        'id' => CMB_PREFIX . 'person_cv',
         'type' => 'file',
         'desc' => 'Upload a CV/Resume file.'
     ) );
@@ -165,7 +161,7 @@ function people_shortcode( $atts ) {
 		"posts_per_page" => 200,
 		"post_type" => 'people',
 		"orderby" => 'meta_value',
-		"meta_key" => '_p_person_lname',
+		"meta_key" => CMB_PREFIX . 'person_lname',
 		"order" => 'ASC'
 	);
 
@@ -178,6 +174,7 @@ function people_shortcode( $atts ) {
 	        )
 	    );
 	}
+
 
 	// run the query
     $p = new WP_Query( $vars );
