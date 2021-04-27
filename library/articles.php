@@ -32,14 +32,20 @@ function articles_shortcode( $atts ) {
 	    // Start looping over the query results.
 	    while ( $query->have_posts() ) {
 	        $query->the_post();
+	        $categories = get_the_category();
+	        $cat = $categories[0];
 	        $return .= '<div class="entry">';
-	        $return .= '<div class="entry-thumbnail"><a href="' . get_the_permalink() . '">';
+	        $return .= '<div class="entry-thumbnail">';
+	        $return .= '<a href="' . get_the_permalink() . '">';
 	        $return .= get_the_post_thumbnail( null, array( 768, 480 ) );
-	        $return .= '</a></div>';
+	        $return .= '</a>';
+		    $return .= '<div class="entry-category ' . $cat->slug . '">' . $cat->name . '</div>';
+		    $return .= '</div>';
 	        $return .= '<div class="entry-inner">';
 		    $return .= '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
 		    $return .= wpautop( get_the_excerpt() );
-		    $return .= '</div></div>';
+		    $return .= '</div>';
+		    $return .= '</div>';
 	    }
 
 		$return .= '</div>';

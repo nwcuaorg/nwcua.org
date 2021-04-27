@@ -12,28 +12,32 @@ $accordion-arrow-size: 30px;
 			position: relative;
 			padding: 0;
 			cursor: pointer;
+			background: rgba( $grey-light, .2 );
+			overflow: hidden;
 
 			h3 {
 				@include font-title-bold;
-				background-color: $grey;
 				color: white;
 				padding: 20px;
 				font-size: 1.3em;
 				text-transform: uppercase;
 				display: inline-block;
+				position: relative;
+				z-index: 0;
 
 				@include respond-to( $bp-xl ) {
 					padding: 20px 60px 20px 40px;
 					position: relative;
 
-					&:after {
+					&::after {
 						content: '';
 						position: absolute;
-						right: -40px;
+						z-index: -1;
+						left: -30px;
 						top: 0;
-						width: 70px;
+						width: 110%;
 						height: 100%;
-						background: $grey;
+						background: $grey-light;
 						transform: skew( -35deg );
 					}
 				}
@@ -43,135 +47,52 @@ $accordion-arrow-size: 30px;
 
 		&.navy .accordion-handle {
 			background: rgba( $navy, .2 );
-
-			h3 {
-				background-color: $navy;
-
-				&:after {
-					background: $navy;
-				}
-			}
+			h3::after { background: $navy; }
 		}
 
 		&.aqua .accordion-handle {
 			background: rgba( $aqua, .2 );
-
-			h3 {
-				background-color: $aqua;
-
-				&:after {
-					background: $aqua;
-				}
-			}
+			h3::after { background: $aqua; }
 		}
 
 		&.forest .accordion-handle {
 			background: rgba( $forest, .2 );
-
-			h3 {
-				background-color: $forest;
-
-				&:after {
-					background: $forest;
-				}
-			}
+			h3::after { background: $forest; }
 		}
 
 		&.seafoam .accordion-handle {
 			background: rgba( $seafoam, .2 );
-
-			h3 {
-				background-color: $seafoam;
-
-				&:after {
-					background: $seafoam;
-				}
-			}
+			h3::after { background: $seafoam; }
 		}
 
 		&.green .accordion-handle {
 			background: rgba( $green, .2 );
-
-			h3 {
-				background-color: $green;
-
-				&:after {
-					background: $green;
-				}
-			}
+			h3::after { background: $green; }
 		}
 
 		&.lime .accordion-handle {
 			background: rgba( $lime, .2 );
-
-			h3 {
-				background-color: $lime;
-
-				&:after {
-					background: $lime;
-				}
-			}
+			h3::after { background: $lime; }
 		}
 
 		&.gold .accordion-handle {
 			background: rgba( $gold, .2 );
-
-			h3 {
-				background-color: $gold;
-
-				&:after {
-					background: $gold;
-				}
-			}
-
+			h3::after { background: $gold; }
 		}
 
 		&.grey-dark .accordion-handle {
 			background: rgba( $grey-dark, .2 );
-
-			h3 {
-				background-color: $grey-dark;
-
-				&:after {
-					background: $grey-dark;
-				}
-			}
+			h3::after { background: $grey-dark; }
 		}
 
 		&.yellow .accordion-handle {
 			background: rgba( $yellow, .2 );
-
-			h3 {
-				background-color: $yellow;
-
-				&:after {
-					background: $yellow;
-				}
-			}
+			h3::after { background: $yellow; }
 		}
 
 		&.teal .accordion-handle {
 			background: rgba( $teal, .2 );
-
-			h3 {
-				background-color: $teal;
-
-				&:after {
-					background: $teal;
-				}
-			}
-		}
-
-		&.grey-light .accordion-handle {
-			background: rgba( $grey-light, .2 );
-
-			h3 {
-				background-color: $grey-light;
-
-				&:after {
-					background: $grey-light;
-				}
-			}
+			h3::after { background: $teal; }
 		}
 
 		.accordion-content {
