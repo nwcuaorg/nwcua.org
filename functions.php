@@ -37,7 +37,7 @@ function require_multi( $files ) {
 
 // include utility functions
 require_multi( 
-	'core', 'metabox', 'page-title', 'images', 'paginate', 'metabox', 'showcase', 'accordion', 'button', 'articles',
+	'core', 'metabox', 'page-settings', 'images', 'paginate', 'metabox', 'showcase', 'showcase-simple', 'accordion', 'button', 'articles',
 	'post-type/people',
 );
 

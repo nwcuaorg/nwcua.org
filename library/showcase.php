@@ -65,6 +65,19 @@ function the_showcase() {
 }
 
 
+// a small boolean function to just check and see if there's a showcase
+function has_showcase() {
+
+	$slides = get_post_meta( get_the_ID(), "showcase", 1 );
+
+	if ( !empty( $slides ) ) {
+		return true;
+	} else {
+		return false;
+	}
+
+}
+
 
 // add the showcase metabox
 function showcase_metabox( $meta_boxes ) {
@@ -127,18 +140,5 @@ function showcase_metabox( $meta_boxes ) {
 }
 add_filter( 'cmb2_admin_init', 'showcase_metabox' );
 
-
-
-// get all wp menus in an array.
-function get_all_menus(){
-	$menus = get_terms( 'nav_menu', array( 'hide_empty' => true ) ); 
-
-	$generated = array( '' => '- select a menu -' );
-	foreach ( $menus as $menu ) {
-		$generated[$menu->slug] = $menu->name;
-	}
-
-	return $generated;
-}
 
 

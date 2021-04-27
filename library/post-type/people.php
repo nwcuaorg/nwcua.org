@@ -144,6 +144,22 @@ function person_metaboxes() {
 }
 
 
+// a small function to get all the people categories
+function get_all_people_cats() {
+	$people_cats = get_categories('taxonomy=people_cat&type=people');
+
+	// loop through them
+	$return_cats = array(
+		'' => '- select a group of people -'
+	);
+	foreach ( $people_cats as $pcat ) {
+		$return_cats[$pcat->slug] = $pcat->name;
+	}
+
+	return $return_cats;
+}
+
+
 // add a people shortcode
 function people_shortcode( $atts ) {
 
