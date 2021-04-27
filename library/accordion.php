@@ -48,7 +48,8 @@ function accordion_metaboxes() {
     $accordion_metabox = new_cmb2_box( array(
         'id' => 'accordions',
         'title' => 'Accordions',
-        'object_types' => array( 'page', 'guide' ), // Post type
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page.php' ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left

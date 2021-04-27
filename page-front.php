@@ -51,6 +51,8 @@ get_header();
 
 	<?php the_simple_showcase(); ?>
 
+	<?php the_partner_logos(); ?>
+
 <?php
 
 get_footer();
