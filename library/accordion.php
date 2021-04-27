@@ -22,7 +22,7 @@ function the_accordions() {
 
 					?>
 			<div class="accordion<?php print ( isset( $accordion['open'] ) ? ( $accordion['open'] == 'on' ? " open" : "" ) : "" ); ?> <?php print $color ?>">
-				<h3 class="accordion-handle"><?php print $title ?></h3>
+				<div class="accordion-handle"><h3><?php print $title ?></h3></div>
 				<div class="accordion-content">
 					<?php print do_shortcode( wpautop( $content ) ); ?>
 				</div>
@@ -49,7 +49,6 @@ function accordion_metaboxes() {
         'id' => 'accordions',
         'title' => 'Accordions',
         'object_types' => array( 'page' ), // Post type
-        'show_on' => array( 'key' => 'page-template', 'value' => 'page.php' ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
