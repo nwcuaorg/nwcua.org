@@ -22,21 +22,21 @@ function page_title_metabox( $meta_boxes ) {
 	global $colors;
 
     // showcase metabox
-    $title_metabox = new_cmb2_box( array(
-        'id' => 'title_metabox',
+    $page_settings_metabox = new_cmb2_box( array(
+        'id' => 'page_settings_metabox',
         'title' => 'Page Settings',
         'object_types' => array( 'page' ), // post type
         'context' => 'normal',
         'priority' => 'high',
     ));
 
-    $title_metabox->add_field( array(
+    $page_settings_metabox->add_field( array(
         'name' => 'Title',
         'id'   => CMB_PREFIX . 'page-title',
         'type' => 'text',
     ) );
 
-    $title_metabox->add_field( array(
+    $page_settings_metabox->add_field( array(
         'name' => 'Color',
         'id'   => CMB_PREFIX . 'page-title-color',
         'type' => 'select',
@@ -44,24 +44,36 @@ function page_title_metabox( $meta_boxes ) {
         'options' => $colors
     ) );
 
-    $title_metabox->add_field( array(
+    $page_settings_metabox->add_field( array(
         'name' => 'Menu Title',
         'id'   => CMB_PREFIX . 'page-menu-title',
         'type' => 'text'
     ) );
 
-    $title_metabox->add_field( array(
+    $page_settings_metabox->add_field( array(
         'name' => 'Menu',
         'id'   => CMB_PREFIX . 'page-menu',
         'type' => 'select',
         'options' => get_all_menus()
     ) );
 
-    $title_metabox->add_field( array(
+    $page_settings_metabox->add_field( array(
         'name' => 'People',
         'id'   => CMB_PREFIX . 'page-people',
         'type' => 'select',
         'options' => get_all_people_cats()
+    ) );
+
+    $cats = get_categories();
+    $page_cats = array( '' => '- select an article category -' );
+    foreach ( $cats as $cat ) {
+        $page_cats[$cat->slug] = $cat->name;
+    }
+    $page_settings_metabox->add_field( array(
+        'name' => 'Articles',
+        'id'   => CMB_PREFIX . 'page-articles',
+        'type' => 'select',
+        'options' => $page_cats
     ) );
 
 }

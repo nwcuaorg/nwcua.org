@@ -24,8 +24,7 @@ function articles_shortcode( $atts ) {
 	}
 
 	if ( !empty($a['cats']) ) {
-		$cats = explode( ',', $a['cats'] );
-		$args['category__in'] = $cats;
+		$args['category_name'] = $cats;
 	}
 
 	$query = new WP_Query( $args );

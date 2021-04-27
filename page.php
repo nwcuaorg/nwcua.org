@@ -58,9 +58,15 @@ the_page_title();
 	</div>
 </div><!-- #content -->
 
+<?php
+if ( has_cmb_value( 'page-articles' ) ) {
+	?>
 <div class="page-articles">
-	<?php print do_shortcode( '[articles posts_per_page=3 /]' ); ?>
+	<?php print do_shortcode( '[articles cats="' . get_cmb_value('page-articles') . '" posts_per_page=3 /]' ); ?>
 </div>
+	<?php
+}
+?>
 
 <?php
 
