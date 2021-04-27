@@ -11,13 +11,13 @@ $accordion-arrow-size: 30px;
 		.accordion-handle {
 			position: relative;
 			padding: 0;
+			cursor: pointer;
 
 			h3 {
 				@include font-title-bold;
 				background-color: $grey;
 				color: white;
 				padding: 20px;
-				cursor: pointer;
 				font-size: 1.3em;
 				text-transform: uppercase;
 				display: inline-block;
