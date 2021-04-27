@@ -14,17 +14,12 @@ function articles_shortcode( $atts ) {
 		'posts_per_page' => $a['posts_per_page']
 	);
 
-	if ( !empty( $a['tag'] ) ) {
-		$args['tag'] = $a['tag'];
-	}
-
 	if ( !empty( $a['tags'] ) ) {
-		$tags = explode( ',', $a['tags'] );
-		$args['tag__in'] = $tags;
+		$args['tag'] = $a['tags'];
 	}
 
 	if ( !empty($a['cats']) ) {
-		$args['category_name'] = $cats;
+		$args['category_name'] = $a['cats'];
 	}
 
 	$query = new WP_Query( $args );
