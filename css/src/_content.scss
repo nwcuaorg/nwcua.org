@@ -140,6 +140,10 @@
 			padding: 20px 30px;
 		}
 
+		@include respond-to( $bp-l ) {
+			padding: 30px 40px;
+		}
+
 		@include respond-to( $bp-xl ) {
 			padding: 30px 50px;
 		}

@@ -1,12 +1,17 @@
 
 
+.sidebar-title {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	color: $navy;
+	text-transform: uppercase;
+}
+
+
 .sidebar {
 	.widget-title {
-		font-size: 1.2em;
-		line-height: 1.3em;
+		@extend .sidebar-title;
 		padding: 5px 0;
-		color: $navy;
-		text-transform: uppercase;
 	}
 
 	.widget_nav_menu {

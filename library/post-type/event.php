@@ -149,157 +149,17 @@ function event_metaboxes( $meta_boxes ) {
     $event_metabox->add_field( array(
         'name' => 'Location Description',
         'id'   => CMB_PREFIX . 'event_location_text',
-        'type' => 'text',
+        'type' => 'wysiwyg',
+        'options' => array(
+			'textarea_rows' => 5, // rows="..."
+		),
     ) );
 
     $event_metabox->add_field( array(
-        'name' => 'Map Embed URL',
-        'id'   => CMB_PREFIX . 'event_location_link',
-        'type' => 'text',
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Venue',
-        'id'   => CMB_PREFIX . 'event_venue',
-        'type' => 'text',
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Address',
-        'id'   => CMB_PREFIX . 'event_address',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'City',
-        'id'   => CMB_PREFIX . 'event_city',
-        'type' => 'text_medium'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'State',
-        'id'   => CMB_PREFIX . 'event_state',
-        'type' => 'text_small'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Zipcode',
-        'id'   => CMB_PREFIX . 'event_zipcode',
-        'type' => 'text_small'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Email',
-        'id'   => CMB_PREFIX . 'event_email',
-        'type' => 'text_email'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Phone',
-        'id'   => CMB_PREFIX . 'event_phone',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Fax',
-        'id'   => CMB_PREFIX . 'event_fax',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Venue Website',
-        'id'   => CMB_PREFIX . 'event_venue_website',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel',
-        'id'   => CMB_PREFIX . 'event_hotel',
-        'type' => 'text',
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Address',
-        'id'   => CMB_PREFIX . 'event_hotel_address',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel City',
-        'id'   => CMB_PREFIX . 'event_hotel_city',
-        'type' => 'text_medium'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel State',
-        'id'   => CMB_PREFIX . 'event_hotel_state',
-        'type' => 'text_small'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Zipcode',
-        'id'   => CMB_PREFIX . 'event_hotel_zipcode',
-        'type' => 'text_small'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Email',
-        'id'   => CMB_PREFIX . 'event_hotel_email',
-        'type' => 'text_email'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Phone',
-        'id'   => CMB_PREFIX . 'event_hotel_phone',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Rate',
-        'id'   => CMB_PREFIX . 'event_hotel_price',
-        'type' => 'text_money'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hotel Website',
-        'id'   => CMB_PREFIX . 'event_hotel_website',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Event Website',
-        'id'   => CMB_PREFIX . 'event_website',
-        'desc' => 'If populated, links from the calendar/listings will go directly to this URL instead of the event page on this website.',
-        'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Registration Link (Override)',
+        'name' => 'Registration Link',
         'id'   => CMB_PREFIX . 'event_registration',
-        'desc' => 'Just in case we need to override the registration button URL.',
+        'desc' => 'Registration Link',
         'type' => 'text'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Hide Registration Link',
-        'id'   => CMB_PREFIX . 'event_registration_hide',
-        'desc' => 'Check to hide the registration link on the front-end.',
-        'type' => 'checkbox'
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Save the Date (.ics)',
-        'id'   => CMB_PREFIX . 'event_save_ical',
-        'desc' => 'Upload an .ics (calendar format) to allow users to save events to Outlook/iCal.',
-        'type' => 'file',
-        'preview_size' => false
-    ) );
-
-    $event_metabox->add_field( array(
-        'name' => 'Save the Date (Google)',
-        'id'   => CMB_PREFIX . 'event_save_gcal',
-        'desc' => 'Set a URL for a Google Calendar event so users can add it to Google.',
-        'type' => 'text',
     ) );
 
 }
@@ -862,9 +722,11 @@ function events_shortcode( $event_atts ) {
 
 
 			$list .= '<div class="event' . ( $num == 0 ? ' first' : '' ) . '">';
-			$list .= '<span class="event-date-month">' . date( 'M', $event->_p_event_start ) . '</span>';
-			$list .= '<span class="event-date-day">' . date( 'j', $event->_p_event_start ) . '</span>';
-			$list .= '<span class="event-date-year">' . date( 'Y', $event->_p_event_start ) . '</span>';
+			$list .= '<div class="event-data">';
+				$list .= '<span class="event-date-month">' . date( 'M', $event->_p_event_start ) . '</span>';
+				$list .= '<span class="event-date-day">' . date( 'j', $event->_p_event_start ) . '</span>';
+				$list .= '<span class="event-date-year">' . date( 'Y', $event->_p_event_start ) . '</span>';
+			$list .= '</div>';
 			$list .= '<h3><a href="' . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . '">' . $event->post_title . '</a></h3>';
 			$list .= '<div class="event-location">' . $event->_p_event_location . '</div>';
 			$list .= '<div class="event-excerpt">' . $excerpt . '</div>';
