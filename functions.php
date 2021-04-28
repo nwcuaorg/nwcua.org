@@ -38,9 +38,6 @@ function require_multi( $files ) {
 // include utility functions
 require_multi( 
 	'core', 'metabox', 'page-settings', 'images', 'paginate', 'metabox', 'showcase', 'showcase-simple', 'accordion', 'partner-logos', 'button', 'articles',
-	'post-type/people',
+	'post-type/people', 'post-type/event',
 );
 
-
-// require composer autoload
-// require_once 'vendor/autoload.php';

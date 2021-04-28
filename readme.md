@@ -1,11 +1,5 @@
-## wp-pure
+## NWCUA.org Future Design
 
-A simple WordPress theme development framework - with a few helpful built-in shortcodes, Sass, Minify, and everything you'll need to build a new theme.
+A WordPress theme created for NWCUA.org by Giraph Creative.
 
-```shell
-cd wp-content/themes/
-composer create-project jpederson/wp-pure
-npm install
-```
-
-Then, to start editing, just run `grunt`.
+&copy; 2021 NWCUA. All rights reserved.
