@@ -43,6 +43,7 @@
 					height: 100%;
 					width: 110%;
 					z-index: -1;
+					opacity: .9;
 				}
 
 				&.advocacy::after { background: $navy; }

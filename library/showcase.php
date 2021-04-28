@@ -93,7 +93,7 @@ function showcase_metabox( $meta_boxes ) {
     ) );
 
     $showcase_metabox->add_field( array(
-        'id' => 'showcase_nav',
+        'id' => CMB_PREFIX . 'showcase_nav',
         'title' => 'Showcase Nav Menu',
         'type' => 'select',
         'options' => $all_menus
