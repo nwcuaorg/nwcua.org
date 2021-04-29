@@ -722,13 +722,11 @@ function events_shortcode( $event_atts ) {
 
 
 			$list .= '<div class="event' . ( $num == 0 ? ' first' : '' ) . '">';
-			$list .= '<div class="event-data">';
+			$list .= '<div class="event-date">';
 				$list .= '<span class="event-date-month">' . date( 'M', $event->_p_event_start ) . '</span>';
 				$list .= '<span class="event-date-day">' . date( 'j', $event->_p_event_start ) . '</span>';
-				$list .= '<span class="event-date-year">' . date( 'Y', $event->_p_event_start ) . '</span>';
 			$list .= '</div>';
 			$list .= '<h3><a href="' . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . '">' . $event->post_title . '</a></h3>';
-			$list .= '<div class="event-location">' . $event->_p_event_location . '</div>';
 			$list .= '<div class="event-excerpt">' . $excerpt . '</div>';
 
 			if ( $a['show_excerpt'] ) {
