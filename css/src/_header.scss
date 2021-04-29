@@ -137,16 +137,15 @@ header {
 				ul.sub-menu {
 					display: none;
 					margin-bottom: 3px;
-					box-shadow: 0 20px 20px rgba( $grey-light, .4 );
 					opacity: .9;
 
-					@include respond-to( $bp-s ) {
+					@include respond-to( $bp-m ) {
 						position: absolute;
-						left: 0;
-						top: 54px;
-						width: 100%;
-						background-color: $grey;
+						right: 0;
+						top: 50px;
+						width: 250px;
 						@include clearfix;
+						background: $navy;
 					}
 
 					li {
@@ -158,18 +157,34 @@ header {
 							line-height: 18px;
 							display: block;
 							padding: 10px 5px;
+							text-align: right;
 
-							@include respond-to( $bp-s ) {
-								padding: 10px;
+							@include respond-to( $bp-m ) {
+								padding: 14px;
 
 								&:hover {
-									background-color: lighten( $grey, 10% );
+									background-color: rgba( $navy, .1 );
 								}
 							}
+						}
 
-							@include respond-to( $bp-l ) {
-								padding: 10px 15px;
+						ul.sub-menu {
+							display: none;
+							margin-bottom: 3px;
+
+							@include respond-to( $bp-m ) {
+								position: absolute;
+								right: 250px;
+								top: 0;
+								width: 250px;
+								@include clearfix;
+								text-align: left;
+								z-index: 1001;
 							}
+						}
+
+						&:hover ul.sub-menu {
+							display: block;
 						}
 					}
 				}
