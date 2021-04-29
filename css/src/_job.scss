@@ -12,14 +12,22 @@
 	.job-search {
 		padding: 0 0 20px;
 
+		label {
+			@include font-bold;
+			text-transform: uppercase;
+			color: $grey;
+			padding: 0 10px 0 0;
+		}
+
 		@include respond-to( $bp-m ) {
-			float: right;
+			float: left;
 			padding: 0;
 		}
 	}
 
 	.job-count {
 		@include respond-to( $bp-m ) {
+			float: right;
 			padding: 10px 0;
 		}
 	}
@@ -141,12 +149,24 @@
 
 .job-single {
 	.job-info {
+		h5 {
+			padding: 15px 0 4px 0;
+			font-size: 1.2em;
+			line-height: 1;
+			text-transform: uppercase;
+			color: $navy;
+		}
+
+		p {
+			padding: 0 0 15px 0;
+		}
+
 		@include respond-to ( $bp-m ) {
 			float: right;
 			width: 30%;
 			margin-left: 3%;
 			border-left: 3px solid #ddd;
-			padding: 0 0 20px 20px;
+			padding: 0 0 0 20px;
 		}
 	}
 }

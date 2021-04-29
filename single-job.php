@@ -26,28 +26,52 @@ get_header();
 			<div class="right-column-inner">
 				<div class="job-info">
 					<?php
+
 					// display credit union name
-					print ( has_cmb_value( 'job_company' ) ? "<p><strong>Credit Union:</strong><br> " . get_cmb_value( 'job_company' ) . "</p>" : '' );
+					if ( has_cmb_value( 'job_company' ) ) { ?>
+						<h5>Credit Union:</h5>
+						<p><?php show_cmb_value( 'job_company' ); ?></p>
+						<?php 
+					}
 
 					// display region
-					print ( has_cmb_value( 'job_region' ) ? "<p><strong>Region:</strong> " . get_cmb_value( 'job_region' ) . "</p>" : '' ) ;
+					if ( has_cmb_value( 'job_region' ) ) { ?>
+						<h5>Region:</h5>
+						<p><?php show_cmb_value( 'job_region' ) ?></p>
+						<?php
+					}
 
 					// display job type
-					print ( has_cmb_value( 'job_type' ) ? "<p><strong>Type:</strong> " . get_cmb_value( 'job_type' ) . "</p>" : '' );
-					?>
-					<?php if ( has_cmb_value( 'job_contact_name' ) ) { ?>
-					<p>
-					<?php print ( has_cmb_value( 'job_contact_name' ) ? "<strong>Contact:</strong> " . get_cmb_value( 'job_contact_name' ) . '<br>' : '' ); ?>
-					<?php print ( has_cmb_value( 'job_contact_email' ) ? '<strong>Email:</strong> <a href="mailto:' . get_cmb_value( 'job_contact_email' ) . '" target="_blank">' . get_cmb_value( 'job_contact_email' ) . '</a><br>' : '' ); ?>
-					<?php print ( has_cmb_value( 'job_contact_phone' ) ? '<strong>Phone:</strong> ' . get_cmb_value( 'job_contact_phone' ) . '<br>' : '' ); ?>
-					<?php print ( has_cmb_value( 'job_contact_fax' ) ? "<strong>Fax:</strong> " . get_cmb_value( 'job_contact_fax' ) . "<br>" : '' ); ?>
-					</p>
-					<?php } ?>
+					if ( has_cmb_value( 'job_type' ) ) { ?>
+						<h5>Type:</h5>
+						<p><?php show_cmb_value( 'job_type' ) ?></p>
+						<?php
+					}
 
-					<?php
-					// display job type
-					print ( has_cmb_value( 'job_expires' ) ? "<p><strong>Closing:</strong> " . date( "n/j/Y", strtotime( get_cmb_value( 'job_expires' ) ) ) . "</p>" : '' );
+					// display job expiration date
+					if ( has_cmb_value( 'job_expires' ) ) { ?>
+						<h5>Closing:</h5>
+						<p><?php print date( "n/j/Y", strtotime( get_cmb_value( 'job_expires' ) ) ) ?></p>
+						<?php
+					}
+
+					// if we have a link, show that
+					if ( has_cmb_value( 'job_apply_link' ) ) { ?>
+						<div class="apply-link"><?php print do_shortcode( '[button url="' . get_cmb_value( 'job_apply_link' ) . '" class="' . get_cmb_value( 'job_color' ) . '" target="_blank"]Learn More[/button]' ); ?></div>
+						<?php
+					} else if ( has_cmb_value( 'job_contact_name' ) ) { // if there's no link, show contact information  ?>
+						<h5>Apply</h5>
+						<p><?php 
+						print ( has_cmb_value( 'job_contact_name' ) ? "<strong>Contact:</strong> " . get_cmb_value( 'job_contact_name' ) . '<br>' : '' );
+						print ( has_cmb_value( 'job_contact_email' ) ? '<strong>Email:</strong> <a href="mailto:' . get_cmb_value( 'job_contact_email' ) . '" target="_blank">' . get_cmb_value( 'job_contact_email' ) . '</a><br>' : '' );
+						print ( has_cmb_value( 'job_contact_phone' ) ? '<strong>Phone:</strong> ' . get_cmb_value( 'job_contact_phone' ) . '<br>' : '' );
+						print ( has_cmb_value( 'job_contact_fax' ) ? "<strong>Fax:</strong> " . get_cmb_value( 'job_contact_fax' ) . "<br>" : '' ); 
+						?></p>
+						<?php
+					}
+
 					?>
+
 				</div>
 				<p><strong>Job Description:</strong></p>
 				<?php the_content(); ?>
