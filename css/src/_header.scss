@@ -195,22 +195,66 @@ header {
 	.search-form {
 		display: none;
 
-		@include respond-to( $bp-s ) {
+		@include respond-to( $bp-m ) {
 			display: block;
 			position: absolute;
-			right: 40px;
+			right: 250px;
 			bottom: 40px;
+			width: 200px;
 			border: 3px solid rgba( $grey, .2 );
 		}
 
 		input[type=submit] {
 			background: $lime url(../img/icon-search.png) center center no-repeat;
 			color: transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
 			width: 40px;
+			height: 40px;
 		}
 
 		input[type=text] {
 			border: 0;
+			width: 100%;
+			padding: 0 10px;
+			font-size: 15px;
+			line-height: 40px;
+			color: $grey-dark;
+		}
+	}
+
+	.account-tools {
+		display: none;
+
+		@include respond-to( $bp-s ) {
+			display: block;
+			position: absolute;
+			right: 40px;
+			bottom: 40px;
+			width: 200px;
+			border: 3px solid rgba( $grey, .2 );
+
+			a {
+				display: block;
+				line-height: 40px;
+				font-size: 15px;
+				text-transform: uppercase;
+				padding: 0 10px;
+				color: $grey-dark;
+			}
+		}
+
+		&:after {
+			content: '';
+			background: $navy url(../img/icon-lock.png) center center no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			height: 40px;
+			width: 40px;
 		}
 	}
 }

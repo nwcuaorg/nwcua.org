@@ -76,6 +76,12 @@ function page_title_metabox( $meta_boxes ) {
         'options' => $page_cats
     ) );
 
+    $page_settings_metabox->add_field( array(
+        'name' => 'Member Only?',
+        'id'   => CMB_PREFIX . 'member-only',
+        'type' => 'checkbox'
+    ) );
+
 }
 add_filter( 'cmb2_admin_init', 'page_title_metabox' );
 

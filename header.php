@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=8" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=9" rel="stylesheet" type="text/css">
 
 </head>
 <body <?php body_class(); ?>>
@@ -40,6 +40,10 @@
 
 	<div class="search-form">
 		<?php get_search_form(); ?>
+	</div>
+
+	<div class="account-tools">
+		<a href="/login">Log In</a>
 	</div>
 	
 </header>
