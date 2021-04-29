@@ -47,8 +47,8 @@
 
 
 .month-nav {
-	padding: 7px 10px;
-	background: $grey;
+	padding: 10px;
+	background: $grey-dark;
 	color: white;
 	text-decoration: none;
 	margin-bottom: 10px;
@@ -94,7 +94,7 @@
 		border-bottom: 1px solid lighten( $grey, 15% );
 
 		&.calendar-day-head {
-			background: $grey-light;
+			background: #ddd;
 
 			span {
 				display: none;
