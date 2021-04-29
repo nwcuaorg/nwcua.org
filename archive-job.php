@@ -81,7 +81,7 @@ $job_count = $wp_query->found_posts;
 			</div>
 
 			<div class="job-list">
-				<?php 
+				<?php
 
 				if ( have_posts() ) :
 					// Start the Loop.
