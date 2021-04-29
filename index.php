@@ -1,31 +1,35 @@
 <?php
-/*
-Home/catch-all template
-*/
+/**
+ * The template for displaying Archive pages
+ */
 
 get_header(); 
 
 ?>
+	<div class="page-title anthem">
+		<h1>Anthem</h1>
+	</div>
+	<div class="content-wide anthem-listing" role="main">
 
-	<div class="content-wide" role="main">
-
-		<?php
-		if ( is_search() ) {
-			?><h1 class="post-title">Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
-		} else {
-			?><h1 class="post-title">Our Blog</h1><?php
-		}
-
+		<?php 
 		if ( have_posts() ) : 
 
 			// Start the Loop.
 			while ( have_posts() ) : the_post(); 
-				?>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
-				<hr />
-				<?php
+	        $categories = get_the_category();
+	        $cat = $categories[0];
+	        ?>
+	       	<div class="entry">
+	        	<div class="entry-thumbnail">
+	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
+		    		<div class="entry-category <?php print $cat->slug ?>"><?php print $cat->name ?></div>
+		   		</div>
+	        	<div class="entry-inner">
+		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+		    		<?php the_excerpt(); ?>
+		    	</div>
+		    </div>
+		    <?php
 			endwhile;
 
 		else :
@@ -34,10 +38,13 @@ get_header();
 
 		endif;
 		?>
-		
-		<?php paginate(); ?>
 
 	</div><!-- #primary -->
 
+	<?php paginate(); ?>
 
-<?php get_footer(); ?>
+<?php
+
+get_footer();
+
+?>
