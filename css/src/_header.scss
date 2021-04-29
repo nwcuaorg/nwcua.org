@@ -157,10 +157,10 @@ header {
 							line-height: 18px;
 							display: block;
 							padding: 10px 5px;
-							text-align: right;
 
 							@include respond-to( $bp-m ) {
 								padding: 14px;
+								text-align: right;
 
 								&:hover {
 									background-color: rgba( $navy, .1 );
@@ -215,3 +215,21 @@ header {
 	}
 }
 
+
+body.scrolled header nav {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	.menu-main-menu-container {
+		position: relative;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+}
+
+body.scrolled.admin-bar header nav {
+	top: 32px;
+}

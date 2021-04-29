@@ -41,5 +41,21 @@ jQuery(document).ready(function($){
 	$( '.lightbox' ).magnificPopup({ 'type': 'image' });
 
 
+	// track the position of the top of the content section
+	var contentPosition = $('section.content').offset();
+	$( window ).on('resize',function() {
+		contentPosition = $('section.content').offset();
+	});
+
+	$( window ).on( 'scroll', function(){
+    	scrollPosition = $(this).scrollTop();
+    	if ( scrollPosition >= contentPosition.top & $( window ).innerWidth()>820 ) {
+    		$( 'body' ).addClass( 'scrolled' );
+    	} else {
+    		$( 'body' ).removeClass( 'scrolled' );
+    	}
+	});
+
+
 });
 
