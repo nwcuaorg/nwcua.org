@@ -88,6 +88,112 @@ register_taxonomy( 'job_cat',
 
 
 
+// add metabox(es)
+function job_metaboxes( $meta_boxes ) {
+
+	global $colors;
+
+    // job metabox
+    $job_metabox = new_cmb2_box( array(
+        'id' => 'job_metabox',
+        'title' => 'Job',
+        'object_types' => array( 'job' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $job_metabox->add_field( array(
+        'name' => 'Color',
+        'id'   => CMB_PREFIX . 'job_color',
+        'type' => 'select',
+		'options' => $colors
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Region',
+        'id'   => CMB_PREFIX . 'job_region',
+        'type' => 'text',
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Company',
+        'id'   => CMB_PREFIX . 'job_company',
+        'type' => 'text',
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Job Type',
+        'id'   => CMB_PREFIX . 'job_type',
+        'type' => 'select',
+        'options' => array(
+            'Staff' => 'Staff',
+            'Management' => 'Management'
+        ),
+        'default' => 'Staff'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Education',
+        'id'   => CMB_PREFIX . 'job_education',
+        'type' => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 7 )
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Comments',
+        'id'   => CMB_PREFIX . 'job_comments',
+        'type' => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 7 )
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Contact Name',
+        'id'   => CMB_PREFIX . 'job_contact_name',
+        'type' => 'text'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Contact Email',
+        'id'   => CMB_PREFIX . 'job_contact_email',
+        'type' => 'text_email'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Contact Phone',
+        'id'   => CMB_PREFIX . 'job_contact_phone',
+        'type' => 'text'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Apply Email',
+        'id'   => CMB_PREFIX . 'job_apply_email',
+        'type' => 'text'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Apply Link',
+        'id'   => CMB_PREFIX . 'job_apply_link',
+        'type' => 'text'
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Job Expires',
+        'id'   => CMB_PREFIX . 'job_expires',
+        'type' => 'text_date',
+        'date_format' => "Y-m-d"
+    ) );
+
+    $job_metabox->add_field( array(
+        'name' => 'Job Creator',
+        'id'   => CMB_PREFIX . 'job_creator',
+        'type' => 'text'
+    ) );
+
+}
+add_filter( 'cmb2_admin_init', 'job_metaboxes' );
+
+
+
 // add capabilities
 function add_job_caps() {
 

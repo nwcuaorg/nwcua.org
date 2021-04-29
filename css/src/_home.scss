@@ -12,12 +12,26 @@
 			flex: 1;
 			flex-basis: 66.6666%;
 		}
+
+		.article-cards {
+			padding-top: 0;
+
+			@include respond-to( 768px ) {}
+			padding-top: 20px;
+		}
 	}
 
 	.events {
 		@include respond-to( 768px ) {
 			flex: 1;
 			flex-basis: 33.3333%;
+			padding-left: 3px;
+		}
+	}
+
+	.promo {
+		@include respond-to( 1024px ) {
+			padding: 37px 0 0 15px;
 		}
 	}
 }

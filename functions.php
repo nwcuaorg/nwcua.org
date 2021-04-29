@@ -39,7 +39,7 @@ function require_multi( $files ) {
 require_multi( 
 	'core', 'metabox', 'page-settings', 
 
-	'post-type/people', 'post-type/event',
+	'post-type/people', 'post-type/event', 'post-type/job',
 	
 	'images', 'paginate', 'metabox', 'showcase', 'showcase-simple', 'accordion', 'partner-logos', 'button', 'articles',
 );
