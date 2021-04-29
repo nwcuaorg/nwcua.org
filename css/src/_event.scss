@@ -43,9 +43,6 @@
 }
 
 
-
-
-
 .month-nav {
 	padding: 10px;
 	background: $grey-dark;
@@ -64,7 +61,6 @@
 		color: white;
 	}
 }
-
 
 
 .calendar-month-title {
@@ -106,7 +102,7 @@
 		}
 
 		&.calendar-day:hover {
-			background: $grey-light;
+			background: #eee;
 		}
 
 		.day-number {
@@ -168,7 +164,6 @@
 		line-height: 1.4em;
 	}
 }
-
 
 
 .event-list {

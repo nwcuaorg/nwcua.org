@@ -56,6 +56,11 @@ if ( isset( $_REQUEST['event_category'] ) && $_REQUEST['event_category']!=0 ) {
 			<br>
 			<?php 
 
+			/*
+			$url_parts = explode( "?", $_SERVER['REQUEST_URI'] );
+			parse_str( $url_parts[1], $request );
+			*/
+
 			// get URL parameters and default to current month.
 			$month = ( isset( $_REQUEST['mo'] ) ? $_REQUEST['mo'] : date( "n" ) );
 			$year = ( isset( $_REQUEST['yr'] ) ? $_REQUEST['yr'] : date( "Y" ) );

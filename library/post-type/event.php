@@ -167,6 +167,15 @@ add_filter( 'cmb2_admin_init', 'event_metaboxes' );
 
 
 
+function add_event_query_vars_filter( $vars ){
+  $vars[] = "mo";
+  $vars[] = "yr";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_event_query_vars_filter' );
+
+
+
 function get_day_events( $m, $d, $y ) {
 
 	$args = array(
