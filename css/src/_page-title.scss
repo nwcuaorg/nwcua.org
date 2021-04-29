@@ -16,5 +16,25 @@
 			padding: 10px 50px;
 		}
 	}
+
+	&.anthem {
+		background: rgba( $grey-light, .3 );
+
+		h1 {
+			color: $gold;
+			text-transform: none;
+			font-size: 3.5em;
+			line-height: 1em;
+			padding: 10px 20px 5px;
+
+			@include respond-to( $bp-l ) {
+				padding: 10px 40px 5px;
+			}
+
+			@include respond-to( $bp-xl ) {
+				padding: 10px 50px 5px;
+			}
+		}
+	}
 }
 

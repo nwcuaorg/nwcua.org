@@ -37,3 +37,12 @@ register_sidebar( array(
     'after_title' => '</h4></div>',
 ) );
 
+register_sidebar( array(
+	'id' => 'anthem-sidebar',
+	'name'=> 'Anthem Sidebar',
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<div class="widget-title"><h4>',
+    'after_title' => '</h4></div>',
+) );
+

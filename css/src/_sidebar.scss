@@ -50,5 +50,21 @@
 			padding-bottom: 40px;
 		}
 	}
+
+	.widget_recent_entries {
+		ul {
+			li {
+				border-top: 2px solid #ddd;
+
+				a {
+					display: block;
+					font-size: 1.2em;
+					line-height: 1.5em;
+					padding: 10px 0;
+					color: $grey-dark;
+				}
+			}
+		}
+	}
 }
 

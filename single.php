@@ -8,19 +8,30 @@ get_header();
 the_showcase();
 
 ?>
-
-	<div class="content-wide" role="main">
+	
+	<div class="page-title anthem">
+		<h1>Anthem</h1>
+	</div>
+	<div class="two-column" role="main">
+		<div class="sidebar">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('anthem-sidebar') ) : ?><!-- no sidebar --><?php endif; ?>
+		</div>
+		<div class="right-column">
+			<div class="right-column-inner">
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
 				?>
 				<h1><?php the_title(); ?></h1>
+				<p class="post-date"><?php the_date(); ?></p>
 				<?php the_content(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
+				<p class="quiet">Posted in <?php print get_the_category_list( ', ' ) ?>.</p>
 				<?php
 			endwhile;
 		endif;
 		?>
+			</div>
+		</div>
 	</div>
 
 <?php

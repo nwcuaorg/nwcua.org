@@ -70,8 +70,9 @@ get_header();
 				print "<p>$" . $current_price . ( $is_early ? ' (early bird price)' : ( $is_late ? ' (late registration price)' : '' ) ) . "</p>";
 				print '</div>';
 			}
+			
 			if ( has_cmb_value( 'event_registration' ) ) {
-				print '<p class="event-registration"><a href="' . ( has_cmb_value( 'event_registration' ) ? get_cmb_value( 'event_registration' ) : 'https://nwcua.force.com/s/product/' . get_cmb_value( 'event_id' ) ) . '" class="btn-arrow green">Register Now</a></p>';
+				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn-arrow green">Register Now</a></p>';
 			}
 
 
