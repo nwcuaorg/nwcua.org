@@ -19,9 +19,7 @@ get_header();
 		<div class="events">
 			<?php print do_shortcode( '[events limit=3 /]' ); ?>
 
-			<div class="promo">
-				<img src="<?php bloginfo( 'template_url' ); ?>/img/ad-glia.png" />
-			</div>
+			<?php do_ad_group( 'sidebar' ) ?>
 
 		</div>
 
