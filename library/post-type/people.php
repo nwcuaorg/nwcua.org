@@ -140,6 +140,19 @@ function person_metaboxes() {
         'type' => 'file',
         'desc' => 'Upload a CV/Resume file.'
     ) );
+    
+    $people_cats = get_terms( 'people_cat' );
+    $groups = array( '' => '- select a group -' );
+    foreach ( $people_cats as $cat ) {
+        $groups[$cat->slug] = $cat->name;
+    }
+    $person_box->add_field( array(
+        'name' => 'Bio Group',
+        'desc' => 'Select the people group that should be displayed on this persons bio page.',
+        'id' => CMB_PREFIX . 'person_group',
+        'type' => 'select',
+        'options' => $groups
+    ) );
 
 }
 

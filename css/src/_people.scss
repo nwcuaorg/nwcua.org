@@ -160,10 +160,16 @@
 		img {
 			width: 100%;
 			display: block;
+			border: 2px solid rgba( $grey, .7 );
+			box-shadow: 0 0 20px rgba( $grey, .4 );
+
+			@include respond-to( 768px ) {
+				margin-top: 20px
+			}
 		}
 
 		.person-info {
-			padding: 20px;
+			padding: 20px 0;
 
 			h5 {
 				padding-bottom: 3px;
