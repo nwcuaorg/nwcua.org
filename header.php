@@ -43,7 +43,7 @@
 	</div>
 
 	<div class="account-tools">
-		<a href="/login">Log In</a>
+		<?php account_button() ?>
 	</div>
 	
 </header>
