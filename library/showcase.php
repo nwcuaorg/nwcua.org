@@ -93,8 +93,9 @@ function showcase_metabox( $meta_boxes ) {
     ) );
 
     $showcase_metabox->add_field( array(
+        'title' => 'Showcase Menu',
         'id' => CMB_PREFIX . 'showcase_nav',
-        'title' => 'Showcase Nav Menu',
+        'desc' => 'Select a menu to be positioned over the bottom of the showcase.',
         'type' => 'select',
         'options' => $all_menus
     ) );
@@ -122,6 +123,9 @@ function showcase_metabox( $meta_boxes ) {
         'desc' => 'Enter the content for the slide.',
         'id'   => 'content',
         'type' => 'wysiwyg',
+		'options' => array(
+			'textarea_rows' => 5,
+	    ),
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(

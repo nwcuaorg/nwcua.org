@@ -44,6 +44,18 @@ function page_title_metabox( $meta_boxes ) {
         'options' => $colors
     ) );
 
+    $event_cats = get_terms( 'event_cat' );
+    $event_groups = array( '' => '- select an event category -' );
+    foreach ( $event_cats as $cat ) {
+        $event_groups[$cat->slug] = $cat->name;
+    }
+    $page_settings_metabox->add_field( array(
+        'name' => 'Sidebar Event Category',
+        'id'   => CMB_PREFIX . 'page-events',
+        'type' => 'select',
+        'options' => $event_groups
+    ) );
+
     $page_settings_metabox->add_field( array(
         'name' => 'Menu Title',
         'id'   => CMB_PREFIX . 'page-menu-title',
@@ -55,6 +67,18 @@ function page_title_metabox( $meta_boxes ) {
         'id'   => CMB_PREFIX . 'page-menu',
         'type' => 'select',
         'options' => get_all_menus()
+    ) );
+
+    $ad_cats = get_terms( 'ad_group' );
+    $ad_groups = array( '' => '- select an ad group -' );
+    foreach ( $ad_cats as $cat ) {
+        $ad_groups[$cat->slug] = $cat->name;
+    }
+    $page_settings_metabox->add_field( array(
+        'name' => 'Sidebar Ad Group',
+        'id'   => CMB_PREFIX . 'page-ad-group',
+        'type' => 'select',
+        'options' => $ad_groups
     ) );
 
     $page_settings_metabox->add_field( array(

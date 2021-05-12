@@ -87,6 +87,9 @@ function accordion_metaboxes() {
         'name' => 'Content',
         'id'   => 'content',
         'type' => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => 5,
+        ),
     ) );
 
 }

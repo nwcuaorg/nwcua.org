@@ -114,6 +114,7 @@
 
 .content-pad {
 	padding: 20px;
+	@extend .content-style;
 
 	@include respond-to( 768px ) {
 		padding: 30px 40px;
@@ -156,6 +157,7 @@
 		}
 
 		.right-column-inner {
+			@extend .content-style;
 			padding: 20px;
 
 			@include respond-to( $bp-m ) {

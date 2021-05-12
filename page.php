@@ -12,6 +12,11 @@ the_page_title();
 	<div class="sidebar">
 
 		<?php 
+		$event_group = get_cmb_value( 'page-events' );
+		if ( !empty( $event_group ) ) {
+			print do_shortcode( '[events category="' . $event_group . '" /]' );
+		}
+
 		if ( has_cmb_value( 'page-menu' ) ) {
 		?>
 		<div class="widget widget_nav_menu">
@@ -22,10 +27,15 @@ the_page_title();
 		}
 		?>
 
+		<?php
+		$group = get_cmb_value( 'page-ad-group' );
+		if ( !empty( $group ) ) {
+			?>
 		<div class="widget widget_media_image">
-			<a href="#"><img src="<?php bloginfo( 'template_url' ) ?>/img/ad-glia.png"></a>
+			<?php do_ad_group( $group ); ?>
 		</div>
-
+			<?php 
+		} ?>
 
 		<?php
 		$sidebar_people = get_cmb_value( 'page-people' );
@@ -36,6 +46,8 @@ the_page_title();
 			<?php print do_shortcode( '[people category="' . $sidebar_people . '" /]' ) ?>
 		</div>
 			<?php 
+		} else {
+			if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
 		}
 		?>
 		
@@ -51,6 +63,8 @@ the_page_title();
 				<?php
 			endwhile;
 		endif;
+
+		the_icons();
 
 		?>
 		</div>
