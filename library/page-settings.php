@@ -6,7 +6,7 @@ function the_page_title() {
 	// get the slides
 	if ( has_cmb_value( 'page-title' ) ) {
 		?>
-		<div class="page-title bg-<?php show_cmb_value( 'page-title-color' ) ?>">
+		<div class="page-title <?php show_cmb_value( 'page-title-color' ) ?>">
 			<h1><?php show_cmb_value( 'page-title' ) ?></h1>
 		</div>
 		<?php
