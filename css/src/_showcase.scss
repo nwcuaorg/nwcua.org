@@ -70,7 +70,7 @@
 			position: relative;
 			z-index: 20;
 
-			h2 {
+			h1, h2 {
 				@include font-bold;
 				color: white;
 				text-transform: uppercase;
@@ -85,6 +85,13 @@
 					font-size: 40px;
 					line-height: 50px;
 				}
+			}
+
+			h3, h4 {
+				@include font;
+				color: white;
+				font-style: italic;
+				padding-top: 5px;
 			}
 
 			p {

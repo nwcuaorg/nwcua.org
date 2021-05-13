@@ -181,7 +181,7 @@ function people_shortcode( $atts ) {
 		'category' => '',
 		'link' => 1,
 		'show_search' => 0,
-		'style' => 'cards'
+		'style' => 'list'
 	), $atts ));
 
 
@@ -257,7 +257,7 @@ add_shortcode( 'people', 'people_shortcode' );
 function person_shortcode( $atts ) {
 
 	// set default params and override with those in shortcode
-		extract( shortcode_atts( array(
+	extract( shortcode_atts( array(
 		'link' => true,
 		'id' => ''
 	), $atts ) );
