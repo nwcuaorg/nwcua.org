@@ -57,7 +57,7 @@ function the_showcase() {
 		<?php
 	}
 
-	if ( !empty( $showcase_nav ) ) {
+	if ( !empty( $slides ) && !empty( $showcase_nav ) ) {
 		print '<div class="showcase-subnav">';
 		wp_nav_menu( array( 'menu' => $showcase_nav ) );
 		print '</div>';
