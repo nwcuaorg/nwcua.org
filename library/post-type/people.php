@@ -208,7 +208,7 @@ function people_shortcode( $atts ) {
 	// run the query
     $p = new WP_Query( $vars );
 
-    $people_content = '<section class="people ' . ( $style = 'list' ? 'list' : 'cards' ) . '">';
+    $people_content = '<section class="people ' . ( $style == 'list' ? 'list' : 'cards' ) . '">';
 
    	if ( $show_search ) {
 		$people_content .= '<div class="people-search"><input type="text" name="people-search-term" id="s" placeholder="Search Name, Academic Department, or Title"></div>';
@@ -230,6 +230,8 @@ function people_shortcode( $atts ) {
 					<p class="person-phone">' . get_cmb_value( "person_phone" ) . '</p>
 					<p class="person-tollfree">' . get_cmb_value( "person_tollfree" ) . '</p>
 					<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>
+					<p class="person-excerpt">' . get_the_excerpt() . '</p>
+					<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>
 				</div>
 			</div>';
 

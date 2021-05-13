@@ -27,33 +27,6 @@
 }
 
 
-.people.cards .person-entry {
-	box-shadow: 0 0 20px rgba( black, .2 );
-
-	img {
-		width: 100%;
-	}
-
-	.person-info {
-		padding: 10px 20px 20px;
-
-		h4 {
-			padding-bottom: 0;
-		}
-
-		.person-title {
-			padding: 3px 0;
-		}
-
-		.person-email {
-			padding: 0;
-			font-size: .9em;
-			text-transform: lowercase;
-		}
-	}
-}
-
-
 .people.list {
 	.right-column & .people-listing {
 		@include respond-to( 900px ) {
@@ -94,6 +67,10 @@
 			p {
 				padding: 0;
 				font-size: .9em;
+			}
+
+			.person-excerpt, .person-bio-link {
+				display: none;
 			}
 
 			.person-title {
@@ -140,30 +117,43 @@
 		display: none;
 		@extend .person-entry;
 
+		.person-title, .person-phone, .person-tollfree, .person-email {
+			display: none;
+		}
+
 		&.visible {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			border: 1px solid $grey;
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			text-transform: uppercase;
+		}
+
+		.person-bio-link .btn {
 			display: block;
 		}
 
 		@include respond-to( 500px ) {
 			flex: 1;
-			flex-basis: 48%;
+			flex-basis: 47%;
 			flex-grow: 0;
-			margin: 0 2% 20px 0;
+			margin: 0 3% 20px 0;
 		}
 
 		@include respond-to( 900px ) {
-			flex-basis: 32%;
-			margin-right: 1.3333%;
+			flex-basis: 31%;
+			margin-right: 2.3333%;
 		}
 
 		@include respond-to( 1220px ) {
-			flex-basis: 23%;
-			margin-right: 2%;
-		}
-
-		@include respond-to( 1440px ) {
-			flex-basis: 18%;
-			margin-right: 2%;
+			flex-basis: 22%;
+			margin-right: 3%;
 		}
 	}
 }

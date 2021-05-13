@@ -21,7 +21,7 @@ function the_accordions() {
                     $color = ( isset( $accordion["color"] ) ? $accordion["color"] : '' );
 
 					?>
-            <a name="accordion-<?php print $key; ?>"></a>
+            <a name="accordion-<?php print $key+1; ?>"></a>
 			<div class="accordion<?php print ( isset( $accordion['open'] ) ? ( $accordion['open'] == 'on' ? " open" : "" ) : "" ); ?> <?php print $color ?>">
 				<div class="accordion-handle"><h3><?php print $title ?></h3></div>
 				<div class="accordion-content">
