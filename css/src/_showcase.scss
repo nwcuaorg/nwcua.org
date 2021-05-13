@@ -212,7 +212,7 @@
 		li {
 			@include respond-to( 768px ) {
 				flex: 1;
-				flex-basis: 20%;
+				flex-basis: 25%;
 			}
 
 			@include respond-to( 1220px ) {
@@ -231,6 +231,7 @@
 				text-align: center;
 				transition: all 400ms ease-in-out;
 				white-space: nowrap;
+				vertical-align: middle;
 
 				@include respond-to( 768px ) {
 					line-height: 120px;
@@ -249,7 +250,7 @@
 			&.lime a { background: $lime; }
 			&.forest a { background: $forest; }
 			&.seafoam a { background: $seafoam; }
-			&.orange a { background: $orange; }
+			&.orange a { background: $orange`; }
 			&.grey-dark a { background: $grey-dark; }
 			&.gold a { background: $gold; }
 			&.grey-dark a { background: $grey-dark; }
