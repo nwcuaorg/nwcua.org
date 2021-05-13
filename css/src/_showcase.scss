@@ -185,7 +185,7 @@
 
 
 .showcase-subnav {
-	@include respond-to( 768px ) {
+	@include respond-to( 1220px ) {
 		position: relative;
 		top: -120px;
 		opacity: .9;
@@ -195,11 +195,21 @@
 	ul {
 		@include respond-to( 768px ) {
 			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include respond-to( 1220px ) {
+			flex-wrap: nowrap;
 		}
 
 		li {
 			@include respond-to( 768px ) {
 				flex: 1;
+				flex-basis: 20%;
+			}
+
+			@include respond-to( 1220px ) {
+				flex-basis: auto;
 			}
 
 			a {
@@ -210,14 +220,15 @@
 				color: white;
 				text-transform: uppercase;
 				@include font-bold;
-				letter-spacing: 1px;
+				//letter-spacing: 1px;
 				text-align: center;
 				transition: all 400ms ease-in-out;
+				white-space: nowrap;
 
 				@include respond-to( 768px ) {
 					line-height: 120px;
 					text-decoration: none;
-					padding: 0;
+					padding: 0 5px;
 				}
 
 				&:hover {
