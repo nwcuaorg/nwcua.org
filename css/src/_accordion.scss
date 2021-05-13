@@ -79,6 +79,11 @@ $accordion-arrow-size: 30px;
 			h3::after { background: $lime; }
 		}
 
+		&.orange .accordion-handle {
+			background: rgba( $orange, .2 );
+			h3::after { background: $orange; }
+		}
+
 		&.gold .accordion-handle {
 			background: rgba( $gold, .2 );
 			h3::after { background: $gold; }
