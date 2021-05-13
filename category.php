@@ -11,27 +11,28 @@
 
 get_header(); ?>
 
-	<div class="content-wide" role="main">
+	<div class="page-title">
+		<h1>Category: <span><?php printf( single_cat_title( '', false ) ); ?></span></h1>
+	</div>
+	<div class="content-wide anthem-listing" role="main">
 
 		<?php 
-		if ( have_posts() ) : ?>
-
-			<h1>Category: <span><?php printf( single_cat_title( '', false ) ); ?></span></h1>
-
-			<?php
-			// Show an optional term description.
-			$term_description = term_description();
-			if ( ! empty( $term_description ) ) :
-				printf( '<div class="description">%s</div>', $term_description );
-			endif;
-
+		if ( have_posts() ) : 
 
 			while ( have_posts() ) : the_post(); 
+		        $categories = get_the_category();
+		        $cat = $categories[0];
 				?>
-				<hr />
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
+	       	<div class="entry">
+	        	<div class="entry-thumbnail">
+	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
+		    		<div class="entry-category <?php print $cat->slug ?>"><?php print $cat->name ?></div>
+		   		</div>
+	        	<div class="entry-inner">
+		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+		    		<?php the_excerpt(); ?>
+		    	</div>
+		    </div>
 				<?php
 			endwhile;
 

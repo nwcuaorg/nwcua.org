@@ -16,9 +16,9 @@ get_header();
 
 			// Start the Loop.
 			while ( have_posts() ) : the_post(); 
-	        $categories = get_the_category();
-	        $cat = $categories[0];
-	        ?>
+		        $categories = get_the_category();
+		        $cat = $categories[0];
+		        ?>
 	       	<div class="entry">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
@@ -29,7 +29,7 @@ get_header();
 		    		<?php the_excerpt(); ?>
 		    	</div>
 		    </div>
-		    <?php
+			    <?php
 			endwhile;
 
 		else :

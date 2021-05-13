@@ -6,7 +6,7 @@
 get_header(); 
 
 ?>
-	<div class="page-title anthem">
+	<div class="page-title">
 		<h1>Anthem</h1>
 	</div>
 	<div class="content-wide anthem-listing" role="main">
