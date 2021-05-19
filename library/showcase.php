@@ -55,13 +55,29 @@ function the_showcase() {
 		?>
 		</div>
 		<?php
+
+		if ( !empty( $showcase_nav ) ) {
+
+			// get menu info, so we have a menu item count.
+			$my_menu = wp_get_nav_menu_object( $showcase_nav );
+			
+			// set the menu class based on the number of items
+			if ( $my_menu->count <= 6 ) {
+				$count_class = 'three';
+			} else if ( $my_menu->count <= 8 ) {
+				$count_class = 'four';
+			} else {
+				$count_class = 'five';
+			}
+
+			// output the menu container and menu
+			print '<div class="showcase-subnav ' . $count_class . '">';
+			wp_nav_menu( array( 'menu' => $showcase_nav ) );
+			print '</div>';
+
+		}
 	}
 
-	if ( !empty( $slides ) && !empty( $showcase_nav ) ) {
-		print '<div class="showcase-subnav">';
-		wp_nav_menu( array( 'menu' => $showcase_nav ) );
-		print '</div>';
-	}
 }
 
 

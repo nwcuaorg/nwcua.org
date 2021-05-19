@@ -212,15 +212,6 @@
 		}
 
 		li {
-			@include respond-to( 768px ) {
-				flex: 1;
-				flex-basis: 25%;
-			}
-
-			@include respond-to( 1220px ) {
-				flex-basis: auto;
-			}
-
 			a {
 				background: $grey;
 				font-size: 14px;
@@ -256,6 +247,33 @@
 			&.grey-dark a { background: $grey-dark; }
 			&.gold a { background: $gold; }
 			&.grey-darker a { background: darken( $grey-dark, 10% ); }
+		}
+	}
+
+	&.three ul li {
+		@include respond-to( 768px ) {
+			flex: 1;
+			flex-basis: 33.3333%;
+		}
+	}
+
+	&.four ul li {
+		@include respond-to( 768px ) {
+			flex: 1;
+			flex-basis: 25%;
+		}
+	}
+
+	&.five ul li {
+		@include respond-to( 768px ) {
+			flex: 1;
+			flex-basis: 20%;
+		}
+	}
+
+	&.three ul li, &.four ul li, &.five ul li {
+		@include respond-to( 1220px ) {
+			flex-basis: auto;
 		}
 	}
 }
