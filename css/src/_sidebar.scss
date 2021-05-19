@@ -14,20 +14,22 @@
 		padding: 5px 0;
 	}
 
-	.widget_nav_menu {
+	.widget_nav_menu, .widget_categories {
 		ul {
 			list-style: none;
 			padding: 0;
+			border-top: 1px solid rgba( $grey-light, .3 );
 
 			li {
 				padding: 0;
 
 				a {
 					display: block;
-					padding: 5px 0;
+					padding: 7px 0;
 					color: $navy;
 					transition: all 400ms ease-in-out;
 					text-transform: uppercase;
+					border-bottom: 1px solid rgba( $grey-light, .3 );
 
 					&:hover {
 						text-decoration: none;

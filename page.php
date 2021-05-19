@@ -12,11 +12,6 @@ the_page_title();
 	<div class="sidebar">
 
 		<?php 
-		$event_group = get_cmb_value( 'page-events' );
-		if ( !empty( $event_group ) ) {
-			print do_shortcode( '[events category="' . $event_group . '" /]' );
-		}
-
 		if ( has_cmb_value( 'page-menu' ) ) {
 		?>
 		<div class="widget widget_nav_menu">
@@ -25,6 +20,13 @@ the_page_title();
 		</div>
 		<?php
 		}
+
+
+		$event_group = get_cmb_value( 'page-events' );
+		if ( !empty( $event_group ) ) {
+			print do_shortcode( '[events category="' . $event_group . '" /]' );
+		}
+
 		?>
 
 		<?php
