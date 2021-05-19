@@ -23,7 +23,7 @@ function people_post_type() {
 				'edit_item' => __( 'Edit Person', 'ptheme' ), /* Edit Display Title */
 				'new_item' => __( 'New Person', 'ptheme' ), /* New Display Title */
 				'view_item' => __( 'View Person', 'ptheme' ), /* View Display Title */
-				'search_items' => __( 'Search Faculty', 'ptheme' ), /* Search Custom Type Title */ 
+				'search_items' => __( 'Search People', 'ptheme' ), /* Search Custom Type Title */ 
 				'not_found' =>  __( 'Nothing found in the database.', 'ptheme' ), /* This displays if there are no entries yet */ 
 				'not_found_in_trash' => __( 'Nothing found in Trash', 'ptheme' ), /* This displays if there is nothing in the trash */
 				'parent_item_colon' => ''
