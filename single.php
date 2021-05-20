@@ -24,6 +24,7 @@ the_showcase();
 				?>
 				<h1><?php the_title(); ?></h1>
 				<p class="post-date"><?php the_date(); ?></p>
+				<?php the_post_thumbnail( 'full' ); ?>
 				<?php the_content(); ?>
 				<p class="quiet">Posted in <?php print get_the_category_list( ', ' ) ?>.</p>
 				<?php
