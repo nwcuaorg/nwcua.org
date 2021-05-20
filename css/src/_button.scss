@@ -65,5 +65,9 @@
 	&.orange {
 		background-color: $orange;
 	}
+
+	&.grey-dark, &.dark-grey {
+		background-color: $grey-dark;
+	}
 }
 

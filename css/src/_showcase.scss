@@ -244,9 +244,9 @@
 			&.forest a { background: $forest; }
 			&.seafoam a { background: $seafoam; }
 			&.orange a { background: $orange; }
-			&.grey-dark a { background: $grey-dark; }
+			&.grey-dark a, &.dark-grey a, &.darkgrey a, &.greydark a { background: $grey-dark; }
 			&.gold a { background: $gold; }
-			&.grey-darker a { background: darken( $grey-dark, 10% ); }
+			&.grey-darker a, &.darker-grey a { background: darken( $grey-dark, 10% ); }
 		}
 	}
 
