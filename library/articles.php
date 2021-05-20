@@ -7,6 +7,7 @@ function articles_shortcode( $atts ) {
 		'style' => "card",
 		'tags' => '',
 		'cats' => '',
+		'category__not_in' => '',
 		'posts_per_page' => 4
 	), $atts );
 
@@ -18,8 +19,12 @@ function articles_shortcode( $atts ) {
 		$args['tag'] = $a['tags'];
 	}
 
-	if ( !empty($a['cats']) ) {
+	if ( !empty( $a['cats'] ) ) {
 		$args['category_name'] = $a['cats'];
+	}
+
+	if ( !empty( $a['category__not_in'] ) ) {
+		$args['category__not_in'] = $a['category__not_in'];
 	}
 
 	$query = new WP_Query( $args );

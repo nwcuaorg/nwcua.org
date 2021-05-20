@@ -13,7 +13,7 @@ get_header();
 	<div class="content-pad">
 
 		<div class="articles">
-			<?php print do_shortcode( '[articles /]' ); ?>
+			<?php print do_shortcode( '[articles category__not_in=71 /]' ); ?>
 		</div>
 
 		<div class="events">
