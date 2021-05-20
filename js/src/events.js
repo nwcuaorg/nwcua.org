@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
 		// set event list min-height on load
 		setTimeout(function(){
 			set_event_height();
-		}, 200 );
+		}, 1000 );
 
 
 		// set event list min-height on window resize
