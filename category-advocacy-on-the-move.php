@@ -32,7 +32,7 @@ $category = get_the_category();
 
 
 		// set our query arguments
-		$query_args['posts_per_page'] = 30;
+		$query_args['posts_per_page'] = 60;
 
 
 		// handle paginating results
@@ -52,7 +52,7 @@ $category = get_the_category();
 			        $categories = get_the_category();
 			        $cat = $categories[0];
 					?>
-			<div class="entry <?php print ( in_category(7851) ? ' idaho' : '' ); ?><?php print ( in_category(7852) ? ' oregon' : '' ); ?><?php print ( in_category(7853) ? ' washington' : '' ); ?><?php print ( in_category(7960) ? ' regulatory' : '' ); ?>">
+			<div class="entry <?php print ( in_category(43) || in_category(74) ? ' idaho' : '' ); ?><?php print ( in_category(73) || in_category(51) ? ' oregon' : '' ); ?><?php print ( in_category(72) || in_category(55) ? ' washington' : '' ); ?><?php print ( in_category(6502) ? ' regulatory' : '' ); ?>">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
 		    		<div class="entry-category <?php print $cat->slug ?>">Advocacy on the Move</div>
@@ -73,10 +73,11 @@ $category = get_the_category();
 		?>
 			
 		</div><!-- #content -->
-		
+		<!--
 		<div class="pagination group">
 			<?php pagination(); ?>
 		</div>
+		-->
 		<?php
 		} else {
 			print "<div id='content' class='wrap content-wide search-list advocacy-blog'><p>This content is reserved for NWCUA members only. You are either not logged in, or your account doesn't have an active membership.</p></div>";
