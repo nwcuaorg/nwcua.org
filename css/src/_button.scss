@@ -5,8 +5,7 @@
 }
 
 
-// general button styles
-.btn {
+@mixin button {
 	@include font-bold;
 	opacity: 1;
 	border: 0;
@@ -24,6 +23,12 @@
 	-webkit-appearance: none;
 	border-radius: 0;
 	margin: 0 2px 4px 0;
+
+}
+
+// general button styles
+.btn {
+	@include button;
 
 	&:hover {
 		text-decoration: none;

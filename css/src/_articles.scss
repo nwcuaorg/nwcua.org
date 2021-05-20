@@ -49,6 +49,7 @@
 				&.advocacy::after { background: $navy; }
 				&.compliance::after { background: $orange; }
 				&.foundation::after { background: $seafoam; }
+				&.advocacy-on-the-move::after { background: $navy; }
 			}
 		}
 
@@ -137,4 +138,5 @@
 		background-size: cover;
 	}
 }
+
 

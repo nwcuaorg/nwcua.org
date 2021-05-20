@@ -36,6 +36,15 @@
 						opacity: .8;
 					}
 				}
+
+				ul.sub-menu {
+					display: none;
+					padding-left: 15px;
+
+					&.open {
+						display: block;
+					}
+				}
 			}
 		}
 	}

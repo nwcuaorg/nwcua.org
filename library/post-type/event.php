@@ -727,7 +727,7 @@ function events_shortcode( $event_atts ) {
 		foreach ( $events as $event ) {
 
 			// piece together an excerpt.
-			$excerpt = ( !empty( $event->post_excerpt ) ? $event->post_excerpt : wp_trim_words( $event->post_content, 40 ) . "[...]" );
+			$excerpt = ( !empty( $event->post_excerpt ) ? $event->post_excerpt : wp_trim_words( $event->post_content, 30 ) . "[...]" );
 
 
 			$list .= '<div class="event' . ( $num == 0 ? ' first' : '' ) . '">';
@@ -737,10 +737,6 @@ function events_shortcode( $event_atts ) {
 			$list .= '</div>';
 			$list .= '<h3><a href="' . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . '">' . $event->post_title . '</a></h3>';
 			$list .= '<div class="event-excerpt">' . $excerpt . '</div>';
-
-			if ( $a['show_excerpt'] ) {
-				$list .= $event->post_excerpt;
-			}
 			$list .= '</div>';
 			$num++;
 		}

@@ -1,0 +1,48 @@
+
+
+.aotm-title {
+	background: $grey;
+	padding: 10px 20px;
+
+	@include respond-to( $bp-l ) {
+		padding: 15px 40px 15px;
+	}
+
+	@include respond-to( $bp-xl ) {
+		padding: 15px 50px 15px;
+	}
+
+	h2 {
+		color: white;
+		@include font;
+		font-size: 1.6em;
+		padding: 0;
+	}
+
+	p {
+		color: white;
+		opacity: .7;
+		padding: 0;
+	}
+}
+
+
+.aotm-listing {
+	.filtering {
+		padding: 20px 20px 10px;
+
+		@include respond-to( $bp-l ) {
+			padding: 20px 40px 15px;
+		}
+
+		@include respond-to( $bp-xl ) {
+			padding: 20px 50px 15px;
+		}
+	}
+}
+
+
+.aotm-subscribe {
+	padding-bottom: 30px;
+}
+
