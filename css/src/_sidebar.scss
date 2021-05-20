@@ -11,7 +11,7 @@
 .sidebar {
 	.widget-title {
 		@extend .sidebar-title;
-		padding: 5px 0;
+		padding: 10px 0 5px;
 	}
 
 	.widget_nav_menu, .widget_categories {
@@ -70,7 +70,11 @@
 
 	.event-list {
 		padding-bottom: 20px;
-		padding-top: 20px;
+
+		h3 {
+			font-size: 1.3em;
+			line-height: 1.4em;
+		}
 	}
 }
 

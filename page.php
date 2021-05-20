@@ -24,7 +24,12 @@ the_page_title();
 
 		$event_group = get_cmb_value( 'page-events' );
 		if ( !empty( $event_group ) ) {
-			print do_shortcode( '[events category="' . $event_group . '" /]' );
+			?>
+			<div class="widget-title">
+				<h4>Upcoming Events</h4>
+			</div>
+			<?php 
+			print do_shortcode( '[events category="' . $event_group . '" /]' ); 
 		}
 
 		?>
