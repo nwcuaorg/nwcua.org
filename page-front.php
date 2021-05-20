@@ -17,10 +17,10 @@ get_header();
 		</div>
 
 		<div class="events">
+			<a href="/events" class="all-events">All Events</a>
 			<?php print do_shortcode( '[events limit=3 /]' ); ?>
 
 			<?php do_ad_group( 'sidebar' ) ?>
-
 		</div>
 
 	</div>

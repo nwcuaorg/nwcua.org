@@ -22,10 +22,44 @@
 	}
 
 	.events {
+		position: relative;
+
+		.all-events {
+			position: absolute;
+			right: -20px;
+			top: 20px;
+			width: 60px;
+			height: 60px;
+			background: $navy url(../img/icon-all-events.webp) center center no-repeat;
+			background-size: contain;
+
+			@include respond-to( 768px ) {
+				right: -40px;
+			}
+
+			@include respond-to( 1220px ) {
+				right: -50px;
+				width: 100px;
+				height: 100px;
+			}
+		}
+
 		@include respond-to( 768px ) {
 			flex: 1;
 			flex-basis: 33.3333%;
 			padding-left: 3px;
+		}
+		
+		.event-list {
+			padding-right: 40px;
+
+			@include respond-to( 768px ) {
+				padding-right: 20px;
+			}
+
+			@include respond-to( 1220px ) {
+				padding-right: 80px;
+			}
 		}
 	}
 
