@@ -35,6 +35,5 @@ $admin_email = get_option( 'admin_email' );
 </div><!-- #container -->
 
 <?php wp_footer(); ?>
-<script src="<?php bloginfo( "template_url" ) ?>/js/main.js?v=7"></script>
 </body>
 </html>
