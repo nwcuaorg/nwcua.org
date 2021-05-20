@@ -28,8 +28,11 @@ the_page_title();
 			<div class="widget-title">
 				<h4>Upcoming Events</h4>
 			</div>
-			<?php 
-			print do_shortcode( '[events category="' . $event_group . '" /]' ); 
+			<div class="widget-events">
+				<?php print do_shortcode( '[events category="' . $event_group . '" /]' ); ?>
+				<a href="/events" class="btn navy">View All Events</a>
+			</div>
+			<?php
 		}
 
 		?>

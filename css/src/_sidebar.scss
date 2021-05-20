@@ -68,8 +68,12 @@
 		}
 	}
 
-	.event-list {
+	.widget-events {
 		padding-bottom: 20px;
+
+		@include respond-to( $bp-l ) {
+			padding-bottom: 40px;
+		}
 
 		h3 {
 			font-size: 1.3em;
