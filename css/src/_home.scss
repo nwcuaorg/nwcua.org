@@ -32,6 +32,7 @@
 			height: 60px;
 			background: $navy url(../img/icon-all-events.webp) center center no-repeat;
 			background-size: contain;
+			color: transparent;
 
 			@include respond-to( 768px ) {
 				right: -40px;

@@ -8,10 +8,15 @@ get_header();
 the_showcase();
 
 ?>
-	
+	<?php if ( in_category( 'advocacy-on-the-move' ) ) { ?>
+	<div class="page-title aotm">
+		<h1>Advocacy on the Move</h1>
+	</div>
+	<?php } else { ?>
 	<div class="page-title anthem">
 		<h1>Anthem</h1>
 	</div>
+	<?php } ?>
 	<div class="two-column" role="main">
 		<div class="sidebar">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('anthem-sidebar') ) : ?><!-- no sidebar --><?php endif; ?>
