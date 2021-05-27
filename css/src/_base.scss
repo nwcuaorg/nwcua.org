@@ -112,22 +112,24 @@ pre {
 
 .pagination {
 	@include clearfix;
-	padding: 15px 0;
+	padding: 0 20px 60px;
 	text-align: center;
-	font-size: 15px;
-	line-height: 15px;
+	font-size: 1em;
+	line-height: 1.3em;
 	@include font;
 
 	@include respond-to( $bp-m ) {
-		padding: 40px 0;
+		padding: 20px 20px 80px;
 	}
 
 	a {
-		padding: 7px 12px;
-		background: $grey;
+		padding: 10px 15px;
+		background: $navy;
 		color: white;
 		text-decoration: none;
 		display: inline-block;
+		margin: 0 1px;
+		box-shadow: 0 0 20px rgba( black, .2 );
 
 		&:hover {
 			background: lighten( $grey, 5% );
@@ -135,9 +137,11 @@ pre {
 	}
 
 	.current {
-		padding: 7px 12px;
+		padding: 10px 15px;
+		margin: 0 1px;
 		display: inline-block;
-		background: lighten( $grey, 5% );
+		background: #ddd;
+		color: $grey-dark;
 	}
 }
 

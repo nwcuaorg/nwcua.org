@@ -90,26 +90,6 @@
 }
 
 
-.pagination {
-	padding: 10px 50px 30px;
-	text-align: center;
-	@include font-title;
-
-	.page-numbers {
-		display: inline-block;
-		padding: 6px 10px;
-		text-decoration: none;
-		background: $navy;
-		color: white;
-
-		&.current {
-			background: #eee;
-			color: $grey-dark;
-		}
-	}
-}
-
-
 .featured-search {
 	padding: 20px;
 

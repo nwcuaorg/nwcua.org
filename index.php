@@ -3,9 +3,6 @@
  * The template for displaying Archive pages
  */
 
-get_header(); 
-
-
 
 // parse the query string
 $request = parse_query_string();
@@ -16,10 +13,7 @@ global $wp_query;
 // set the args based on current query
 $args = $wp_query->query_vars;
 
-// set paged value based on request
-$args['paged'] = $request['paged'];
-
-if ( $request['paged'] > 1 ) {
+if ( $paged > 0 ) {
 	$args['posts_per_page'] = 15;
 } else {
 	$args['posts_per_page'] = 13;
@@ -27,6 +21,9 @@ if ( $request['paged'] > 1 ) {
 
 // rerun the query
 query_posts( $args );
+
+
+get_header(); 
 
 
 ?>
@@ -43,7 +40,7 @@ query_posts( $args );
 			while ( have_posts() ) : the_post(); 
 		        $categories = get_the_category();
 		        $cat = $categories[0];
-		        if ( $count == 0 && ( !isset( $request['paged'] ) || $request['paged'] == 1 ) ) {
+		        if ( $count == 0 && $paged == 0 ) {
 		        	?>
 	       	<div class="entry first">
 	        	<div class="entry-thumbnail">

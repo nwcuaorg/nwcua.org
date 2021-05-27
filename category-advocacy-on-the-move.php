@@ -73,11 +73,7 @@ $category = get_the_category();
 		?>
 			
 		</div><!-- #content -->
-		<!--
-		<div class="pagination group">
-			<?php pagination(); ?>
-		</div>
-		-->
+
 		<?php
 		} else {
 			print "<div id='content' class='wrap content-wide search-list advocacy-blog'><p>This content is reserved for NWCUA members only. You are either not logged in, or your account doesn't have an active membership.</p></div>";

@@ -9,31 +9,6 @@
  * @since Twenty Fourteen 1.0
  */
 
-
-remove_all_filters( 'wp_title' );
-add_filter('wp_title', 'filter_pagetitle', 99,1);
-function filter_pagetitle( $title ) {
-    $title = single_cat_title( '', false ) . ' | ';
-    return $title;
-}
-
-
-// parse the query string
-$request = parse_query_string();
-
-// lets globalize the wp_query var
-global $wp_query;
-
-// set the args based on current query
-$args = $wp_query->query_vars;
-
-// set paged value based on request
-$args['paged'] = $request['paged'];
-$args['posts_per_page'] = 15;
-
-// rerun the query
-query_posts( $args );
-
 get_header();
 
 ?>

@@ -72,8 +72,9 @@ add_shortcode( 'articles', 'articles_shortcode' );
 
 // pagination
 function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
-    global $wp_query;
+    global $wp_query, $wp_rewrite;
 
+    /*
     $request = parse_query_string();
 
     $posts_per_page = ( isset( $wp_query->query_vars['posts_per_page'] ) ? $wp_query->query_vars['posts_per_page'] : 18 );
@@ -91,6 +92,7 @@ function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
         'next_text' => __($next),
         'type' => 'plain'
     );
+    */
 
     echo '<div class="pagination">' . paginate_links( $pagination ) . '</div>';
 }
