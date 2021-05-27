@@ -21,7 +21,9 @@ function the_simple_showcase() {
 
 				?>
 			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>">
+				<?php if ( !empty( $link ) ) print '<a href="' . $link . '">'; ?>
 				<img src="<?php print $image ?>" />
+				<?php if ( !empty( $link ) ) print '</a>'; ?>
 			</div>
 				<?php
 

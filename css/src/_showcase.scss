@@ -277,3 +277,69 @@
 		}
 	}
 }
+
+
+.showcase-simple {
+	@include clearfix;
+	position: relative;
+	overflow: hidden;
+	transition: height 300ms ease-in-out;
+	background: #eee;
+	z-index: 0;
+	height: 0;
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		transition: opacity 400ms ease-in-out, padding 400ms ease-in-out;
+		height: 100%;
+		background: center center no-repeat;
+		background-size: cover;
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.visible {
+			opacity: 1;
+			z-index: 6;
+		}
+
+		a:hover { opacity: 1; }
+	}
+
+	.showcase-nav a {
+		position: absolute;
+		top: 50%;
+		margin-top: -40px;
+		cursor: pointer;
+		width: 50px;
+		height: 80px;
+		text-indent: -300px;
+		overflow: hidden;
+		opacity: .3;
+		color: black;
+		z-index: 500;
+
+		&:hover {
+			opacity: .6;
+		}
+
+		&.previous {
+			left: 0;
+			background: transparent url(../img/slider-arrow-left.png) right center no-repeat;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&.next {
+			right: 0;
+			background: transparent url(../img/slider-arrow-right.png) left center no-repeat;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
