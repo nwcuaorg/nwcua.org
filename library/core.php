@@ -9,9 +9,19 @@ add_action( 'wp_enqueue_scripts', 'p_scripts' );
 
 
 
+// parse the query string
+function parse_query_string() {
+	$url_parts = wp_parse_url( $_SERVER['REQUEST_URI'] );
+	parse_str( $url_parts['query'], $query_args );
+	return $query_args;
+}
+
+
+
 // register a couple nav menus
 register_nav_menus( array(
 	'main-menu' => 'Main',
+	'anthem-categories' => 'Anthem - Featured Categories',
 	'footer-links' => 'Footer - Links',
 	'footer-resources' => 'Footer - Resources'
 ) );
@@ -46,3 +56,5 @@ register_sidebar( array(
     'after_title' => '</h4></div>',
 ) );
 
+
+add_theme_support('title-tag');

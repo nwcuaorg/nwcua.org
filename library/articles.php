@@ -72,13 +72,15 @@ add_shortcode( 'articles', 'articles_shortcode' );
 
 // pagination
 function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
-    global $wp_query, $wp_rewrite;
+    global $wp_query;
 
-    $posts_per_page = ( isset( $wp_query->query_vars['posts_per_page'] ) ? $wp_query->query_vars['posts_per_page'] : 14 );
+    $request = parse_query_string();
+
+    $posts_per_page = ( isset( $wp_query->query_vars['posts_per_page'] ) ? $wp_query->query_vars['posts_per_page'] : 18 );
 
     $total = ceil( $wp_query->found_posts / $posts_per_page );
 
-    $current = ( isset( $_REQUEST['paged'] ) ? $_REQUEST['paged'] : 1 );
+    $current = ( isset( $request['paged'] ) ? $request['paged'] : 1 );
 
     $pagination = array(
         'base' => @add_query_arg('paged','%#%'),
@@ -90,8 +92,6 @@ function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
         'type' => 'plain'
     );
 
-    if ( !empty($wp_query->query_vars['s']) ) $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-
-    echo paginate_links( $pagination );
+    echo '<div class="pagination">' . paginate_links( $pagination ) . '</div>';
 }
 

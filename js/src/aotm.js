@@ -36,5 +36,9 @@ jQuery(document).ready(function($){
 		$( '.washington-filter' ).change( do_filtering );
 		$( '.regulatory-filter' ).change( do_filtering );
 	}
+
+	$('.category-select').on( 'change', function(){
+		location.href = '/category/' + $(this).val();
+	});
 });
 
