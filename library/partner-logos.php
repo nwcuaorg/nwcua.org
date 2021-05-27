@@ -14,21 +14,23 @@ function the_partner_logos() {
 
 		// if it's an array, we'll assume it's got content
 		?>
-		<div class="partner-logos">
-			<?php
-			foreach ( $icons as $icon ) {
-				if ( !empty( $icon['image'] ) ) { 
-					?>
-			<div class="partner-logo">
-				<?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
-                    <img src="<?php print $icon['image']; ?>" alt="<?php print $icon['alt-text']; ?>">
-                <?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
-			</div>
-					<?php 
-				} 
-			}
-			?>
-		</div>
+        <div class="partner-logos-container">
+    		<div class="partner-logos">
+    			<?php
+    			foreach ( $icons as $icon ) {
+    				if ( !empty( $icon['image'] ) ) { 
+    					?>
+    			<div class="slide">
+    				<?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
+                        <img src="<?php print $icon['image']; ?>" alt="<?php print $icon['alt-text']; ?>">
+                    <?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
+    			</div>
+    					<?php 
+    				} 
+    			}
+    			?>
+    		</div>
+        </div>
 		<?php
 		}
 	}
@@ -61,10 +63,10 @@ function partner_logos_metabox( $meta_boxes ) {
 
     $partner_logos_metabox->add_group_field( $partner_logos_metabox_group, array(
         'name' => 'Logo',
-        'desc' => 'Upload a logo image, ideally a transparent PNG.',
+        'desc' => 'Upload a logo image, made using <a href="' . get_bloginfo('template_url') . '/img/partner-logo.psd">this PSD template</a> at <strong>300px x 120px</strong>.',
         'id'   => 'image',
         'type' => 'file',
-        'preview_size' => array( 90, 90 ),
+        'preview_size' => array( 300, 100 ),
         'sanitization_cb' => 'cmb2_relative_urls'
     ) );
 
