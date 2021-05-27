@@ -2,7 +2,7 @@
 jQuery(document).ready(function($){
 
 	$('.partner-logos').slick({
-		slidesToShow: 5,
+		slidesToShow: 6,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2500,
@@ -10,6 +10,11 @@ jQuery(document).ready(function($){
 		dots: false,
 		pauseOnHover: true,
 		responsive: [{
+			breakpoint: 1220,
+			settings: {
+				slidesToShow: 5
+			}
+		}, {
 			breakpoint: 1024,
 			settings: {
 				slidesToShow: 4
