@@ -5,9 +5,23 @@
 
 get_header(); 
 
+if ( is_day() ) :
+	$page_title = '<span>Daily Archives:</span> ' . get_the_date();
+
+elseif ( is_month() ) :
+	$page_title = '<span>Monthly Archive:</span> ' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyfourteen' ) );
+
+elseif ( is_year() ) :
+	$page_title = '<span>Yearly Archive:</span> ' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyfourteen' ) );
+
+else :
+	$page_title = 'Anthem';
+
+endif;
+
 ?>
 	<div class="page-title">
-		<h1>Anthem</h1>
+		<h1><?php print $page_title; ?></h1>
 	</div>
 	<div class="content-wide anthem-listing" role="main">
 
