@@ -228,7 +228,7 @@ function people_shortcode( $atts ) {
 					<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_fname" ) . ' ' . get_cmb_value( "person_lname" ) . ( $link ? '</a>' : '' ) . '</h4>
 					<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>
 					<p class="person-phone">' . get_cmb_value( "person_phone" ) . '</p>
-					<p class="person-tollfree">' . get_cmb_value( "person_tollfree" ) . '</p>
+					<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>
 					<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>
 					<p class="person-excerpt">' . get_the_excerpt() . '</p>
 					<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>
