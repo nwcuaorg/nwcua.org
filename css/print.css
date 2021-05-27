@@ -1,0 +1,29 @@
+.sidebar, .footer, .showcase, .page-articles, .showcase-subnav {
+	display: none;
+}
+
+.accordions .accordion .accordion-handle h3 {
+	padding: 0 0 0 20px;
+	color: black;
+}
+.accordions .accordion .accordion-content {
+	padding: 0 0 0 20px;
+	display: block;
+}
+
+.container {
+	box-shadow: none;
+	border: 0;
+}
+
+header .logo img {
+	max-width: 250px;
+}
+
+.icons .icon .icon-image {
+	width: 15% !important;
+}
+
+.icons .icon .icon-content {
+	width: 85% !important;
+}

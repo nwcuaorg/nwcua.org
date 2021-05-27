@@ -17,20 +17,17 @@
 
 <?php wp_head(); ?>
 <link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=21" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
 </head>
 <body <?php body_class(); ?>>
 <div class="container">
 <header>
-
-	<div class="wrap">
 	
-		<div class="logo">
-			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
-			</a>
-		</div>
-
+	<div class="logo">
+		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+		</a>
 	</div>
 
 	<nav>
