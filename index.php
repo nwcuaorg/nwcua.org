@@ -55,7 +55,7 @@ get_header();
 		    <div class="filter">
 		    	<h3>Browse by Category</h3>
 		    	<div class="browse-by-category">
-		    		<?php wp_dropdown_categories( array( 'show_option_all' => 'Select Category', 'value_field' => 'slug', 'class' => 'category-select' ) ); ?>
+		    		<?php wp_dropdown_categories( array( 'show_option_all' => 'Select Category', 'value_field' => 'slug', 'class' => 'category-select', 'orderby' => 'name' ) ); ?>
 		    	</div>
 		    	<h3>Browse by Date</h3>
 		    	<div class="browse-by-date">
