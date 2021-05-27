@@ -106,7 +106,6 @@ jQuery(document).ready(function($){
 	// set auto-rotate timer var so that it exists.
 	var auto_rotate = 0;
 
-
 	// count the slides
 	var slide_count = showcase_simple.find( '.slide' ).size();
 
@@ -143,7 +142,7 @@ jQuery(document).ready(function($){
 			}, 400 );
 
 			// refresh showcase height
-			showcase_height();
+			showcase_simple_height();
 
 		};
 		
@@ -170,7 +169,7 @@ jQuery(document).ready(function($){
 			}, 400 );
 
 			// refresh showcase height
-			showcase_height();
+			showcase_simple_height();
 
 		};
 
