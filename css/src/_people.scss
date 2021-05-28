@@ -27,7 +27,33 @@
 }
 
 
-.people.list {
+.two-column .right-column .people.list, .two-column .right-column .person-single {
+	.person-entry {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 50%;
+
+		.person-thumbnail {
+			flex: 1;
+			flex-basis: 30%;
+
+			.wp-post-image {
+				float: none;
+				margin: 0;
+				max-width: 100%;
+			}
+		}
+
+		.person-info {
+			flex: 1;
+			flex-basis: 70%;
+		}
+	}
+}
+
+
+
+.people.list, .person-single {
 	.right-column & .people-listing {
 		@include respond-to( 900px ) {
 			display: flex;
@@ -81,11 +107,14 @@
 }
 
 
-.person-single .person-entry.right {
-	@include respond-to( 500px ) {
-		float: right;
-		width: 300px;
-		margin: 0 0 15px 15px;
+.person-single .person-entry {
+	max-width: 400px;
+
+	&.right {
+		@include respond-to( 500px ) {
+			float: right;
+			margin: 0 0 15px 15px;
+		}
 	}
 }
 
