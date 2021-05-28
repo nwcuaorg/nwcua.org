@@ -266,7 +266,6 @@ function person_shortcode( $atts ) {
 
 	if ( !empty( $id ) ) {
 
-
 		// set some query vars
 		$person = get_post( $id );
 
