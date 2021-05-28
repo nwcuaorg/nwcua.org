@@ -261,7 +261,8 @@ function person_shortcode( $atts ) {
 	// set default params and override with those in shortcode
 	extract( shortcode_atts( array(
 		'link' => true,
-		'id' => ''
+		'id' => '',
+		'align' => 'left',
 	), $atts ) );
 
 	if ( !empty( $id ) ) {
@@ -269,7 +270,7 @@ function person_shortcode( $atts ) {
 		// set some query vars
 		$person = get_post( $id );
 
-	    $person_content = '<section class="person-single">';
+	    $person_content = '<section class="person-single ' . $align . '">';
 
 		$person_content .='<div class="person-entry visible">' . 
 			( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') .

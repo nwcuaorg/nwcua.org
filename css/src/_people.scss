@@ -81,19 +81,11 @@
 }
 
 
-.person-single .person-entry {
+.person-single .person-entry.right {
 	@include respond-to( 500px ) {
 		float: right;
-		width: 250px;
+		width: 300px;
 		margin: 0 0 15px 15px;
-	}
-}
-
-
-.guide .librarian .person-single .person-entry {
-	@include respond-to( 500px ) {
-		float: none;
-		width: auto;
 	}
 }
 
