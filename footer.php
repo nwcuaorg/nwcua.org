@@ -17,6 +17,7 @@ $admin_email = get_option( 'admin_email' );
 		<div class="columns">
 			<div class="column">
 				<?php print do_shortcode( '[snippet slug="footer-address" /]' ); ?>
+				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> NWCUA. All Rights Reserved.</div>
 			</div>
 			<div class="column">
 				<h3>Links</h3>
@@ -30,6 +31,7 @@ $admin_email = get_option( 'admin_email' );
 				<?php print do_shortcode( '[snippet slug="footer-subscribe" /]' ); ?>
 			</div>
 		</div>
+
 	</footer>
 
 </div><!-- #container -->
