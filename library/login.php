@@ -79,6 +79,7 @@ function remove_admin_bar() {
 }
 
 
+// https://staging-nwcua.cs14.force.com/s/
 // display the my account/login links based on user state.
 function account_button() {
 
