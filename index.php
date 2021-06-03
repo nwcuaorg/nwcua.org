@@ -40,12 +40,13 @@ get_header();
 			while ( have_posts() ) : the_post(); 
 		        $categories = get_the_category();
 		        $cat = $categories[0];
+		        $color = get_category_color( $cat->term_id );
 		        if ( $count == 0 && $paged == 0 ) {
 		        	?>
 	       	<div class="entry first">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
-		    		<div class="entry-category <?php print $cat->slug ?>"><?php print $cat->name ?></div>
+		    		<div class="entry-category <?php print $cat->slug ?> <?php print $color ?>"><?php print $cat->name ?></div>
 		   		</div>
 	        	<div class="entry-inner">
 		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
@@ -70,7 +71,7 @@ get_header();
 	       	<div class="entry">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
-		    		<div class="entry-category <?php print $cat->slug ?>"><?php print $cat->name ?></div>
+		    		<div class="entry-category <?php print $cat->slug ?> <?php print $color ?>"><?php print $cat->name ?></div>
 		   		</div>
 	        	<div class="entry-inner">
 		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>

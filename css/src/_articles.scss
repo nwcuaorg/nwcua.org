@@ -33,7 +33,7 @@
 				@include font-bold;
 				letter-spacing: .5px;
 
-				&::after {
+				&:after {
 					content: '';
 					background: $grey;
 					transform: skew( -35deg );
@@ -46,10 +46,17 @@
 					opacity: .9;
 				}
 
-				&.advocacy::after { background: $navy; }
-				&.compliance::after { background: $orange; }
-				&.foundation::after { background: $seafoam; }
-				&.advocacy-on-the-move::after { background: $navy; }
+				&.grey-dark:after { background: $grey-dark; }
+				&.navy:after { background: $navy; }
+				&.orange:after { background: $orange; }
+				&.seafoam:after { background: $seafoam; }
+				&.forest:after { background: $forest; }
+				&.aqua:after { background: $aqua; }
+				&.green:after { background: $green; }
+				&.lime:after { background: $lime; }
+				&.river:after { background: $river; }
+				&.teal:after { background: $teal; }
+				&.yellow:after { background: $yellow; }
 			}
 		}
 

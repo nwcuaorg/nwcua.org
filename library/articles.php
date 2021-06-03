@@ -39,12 +39,13 @@ function articles_shortcode( $atts ) {
 	        $query->the_post();
 	        $categories = get_the_category();
 	        $cat = $categories[0];
+	        $color = get_category_color( $cat->term_id );
 	        $return .= '<div class="entry">';
 	        $return .= '<div class="entry-thumbnail">';
 	        $return .= '<a href="' . get_the_permalink() . '">';
 	        $return .= get_the_post_thumbnail( null, array( 768, 480 ) );
 	        $return .= '</a>';
-		    $return .= '<div class="entry-category ' . $cat->slug . '">' . $cat->name . '</div>';
+		    $return .= '<div class="entry-category ' . $cat->slug . ' ' . $color . '">' . $cat->name . '</div>';
 		    $return .= '</div>';
 	        $return .= '<div class="entry-inner">';
 		    $return .= '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';

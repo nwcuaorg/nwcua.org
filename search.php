@@ -43,12 +43,13 @@ if ( $paged > 0 ) {
 			$fpost = $featured_post[0];
 	        $categories = get_the_category( $fpost->ID );
 	        $cat = $categories[0];
+	        $color = get_category_color( $cat->term_id );
 	        $permalink = get_permalink( $fpost->ID );
 			?>
 			<div class="entry">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php print $permalink ?>"><?php print get_the_post_thumbnail( $fpost->ID, array( 768, 480 ) ); ?></a>
-		    		<div class="entry-category <?php print $cat->slug ?>"><?php print $cat->name ?></div>
+		    		<div class="entry-category <?php print $cat->slug ?> <?php print $color ?>"><?php print $cat->name ?></div>
 		   		</div>
 	        	<div class="entry-inner">
 		    		<h4><a href="<?php print $permalink ?>"><?php print $fpost->post_title ?></a></h4>
