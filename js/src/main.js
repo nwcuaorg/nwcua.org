@@ -66,9 +66,5 @@ jQuery(document).ready(function($){
 		}
 	});
 
-
-	// set up datatables
-	$('table').DataTable();
-
 });
 

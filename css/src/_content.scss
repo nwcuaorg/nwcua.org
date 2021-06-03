@@ -59,12 +59,41 @@
 	}
 
 	table {
-		width: 100%;
+		width: 102%;
+		margin: 0 -1%;
 
 		tr {
 			td {
 				vertical-align: top;
-				padding: 6px 10px;
+				padding: 8px 1%;
+				line-height: 1.5em;
+				border: 0;
+			}
+
+			&.odd td {
+				background: transparent;
+			}
+		}
+
+		tbody.row-hover tr:hover td {
+			background: transparent;
+		}
+
+		caption {
+			padding: 5px 0 0 1%;
+
+			a {
+				display: inline-block;
+				background: $grey-dark;
+				color: white;
+				padding: 8px 12px;
+				border-radius: 4px;
+				margin: 10px 0 0 1%;
+				opacity: .5;
+
+				&:hover {
+					opacity: .8;
+				}
 			}
 		}
 	}
