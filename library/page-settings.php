@@ -63,6 +63,12 @@ function page_title_metabox( $meta_boxes ) {
     ) );
 
     $page_settings_metabox->add_field( array(
+        'name' => 'Menu Title Link',
+        'id'   => CMB_PREFIX . 'page-menu-title-link',
+        'type' => 'text'
+    ) );
+
+    $page_settings_metabox->add_field( array(
         'name' => 'Menu',
         'id'   => CMB_PREFIX . 'page-menu',
         'type' => 'select',

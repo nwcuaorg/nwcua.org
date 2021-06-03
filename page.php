@@ -15,7 +15,10 @@ the_page_title();
 		if ( has_cmb_value( 'page-menu' ) ) {
 		?>
 		<div class="widget widget_nav_menu">
-			<?php if ( has_cmb_value( 'page-menu-title' ) ) ?><div class="widget-title"><h4><?php show_cmb_value( 'page-menu-title' ); ?></h4></div>
+			<?php $menu_title_link = get_cmb_value( 'page-menu-title-link' ); ?>
+			<div class="widget-title">
+				<h4><?php print ( !empty( $menu_title_link ) ? '<a href="' . $menu_title_link . '">': '' ) ?><?php show_cmb_value( 'page-menu-title' ); ?><?php print ( !empty( $menu_title_link ) ? '</a>': '' ) ?></h4>
+			</div>
 			<?php wp_nav_menu( array( 'menu' => get_cmb_value( 'page-menu' ) ) ); ?>
 		</div>
 		<?php
