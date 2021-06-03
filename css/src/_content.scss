@@ -116,11 +116,11 @@
 	padding: 20px;
 	@extend .content-style;
 
-	@include respond-to( 768px ) {
+	@include respond-to( $bp-m ) {
 		padding: 30px 40px;
 	}
 
-	@include respond-to( 1024px ) {
+	@include respond-to( $bp-l ) {
 		padding: 40px 50px;
 	}
 }
@@ -179,12 +179,12 @@
 }
 
 
-.single-post .right-column .wp-post-image {
+.single-post .two-column .right-column .wp-post-image {
 	border: 1px solid $grey-light;
 	box-shadow: 0 0 20px rgba( $grey-light, .5 );
 	margin: 10px 0;
 
-	@include respond-to( 1024px ) {
+	@include respond-to( $bp-l ) {
 		float: right;
 		margin: 0 0 15px 15px;
 		max-width: 50%;
