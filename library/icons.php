@@ -64,7 +64,7 @@ function icon_metabox( $meta_boxes ) {
     $showcase_metabox = new_cmb2_box( array(
         'id' => 'icons_metabox',
         'title' => 'Icons',
-        'object_types' => array( 'page' ), // post type
+        'object_types' => array( 'page', 'event' ), // post type
         'context' => 'normal',
         'priority' => 'high',
     ) );

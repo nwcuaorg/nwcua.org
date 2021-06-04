@@ -58,3 +58,4 @@ register_sidebar( array(
 
 
 add_theme_support('title-tag');
+

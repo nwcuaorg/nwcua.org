@@ -34,12 +34,12 @@ get_header();
 				$end = get_cmb_value( 'event_end' );
 				print "<h4>Date</h4>";
 				if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
-					print "<p>" . date( "F jS g:i a", $start ) . " -<br>";
-					print date( "F jS g:i a", $end ) . " P" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
-					print "<p>" . date( "F jS g:i a", $start + 3600 ) . " -<br>";
-					print date( "F jS g:i a", $end + 3600 ) . " M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
+					print "<p>" . date( "F j g:i a", $start ) . " -<br>";
+					print date( "F j g:i a", $end ) . " P" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
+					print "<p>" . date( "F j g:i a", $start + 3600 ) . " -<br>";
+					print date( "F j g:i a", $end + 3600 ) . " M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
 				} else {
-					print "<p>" . date( "F jS", $start ) . "</p>";
+					print "<p>" . date( "F j", $start ) . "</p>";
 					print "<p>" . date( "g:i a", $start );
 					print " - " . date( "g:i a", $end );
 					print " P" . ( date( 'I', $start ) ? "D" : "S" ) . "T<br>";
@@ -72,7 +72,7 @@ get_header();
 			}
 			
 			if ( has_cmb_value( 'event_registration' ) ) {
-				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn-arrow green">Register Now</a></p>';
+				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green">Register Now</a></p>';
 			}
 
 
@@ -87,6 +87,8 @@ get_header();
 		<div class="right-column">
 			<div class="right-column-inner">
 				<?php the_content(); ?>
+
+				<?php the_icons(); ?>
 			</div>
 		</div>
 	</div><!-- #content -->
