@@ -50,3 +50,16 @@ function cmb2_metabox_show_on_template( $display, $meta_box ) {
 }
 add_filter( 'cmb2_show_on', 'cmb2_metabox_show_on_template', 10, 2 );
 
+
+// a sanitization callback to allow html inside a field.
+function cmb2_sanitize_allow_span( $value, $field_args, $field ) {
+
+    /*
+     * Do your custom sanitization. 
+     * strip_tags can allow whitelisted tags
+     * http://php.net/manual/en/function.strip-tags.php
+     */
+    $value = strip_tags( $value, '<span></span>' );
+
+    return $value;
+}

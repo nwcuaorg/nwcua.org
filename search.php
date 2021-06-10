@@ -36,10 +36,10 @@ if ( $paged > 0 ) {
 		
 	<?php if ( $paged == 0 ) { ?>
 	<div class="featured-search">
-		<p class="featured-search-title">Featured Results:</p>
+		<p class="featured-search-title">Trending Searches:</p>
 		<div class="article-cards">
 			<?php
-			$featured_post = get_posts( array( 'posts_per_page' => 1, 'category_name' => 'featured', 'post_type' => 'post' ) );
+			$featured_post = get_posts( array( 'posts_per_page' => 1, 'category_name' => 'trending', 'post_type' => 'post' ) );
 			$fpost = $featured_post[0];
 	        $categories = get_the_category( $fpost->ID );
 	        $cat = $categories[0];

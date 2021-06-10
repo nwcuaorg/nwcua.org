@@ -34,6 +34,7 @@ function page_title_metabox( $meta_boxes ) {
         'name' => 'Title',
         'id'   => CMB_PREFIX . 'page-title',
         'type' => 'text',
+        'sanitization_cb' => 'cmb2_sanitize_allow_span',
     ) );
 
     $page_settings_metabox->add_field( array(
