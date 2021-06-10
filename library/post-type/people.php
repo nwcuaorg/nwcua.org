@@ -181,7 +181,7 @@ function people_shortcode( $atts ) {
 		'category' => '',
 		'link' => 1,
 		'show_search' => 0,
-		'style' => 'list'
+		'style' => 'list' // cards, list
 	), $atts ));
 
 
@@ -208,7 +208,7 @@ function people_shortcode( $atts ) {
 	// run the query
     $p = new WP_Query( $vars );
 
-    $people_content = '<section class="people ' . ( $style == 'list' ? 'list' : 'cards' ) . '">';
+    $people_content = '<section class="people ' . $style . '">';
 
    	if ( $show_search ) {
 		$people_content .= '<div class="people-search"><input type="text" name="people-search-term" id="s" placeholder="Search Name, Academic Department, or Title"></div>';

@@ -120,6 +120,7 @@
 
 
 .people.cards .people-listing {
+
 	@include respond-to( 500px ) {
 		display: flex;
 		flex-wrap: wrap;
@@ -175,6 +176,22 @@
 		@include respond-to( 1220px ) {
 			flex-basis: 22%;
 			margin-right: 3%;
+		}
+	}
+
+	.right-column & {
+		.person-entry {
+			@include respond-to( 768px ) {
+				flex: 1;
+				flex-basis: 47%;
+				flex-grow: 0;
+				margin: 0 3% 20px 0;
+			}
+
+			@include respond-to( 1220px ) {
+				flex-basis: 31%;
+				margin-right: 2.3333%;
+			}
 		}
 	}
 }

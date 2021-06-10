@@ -40,7 +40,7 @@ the_page_title();
 			endwhile;
 		endif;
 
-		print do_shortcode( '[people category="' . get_cmb_value( 'person_group' ) . '" /]' );
+		if ( has_cmb_value( 'person_group' ) ) print do_shortcode( '[people category="' . get_cmb_value( 'person_group' ) . '" /]' );
 
 		?>
 		</div>
