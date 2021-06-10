@@ -7,14 +7,16 @@
 		color: white;
 		padding: 10px 20px;
 		text-transform: uppercase;
-		font-size: 2.5em;
+		font-size: 2em;
 		line-height: 1em;
 
 		@include respond-to( $bp-l ) {
+			font-size: 2.2em;
 			padding: 15px 40px 12px;
 		}
 
 		@include respond-to( $bp-xl ) {
+			font-size: 2.4em;
 			padding: 15px 50px 12px;
 		}
 

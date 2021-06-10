@@ -47,11 +47,11 @@ header {
 			overflow: hidden;
 			text-indent: 1000px;
 			
-			@include respond-to( 400px ) {
+			@include respond-to( $bp-s ) {
 				right: 20px;
 			}
 
-			@include respond-to( $bp-s ) {
+			@include respond-to( $bp-m ) {
 				display: none;
 			}
 		}
@@ -64,12 +64,12 @@ header {
 			padding: 0 20px;
 			@include font-bold;
 			
-			@include respond-to( $bp-s ) {
+			@include respond-to( $bp-m ) {
 				display: block;
 				@include clearfix;
 			}
 
-			@include respond-to( $bp-s ) {
+			@include respond-to( $bp-m ) {
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -91,7 +91,7 @@ header {
 			}
 
 			li {
-				@include respond-to( $bp-s ) {
+				@include respond-to( $bp-m ) {
 					box-shadow: none;
 					position: relative;
 					display: inline-block;
@@ -194,7 +194,7 @@ header {
 	.search-form {
 		display: none;
 
-		@include respond-to( $bp-m ) {
+		@include respond-to( 840px ) {
 			display: block;
 			position: absolute;
 			right: 250px;
@@ -227,7 +227,7 @@ header {
 	.account-tools {
 		display: none;
 
-		@include respond-to( $bp-s ) {
+		@include respond-to( $bp-m ) {
 			display: block;
 			position: absolute;
 			right: 40px;
