@@ -72,7 +72,7 @@ get_header();
 			}
 			
 			if ( has_cmb_value( 'event_registration' ) ) {
-				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green">Register Now</a></p>';
+				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green large">Register Now</a></p>';
 			}
 
 
