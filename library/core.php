@@ -59,3 +59,12 @@ register_sidebar( array(
 
 add_theme_support('title-tag');
 
+
+function is_dev() {
+	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.test' ) ) {
+		return true;
+	}
+	return false;
+}
+
+

@@ -1,10 +1,14 @@
 <?php
 
 
+
 // authenticate a user
-$_SESSION['sf_user']['email'] = 'james@jpederson.com';
-$_SESSION['sf_user']['firstname'] = 'James';
-$_SESSION['sf_user']['lastname'] = 'Pederson';
+if ( is_dev() ) {
+	$_SESSION['sf_user']['email'] = 'james@jpederson.com';
+	$_SESSION['sf_user']['firstname'] = 'James';
+	$_SESSION['sf_user']['lastname'] = 'Pederson';
+}
+
 
 
 // get the request URI and remove the query string
