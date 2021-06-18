@@ -103,13 +103,6 @@ function job_metaboxes( $meta_boxes ) {
     ));
 
     $job_metabox->add_field( array(
-        'name' => 'Color',
-        'id'   => CMB_PREFIX . 'job_color',
-        'type' => 'select',
-		'options' => $colors
-    ) );
-
-    $job_metabox->add_field( array(
         'name' => 'Region',
         'id'   => CMB_PREFIX . 'job_region',
         'type' => 'text',

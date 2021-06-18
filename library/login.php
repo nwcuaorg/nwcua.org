@@ -1,6 +1,11 @@
 <?php
 
 
+// authenticate a user
+$_SESSION['sf_user']['email'] = 'james@jpederson.com';
+$_SESSION['sf_user']['firstname'] = 'James';
+$_SESSION['sf_user']['lastname'] = 'Pederson';
+
 
 // get the request URI and remove the query string
 $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );

@@ -36,6 +36,10 @@
 
 .job-list {
 	.entry-job {
+		.job-delete {
+			float: right;
+		}
+
 		.job-title {
 			position: relative;
 			padding: 0;

@@ -90,6 +90,10 @@ get_header();
 
 				?>
 			</div>
+			<hr />
+			<div class="job-editor">
+				<?php  ?>
+			</div>
 		</div>
 				<?php
 			endwhile;
