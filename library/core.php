@@ -37,7 +37,6 @@ register_sidebar( array(
     'before_title' => '<div class="widget-title"><h4>',
     'after_title' => '</h4></div>',
 ) );
-
 register_sidebar( array(
 	'id' => 'jobs-sidebar',
 	'name'=> 'Jobs Sidebar',
@@ -46,7 +45,6 @@ register_sidebar( array(
     'before_title' => '<div class="widget-title"><h4>',
     'after_title' => '</h4></div>',
 ) );
-
 register_sidebar( array(
 	'id' => 'anthem-sidebar',
 	'name'=> 'Anthem Sidebar',
@@ -57,9 +55,13 @@ register_sidebar( array(
 ) );
 
 
+
+// add title tag support to the theme
 add_theme_support('title-tag');
 
 
+
+// boolean to see if it's the dev site.
 function is_dev() {
 	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.test' ) ) {
 		return true;
