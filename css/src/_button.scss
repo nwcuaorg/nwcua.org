@@ -79,5 +79,19 @@
 	&.grey-dark, &.dark-grey {
 		background-color: $grey-dark;
 	}
+
+	&.back {
+		background-image: url(../img/button-arrow-left.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding-left: 30px;
+	}
+
+	&.next {
+		background-image: url(../img/button-arrow-right.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding-right: 30px;
+	}
 }
 
