@@ -61,7 +61,7 @@ header {
 			background: $navy;
 			position: relative;
 			z-index: 1000;
-			padding: 0 20px;
+			padding: 0 10px;
 			@include font-bold;
 			
 			@include respond-to( $bp-m ) {
