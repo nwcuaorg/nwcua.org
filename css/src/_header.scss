@@ -69,11 +69,11 @@ header {
 				@include clearfix;
 			}
 
-			@include respond-to( $bp-m ) {
+			@include respond-to( $bp-l ) {
 				position: absolute;
 				top: 0;
 				right: 0;
-				padding: 0 30px 0 60px;
+				padding: 0 30px 0 10px;
 				background: $navy;
 				z-index: 100;
 
@@ -123,10 +123,6 @@ header {
 				}
 
 				&:hover, &.open {
-					a {
-						background-color: rgba( white, .1 );
-					}
-
 					ul.sub-menu {
 						@include respond-to( $bp-s ) {
 							display: block;
@@ -140,11 +136,18 @@ header {
 
 					@include respond-to( $bp-m ) {
 						position: absolute;
-						right: 0;
+						left: 0;
 						top: 50px;
-						width: 250px;
+						width: 220px;
 						@include clearfix;
 						background: $navy;
+						z-index: 1000;
+					}
+
+					@include respond-to( $bp-l ) {
+						left: auto;
+						right: 0;
+						width: 250px;
 					}
 
 					li {
@@ -159,11 +162,15 @@ header {
 
 							@include respond-to( $bp-m ) {
 								padding: 14px;
-								text-align: right;
+								text-align: left;
 
 								&:hover {
 									background-color: rgba( $navy, .1 );
 								}
+							}
+
+							@include respond-to( $bp-l ) {
+								text-align: right;
 							}
 						}
 
@@ -173,12 +180,20 @@ header {
 
 							@include respond-to( $bp-m ) {
 								position: absolute;
-								right: 250px;
+								left: 220px;
 								top: 0;
-								width: 250px;
+								width: 220px;
 								@include clearfix;
 								text-align: left;
 								z-index: 1001;
+							}
+
+							@include respond-to( $bp-l ) {
+								position: absolute;
+								left: auto;
+								right: 250px;
+								top: 0;
+								width: 250px;
 							}
 						}
 
@@ -198,9 +213,13 @@ header {
 			display: block;
 			position: absolute;
 			right: 250px;
-			bottom: 40px;
+			bottom: 80px;
 			width: 200px;
 			border: 3px solid rgba( $grey, .2 );
+		}
+
+		@include respond-to( $bp-l ) {
+			bottom: 40px;
 		}
 
 		input[type=submit] {
@@ -231,7 +250,7 @@ header {
 			display: block;
 			position: absolute;
 			right: 40px;
-			bottom: 40px;
+			bottom: 80px;
 			width: 200px;
 			border: 3px solid rgba( $grey, .2 );
 
@@ -244,6 +263,10 @@ header {
 				color: white;
 				background: $navy;
 			}
+		}
+
+		@include respond-to( $bp-l ) {
+			bottom: 40px;
 		}
 
 		&:after {
