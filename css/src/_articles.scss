@@ -184,7 +184,11 @@
 
 .page-articles {
 	position: relative;
-	padding-top: 15px;
+	padding: 15px 20px;
+
+	@include respond-to( $bp-s ) {
+		padding: 15px 0 0 0;
+	}
 
 	&:before {
 		position: absolute;
