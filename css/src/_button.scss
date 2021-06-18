@@ -80,14 +80,14 @@
 		background-color: $grey-dark;
 	}
 
-	&.back {
+	&.back, &.previous, &.left {
 		background-image: url(../img/button-arrow-left.png);
 		background-repeat: no-repeat;
 		background-position: left center;
 		padding-left: 30px;
 	}
 
-	&.next {
+	&.forward, &.next, &.right {
 		background-image: url(../img/button-arrow-right.png);
 		background-repeat: no-repeat;
 		background-position: right center;
