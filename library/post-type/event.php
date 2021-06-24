@@ -162,15 +162,26 @@ function event_metaboxes( $meta_boxes ) {
         'type' => 'text'
     ) );
 
+    $ad_groups = array_merge( array(
+        '0' => '- select an ad group -',
+    ), get_ad_groups() );
+    $event_metabox->add_field( array(
+        'name' => 'Ad Group',
+        'desc' => 'Select an ad group for the sidebar ad (if empty, no ad group will be displayed.',
+        'id' => CMB_PREFIX . 'ad_group',
+        'type' => 'select',
+        'options' => $ad_groups 
+    ) );
+
 }
 add_filter( 'cmb2_admin_init', 'event_metaboxes' );
 
 
 
 function add_event_query_vars_filter( $vars ){
-  $vars[] = "mo";
-  $vars[] = "yr";
-  return $vars;
+	$vars[] = "mo";
+	$vars[] = "yr";
+	return $vars;
 }
 add_filter( 'query_vars', 'add_event_query_vars_filter' );
 

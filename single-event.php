@@ -82,6 +82,15 @@ get_header();
 				show_cmb_wysiwyg_value( 'event_location_text' );
 				print '</div>';
 			}
+
+
+			// if we have an event group
+			$event_ad_group = get_cmb_value( 'ad_group' );
+			if ( !empty( $event_ad_group ) ) {
+				print '<div class="event-ad">';
+				do_ad_group( $event_ad_group );
+				print '</div>';
+			}
 			?>
 		</div>
 		<div class="right-column">
