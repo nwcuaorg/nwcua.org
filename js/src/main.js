@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
 
 
 	// couple of quick bindings for magnific popup
-	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
+	$( '.lightbox-iframe, .video' ).magnificPopup({ 'type': 'iframe' });
 	$( '.lightbox' ).magnificPopup({ 'type': 'image' });
 
 

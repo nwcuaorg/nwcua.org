@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
 			$(".entry-job:icontains("+value+")").each(function( index ){
             	$(this).show();
 		    });
-		});​
+		});
 	}
 
 });
