@@ -174,10 +174,12 @@
 		position: relative;
 		padding-left: 70px;
 		padding-bottom: 20px;
+		min-height: 75px;
 
 		@include respond-to( 1024px ) {
 			padding-left: 100px;
 			padding-bottom: 30px;
+			min-height: 100px;
 		}
 
 		.event-date {
