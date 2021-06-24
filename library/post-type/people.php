@@ -181,7 +181,8 @@ function people_shortcode( $atts ) {
 		'category' => '',
 		'link' => 1,
 		'show_search' => 0,
-		'style' => 'list' // cards, list
+		'style' => 'list', // cards, list
+		'exclude' => 0
 	), $atts ));
 
 
@@ -193,6 +194,9 @@ function people_shortcode( $atts ) {
 		"meta_key" => CMB_PREFIX . 'person_lname',
 		"order" => 'ASC'
 	);
+
+	// 
+	if ( $exclude > 0 ) $vars['post__not_in'] = explode( ',', $exclude );
 
 	if ( !empty( $category ) ) {
 		$vars["tax_query"] = array(
