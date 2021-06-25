@@ -8,17 +8,6 @@ footer {
 	line-height: 1.5em;
 	position: relative;
 
-	&:before {
-		position: absolute;
-		top: -12px;
-		left: 0;
-		width: 100%;
-		height: 12px;
-		content: '';
-		background: url( ../img/border-header.jpg ) center center no-repeat;
-		background-size: cover;
-	}
-
 	a {
 		color: white;
 		opacity: .7;
