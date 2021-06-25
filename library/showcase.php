@@ -23,7 +23,7 @@ function the_showcase() {
 				$title = ( isset( $slide['title'] ) ? $slide['title'] : '' );
 
 				?>
-			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
+			<div class="slide slide-<?php print ( $key==0 ? ' visible' : '' ); ?>" data-id="<?php print $key; ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
 				
 				<?php if ( !empty( $content ) ) { ?>
 				<div class="slide-content">
@@ -36,7 +36,6 @@ function the_showcase() {
 				<?php } else if ( !empty( $title ) ) { ?>
 				<h1 class="slide-title"><?php print $title; ?></h1>
 				<?php } ?>
-
 			</div>
 				<?php
 
@@ -49,6 +48,13 @@ function the_showcase() {
 			<div class="showcase-nav">
 				<a class="previous">Previous</a>
 				<a class="next">Next</a>
+			</div>
+			<div class="showcase-buttons">
+				<?php
+				foreach ( $slides as $key => $slide ) {
+					print '<a class="button' . ( $key == 0 ? ' current' : '' ) . '" data-id="' . $key . '"></a>';
+				}
+				?>
 			</div>
 			<?php
 		}

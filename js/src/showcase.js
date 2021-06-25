@@ -44,6 +44,9 @@ jQuery(document).ready(function($){
 				current_slide.removeClass( 'visible' );
 				prev_slide.addClass( 'visible' );
 
+				// update the buttons
+				update_buttons();
+
 			};
 			
 
@@ -62,7 +65,26 @@ jQuery(document).ready(function($){
 				// switch the slides
 				current_slide.removeClass( 'visible' );
 				next_slide.addClass( 'visible' );
+
+				// update the buttons
+				update_buttons();
+
 			};
+			
+
+			// function to update the buttons (dots) so they show the current slide
+			var update_buttons = function() {
+
+				// remove current class from all buttons
+				showcase.find( '.showcase-buttons a.current' ).removeClass( 'current' );
+
+				// get the current slide
+				var current_slide_id = get_current_slide().attr('data-id');
+
+				// remove 'current' class from all buttons
+				showcase.find( '.showcase-buttons a[data-id="'+current_slide_id+'"]' ).addClass( 'current' );
+
+			}
 
 
 			// grab the current slide
@@ -82,9 +104,11 @@ jQuery(document).ready(function($){
 
 			// next/previous click
 			showcase.find( '.showcase-nav a' ).click(function(){
+
+				// if it has the previous class, use that function
 				if ( $(this).hasClass( 'previous' ) ) {
 					prev_slide();
-				} else {
+				} else { // otherwise, next slide
 					next_slide();
 				}
 
@@ -92,6 +116,35 @@ jQuery(document).ready(function($){
 				if ( slide_count > 1 ) {
 					clearInterval( auto_rotate );
 				}
+
+			});
+
+
+			// next/previous click
+			showcase.find( '.showcase-buttons a' ).click(function(){
+
+				var current_slide = get_current_slide();
+				var target_slide = showcase.find( '.slide[data-id="'+$(this).attr('data-id')+'"]' );
+
+				// if the current slide id isn't the same as the target slide
+				if ( current_slide.attr('data-id') != target_slide.attr('data-id') ) {
+
+					// hide current slide
+					current_slide.removeClass( 'visible' );
+
+					// show target slide
+					target_slide.addClass( 'visible' );
+
+					// update the slide buttons
+					update_buttons();
+
+					// stop auto-rotation
+					if ( slide_count > 1 ) {
+						clearInterval( auto_rotate );
+					}
+
+				}
+
 			});
 
 		}
