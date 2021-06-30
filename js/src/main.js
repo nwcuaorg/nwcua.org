@@ -36,8 +36,8 @@ jQuery(document).ready(function($){
 
 
 	// couple of quick bindings for magnific popup
-	$( '.lightbox-iframe, .video' ).magnificPopup({ 'type': 'iframe' });
-	$( '.lightbox' ).magnificPopup({ 'type': 'image' });
+	$( '.lightbox-iframe, .video, .iframe' ).magnificPopup({ 'type': 'iframe' });
+	$( '.lightbox, .image' ).magnificPopup({ 'type': 'image' });
 
 
 	// track the position of the top of the content section

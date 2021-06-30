@@ -93,18 +93,21 @@ function remove_admin_bar() {
 }
 
 
-// https://staging-nwcua.cs14.force.com/s/
 // display the my account/login links based on user state.
 function account_button() {
 
 	// get the referer
 	$referer = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
+	// url for auth (depending on test/production)
+	$sf_url = "https://staging-nwcua.cs14.force.com/s/";
+	// $sf_url = "https://nwcua.force.com/s/";
+
 	// if the user is logged in.
 	if ( isset( $_SESSION['sf_user'] ) ) {
-		?><a href="https://nwcua.force.com/s/my-account" class='account button'>My Account</a><?php
+		?><a href="<?php print $sf_url ?>my-account" class='account button'>My Account</a><?php
 	} else {
-		?><a href="https://nwcua.force.com/s/redirect-with-url-params?url=<?php print $referer ?>" class='account button'>Log In</a><?php 
+		?><a href="<?php print $sf_url ?>redirect-with-url-params?url=<?php print $referer ?>" class='account button'>Log In</a><?php 
 	}
 
 }
