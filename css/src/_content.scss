@@ -190,6 +190,12 @@
 		display: flex;
 	}
 
+	&.reverse {
+		@include respond-to( $bp-m ) {
+			flex-direction: row-reverse;
+		}
+	}
+
 	.sidebar {
 		padding: 20px;
 		background: rgba( $grey, .2 );

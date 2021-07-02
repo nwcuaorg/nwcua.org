@@ -8,7 +8,25 @@ the_page_title();
 
 ?>
 
-<div class="two-column<?php print ( has_showcase() ? '' : ' no-showcase' ) ?>" role="main">
+<div class="two-column<?php print ( has_showcase() ? '' : ' no-showcase' ) ?> reverse" role="main">
+	<div class="right-column">
+		<div class="right-column-inner">
+		<?php 
+		
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post(); 
+				?>
+		<?php the_content(); ?>
+				<?php
+			endwhile;
+		endif;
+
+		the_icons();
+
+		?>
+		</div>
+		<?php the_accordions(); ?>
+	</div>
 	<div class="sidebar">
 
 		<?php 
@@ -64,24 +82,6 @@ the_page_title();
 		}
 		?>
 		
-	</div>
-	<div class="right-column">
-		<div class="right-column-inner">
-		<?php 
-		
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); 
-				?>
-		<?php the_content(); ?>
-				<?php
-			endwhile;
-		endif;
-
-		the_icons();
-
-		?>
-		</div>
-		<?php the_accordions(); ?>
 	</div>
 </div><!-- #content -->
 
