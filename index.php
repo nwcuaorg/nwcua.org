@@ -22,9 +22,7 @@ if ( $paged > 0 ) {
 // rerun the query
 query_posts( $args );
 
-
 get_header(); 
-
 
 ?>
 	<div class="page-title anthem">
