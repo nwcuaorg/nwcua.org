@@ -15,7 +15,7 @@ $query = new WP_Query( array(
 
 foreach ( $query->posts as $edit_post ) {
 	if ( wp_update_post( array( 'ID' => $edit_post->ID, 'post_content' => preg_replace( "/<img[^>]+\>/i", "", $edit_post->post_content, 1 ) ) ) ) {
-		print "Updated post "" . $edit_post->ID . "\n";
+		print "Updated post " . $edit_post->ID . "\n";
 	}
 }
 
