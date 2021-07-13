@@ -7,6 +7,13 @@ if (!session_id()) {
 }
 
 
+
+global $sf_url;
+$sf_url = "https://staging-nwcua.cs14.force.com/s/";
+// $sf_url = "https://nwcua.force.com/s/";
+
+
+
 // authenticate a user
 if ( is_dev() ) {
 	$_SESSION['sf_user']['email'] = 'james@jpederson.com';
@@ -96,12 +103,11 @@ function remove_admin_bar() {
 // display the my account/login links based on user state.
 function account_button() {
 
+	// let's get the URL
+	global $sf_url;
+
 	// get the referer
 	$referer = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-
-	// url for auth (depending on test/production)
-	$sf_url = "https://staging-nwcua.cs14.force.com/s/";
-	// $sf_url = "https://nwcua.force.com/s/";
 
 	// if the user is logged in.
 	if ( isset( $_SESSION['sf_user'] ) ) {
@@ -183,7 +189,11 @@ function user_has_membership() {
 
 // member error
 function do_member_error() {
+
+	// lets get the url
+	global $sf_url;
 	
+	// set the referrer
 	$referer = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 	?>
 	<div class="three-quarter">
@@ -197,7 +207,7 @@ function do_member_error() {
 		} else {
 			?>
 		<h3>A membership is required to view this content.</h3>
-		<p>Please <a href="https://nwcua.force.com/s/redirect-with-url-params?url=<?php print $referer ?>">log in</a> to view this content.</p>
+		<p>Please <a href="<?php print $sf_url; ?>redirect-with-url-params?url=<?php print $referer ?>">log in</a> to view this content.</p>
 			<?php
 		}
 		?> 
