@@ -198,6 +198,85 @@
 }
 
 
+
+.people.speakers .people-listing {
+
+	@include respond-to( 500px ) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -2%;
+	}
+
+	@include respond-to( 900px ) {
+		margin-right: -1.333%;
+	}
+
+	@include respond-to( 1220px ) {
+		margin-right: -2%;
+	}
+
+	.person-entry {
+		display: none;
+		@extend .person-entry;
+
+		.person-title, .person-phone, .person-tollfree, .person-email, .person-excerpt {
+			display: none;
+		}
+
+		&.visible {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			border: 1px solid $grey;
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			text-transform: uppercase;
+		}
+
+		.person-bio-link .btn {
+			display: block;
+		}
+
+		@include respond-to( 500px ) {
+			flex: 1;
+			flex-basis: 47%;
+			flex-grow: 0;
+			margin: 0 3% 20px 0;
+		}
+
+		@include respond-to( 900px ) {
+			flex-basis: 31%;
+			margin-right: 2.3333%;
+		}
+
+		@include respond-to( 1220px ) {
+			flex-basis: 22%;
+			margin-right: 3%;
+		}
+	}
+
+	.right-column & {
+		.person-entry {
+			@include respond-to( 768px ) {
+				flex: 1;
+				flex-basis: 47%;
+				flex-grow: 0;
+				margin: 0 3% 20px 0;
+			}
+
+			@include respond-to( 1220px ) {
+				flex-basis: 31%;
+				margin-right: 2.3333%;
+			}
+		}
+	}
+}
+
+
 .bio {
 	.sidebar {
 		img {
