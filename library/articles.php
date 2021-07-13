@@ -24,7 +24,7 @@ function articles_shortcode( $atts ) {
 	}
 
 	if ( !empty( $a['category__not_in'] ) ) {
-		$args['category__not_in'] = $a['category__not_in'];
+		$args['category__not_in'] = explode( ',', $a['category__not_in'] );
 	}
 
 	$query = new WP_Query( $args );

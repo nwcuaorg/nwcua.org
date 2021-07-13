@@ -19,6 +19,8 @@ if ( $paged > 0 ) {
 	$args['posts_per_page'] = 13;
 }
 
+$args['cat'] = '-83,-88';
+
 // rerun the query
 query_posts( $args );
 
