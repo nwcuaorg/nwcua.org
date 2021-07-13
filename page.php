@@ -50,7 +50,7 @@ the_page_title();
 				<h4>Upcoming Events</h4>
 			</div>
 			<div class="widget-events">
-				<?php print do_shortcode( '[events category="' . $event_group . '" /]' ); ?>
+				<?php print do_shortcode( '[events category="' . $event_group . '" limit=3 /]' ); ?>
 				<a href="/events" class="btn navy">View All Events</a>
 			</div>
 			<?php
