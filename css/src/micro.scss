@@ -66,11 +66,15 @@ header {
 
 	.grid-row {
 		@include clearfix;
+		@include respond-to( 768px ) {
+			display: flex;
+		}
 	}
 
 	.two-third {
 		@include respond-to( 768px ) {
-			width: 67%;
+			flex: 1;
+			flex-basis: 67%;
 			margin: 0;
 			padding: 10px 2%;
 		}
@@ -101,7 +105,8 @@ header {
 		padding: 10px 20px;
 
 		@include respond-to( 768px ) {
-			width: 33%;
+			flex: 1;
+			flex-basis: 33%;
 			margin: 0;
 			padding: 30px 1%;
 			min-height: 300px;
@@ -176,6 +181,10 @@ header {
 		&:hover {
 			color: lighten( $grey, 30% );
 		}
+	}
+
+	.content:after {
+		display: none;	
 	}
 }
 

@@ -18,7 +18,7 @@
 		ul {
 			list-style: none;
 			padding: 0;
-			border-top: 1px solid rgba( $grey-light, .3 );
+			border-top: 1px solid rgba( $grey, .3 );
 
 			li {
 				padding: 0;
@@ -29,7 +29,7 @@
 					color: $navy;
 					transition: all 400ms ease-in-out;
 					text-transform: uppercase;
-					border-bottom: 1px solid rgba( $grey-light, .3 );
+					border-bottom: 1px solid rgba( $grey, .3 );
 
 					&:hover {
 						text-decoration: none;

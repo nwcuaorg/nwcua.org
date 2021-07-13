@@ -12,7 +12,7 @@ $accordion-arrow-size: 30px;
 			position: relative;
 			padding: 0;
 			cursor: pointer;
-			background: rgba( $grey-light, .2 );
+			background: rgba( $grey, .2 );
 			overflow: hidden;
 
 			h3 {
@@ -33,7 +33,7 @@ $accordion-arrow-size: 30px;
 					top: 0;
 					width: 120%;
 					height: 100%;
-					background: $grey-light;
+					background: $grey;
 					transform: skew( -35deg );
 				}
 

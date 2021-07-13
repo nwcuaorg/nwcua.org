@@ -43,7 +43,7 @@
 		.job-title {
 			position: relative;
 			padding: 0;
-			background: rgba( $grey-light, .2 );
+			background: rgba( $grey, .2 );
 			overflow: hidden;
 
 			h3 {
@@ -68,7 +68,7 @@
 					top: 0;
 					width: 120%;
 					height: 100%;
-					background: $grey-light;
+					background: $grey;
 					transform: skew( -35deg );
 				}
 
