@@ -18,7 +18,7 @@ get_header();
 
 		<div class="events">
 			<a href="/events" class="all-events">All Events</a>
-			<?php print do_shortcode( '[events limit=3 /]' ); ?>
+			<?php print do_shortcode( '[events limit=3 category="featured-events" /]' ); ?>
 
 			<?php do_ad_group( 'sidebar' ) ?>
 		</div>
