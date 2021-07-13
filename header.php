@@ -16,11 +16,14 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=43" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=44" rel="stylesheet" type="text/css">
 <link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
 </head>
 <body <?php body_class(); ?>>
+
+<?php the_notice_bar(); ?>
+
 <div class="container">
 <header>
 	
