@@ -15,11 +15,13 @@ $sf_url = "https://staging-nwcua.cs14.force.com/s/";
 
 
 // authenticate a user
+/*
 if ( is_dev() ) {
 	$_SESSION['sf_user']['email'] = 'james@jpederson.com';
 	$_SESSION['sf_user']['firstname'] = 'James';
 	$_SESSION['sf_user']['lastname'] = 'Pederson';
 }
+*/
 
 
 

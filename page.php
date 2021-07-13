@@ -12,20 +12,26 @@ the_page_title();
 	<div class="right-column">
 		<div class="right-column-inner">
 		<?php 
-		
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); 
-				?>
-		<?php the_content(); ?>
-				<?php
-			endwhile;
-		endif;
+		if ( is_member() ) {
 
-		the_icons();
+			if ( have_posts() ) :
+				while ( have_posts() ) : the_post(); 
+					?>
+			<?php the_content(); ?>
+					<?php
+				endwhile;
+			endif;
 
-		?>
+			the_icons();
+
+			?>
 		</div>
-		<?php the_accordions(); ?>
+			<?php 
+			the_accordions();
+		} else {
+			do_member_error();
+		}
+		?>
 	</div>
 	<div class="sidebar">
 
