@@ -348,15 +348,9 @@ function the_job_list( $jobs = '', $random = false ) {
 }
 
 
-/*
-add_action( 'gform_post_submission_17', 'job_expiry_timestamp', 10, 2 );
-function job_expiry_timestamp( $entry, $form ) {
-	$expiry_date = get_post_meta( $entry['post_id'], '_p_job_expires_date', true );
-	if ( $start_date ) {
-		$timestamp = strtotime( $start_date );
-		update_post_meta( $entry['post_id'], '_p_job_expires', $timestamp );		
-	}
+add_filter( 'gform_field_value_sf_user', 'populate_sf_user' );
+function populate_sf_user( $value ) {
+    return $_SESSION['sf_user']['email'];
 }
-*/
 
 
