@@ -22,6 +22,8 @@ the_showcase();
 			<?php 
 			if ( in_category( 'advocacy-on-the-move' ) ) {
 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('aotm-sidebar') ) : ?><!-- no sidebar --><?php endif; 
+			} else if ( in_category( 'compliance' ) ) {
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('compliance-sidebar') ) : ?><!-- no sidebar --><?php endif; 
 			} else {
 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('anthem-sidebar') ) : ?><!-- no sidebar --><?php endif; 
 			}
