@@ -7,11 +7,9 @@ if (!session_id()) {
 }
 
 
-
 global $sf_url;
 $sf_url = "https://staging-nwcua.cs14.force.com/s/";
 // $sf_url = "https://nwcua.force.com/s/";
-
 
 
 // authenticate a user
@@ -22,7 +20,6 @@ if ( is_dev() ) {
 	$_SESSION['sf_user']['lastname'] = 'Pederson';
 }
 */
-
 
 
 // get the request URI and remove the query string
@@ -51,7 +48,6 @@ if ( substr( $request, 0, 7 ) == '/logout' ) {
 	exit;
 	
 }
-
 
 
 // [cal-link] shortcode handler

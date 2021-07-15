@@ -76,6 +76,12 @@ function page_title_metabox( $meta_boxes ) {
         'options' => get_all_menus()
     ) );
 
+    $page_settings_metabox->add_field( array(
+        'name' => 'Ad Title',
+        'id'   => CMB_PREFIX . 'page-ad-title',
+        'type' => 'text'
+    ) );
+
     $ad_cats = get_terms( 'ad_group' );
     $ad_groups = array( '' => '- select an ad group -' );
     foreach ( $ad_cats as $cat ) {

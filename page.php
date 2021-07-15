@@ -35,17 +35,19 @@ the_page_title();
 	</div>
 	<div class="sidebar">
 
-		<?php 
+		<?php
+
 		if ( has_cmb_value( 'page-menu' ) ) {
-		?>
-		<div class="widget widget_nav_menu">
-			<?php $menu_title_link = get_cmb_value( 'page-menu-title-link' ); ?>
+			if ( has_cmb_value( 'page-menu-title' ) ) {
+				$menu_title_link = get_cmb_value( 'page-menu-title-link' ); ?>
 			<div class="widget-title">
 				<h4><?php print ( !empty( $menu_title_link ) ? '<a href="' . $menu_title_link . '">': '' ) ?><?php show_cmb_value( 'page-menu-title' ); ?><?php print ( !empty( $menu_title_link ) ? '</a>': '' ) ?></h4>
 			</div>
-			<?php wp_nav_menu( array( 'menu' => get_cmb_value( 'page-menu' ) ) ); ?>
-		</div>
-		<?php
+			<?php } ?>
+			<div class="widget widget_nav_menu">
+				<?php wp_nav_menu( array( 'menu' => get_cmb_value( 'page-menu' ) ) ); ?>
+			</div>
+			<?php
 		}
 
 
@@ -62,19 +64,21 @@ the_page_title();
 			<?php
 		}
 
-		?>
 
-		<?php
 		$group = get_cmb_value( 'page-ad-group' );
 		if ( !empty( $group ) ) {
-			?>
-		<div class="widget widget_media_image">
-			<?php do_ad_group( $group ); ?>
-		</div>
+			if ( has_cmb_value( 'page-ad-title' ) ) { ?>
+			<div class="widget-title">
+				<h4><?php show_cmb_value( 'page-ad-title' ); ?></h4>
+			</div>
+			<?php } ?>
+			<div class="widget widget_media_image">
+				<?php do_ad_group( $group ); ?>
+			</div>
 			<?php 
-		} ?>
+		}
 
-		<?php
+
 		$sidebar_people = get_cmb_value( 'page-people' );
 		if ( !empty( $sidebar_people ) ) {
 			?>
@@ -86,6 +90,7 @@ the_page_title();
 		} else {
 			if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
 		}
+
 		?>
 		
 	</div>
