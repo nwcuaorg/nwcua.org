@@ -55,7 +55,7 @@
 	&.teal { background: $teal; }
 	&.navy { background: $navy; }
 	&.seafoam { background: $seafoam; }
-	&.grey { background: $grey; }
+	&.grey, &.grey-light { background: $grey; }
 	&.grey-dark { background: $grey-dark; }
 	&.yellow { background: $yellow; }
 }
