@@ -3,10 +3,11 @@
  * The template for displaying 404 pages (Not Found)
  */
 
-get_header(); ?>
+get_header(); 
 
+?>
 
-	<div class="site-content content-wide" role="main">
+	<div class="content-wide">
 
 		<h1>Not Found</h1>
 		<p>We couldn't find a page at the URL you requested. Navigate using the menu, or search using the form below.</p>
@@ -18,4 +19,3 @@ get_header(); ?>
 
 get_footer();
 
-?>
