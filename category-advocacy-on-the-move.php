@@ -80,6 +80,7 @@ $category = get_the_category();
 		}
 		?>
 
+		<a name="subscribe"></a>
 		<div class="aotm-title">
 				<h2>Stay up to date on Advocacy!</h2>
 				<p>Sign up for daily or weekly updates.</p>
