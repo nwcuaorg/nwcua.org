@@ -53,6 +53,14 @@ register_sidebar( array(
     'before_title' => '<div class="widget-title"><h4>',
     'after_title' => '</h4></div>',
 ) );
+register_sidebar( array(
+	'id' => 'aotm-sidebar',
+	'name'=> 'Advocacy on the Move Sidebar',
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<div class="widget-title"><h4>',
+    'after_title' => '</h4></div>',
+) );
 
 
 
@@ -64,6 +72,26 @@ add_theme_support('title-tag');
 // boolean to see if it's the dev site.
 function is_dev() {
 	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.test' ) ) {
+		return true;
+	}
+	return false;
+}
+
+
+
+// boolean to see if it's the test site.
+function is_test() {
+	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.org' ) ) {
+		return true;
+	}
+	return false;
+}
+
+
+
+// boolean to see if it's the live site.
+function is_live() {
+	if ( stristr( $_SERVER['HTTP_HOST'], 'nwcua.org' ) && !is_test() ) {
 		return true;
 	}
 	return false;

@@ -19,7 +19,13 @@ the_showcase();
 	<?php } ?>
 	<div class="two-column" role="main">
 		<div class="sidebar">
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('anthem-sidebar') ) : ?><!-- no sidebar --><?php endif; ?>
+			<?php 
+			if ( in_category( 'advocacy-on-the-move' ) ) {
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('aotm-sidebar') ) : ?><!-- no sidebar --><?php endif; 
+			} else {
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('anthem-sidebar') ) : ?><!-- no sidebar --><?php endif; 
+			}
+			?>
 		</div>
 		<div class="right-column">
 			<div class="right-column-inner">
