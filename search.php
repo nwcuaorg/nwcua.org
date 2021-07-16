@@ -39,13 +39,13 @@ if ( $paged > 0 ) {
 		<p class="featured-search-title">Trending Searches:</p>
 		<div class="article-cards">
 			<?php
-			$featured_post = get_posts( array( 'posts_per_page' => 3, 'category_name' => 'trending', 'post_type' => 'post' ) );
-			$fpost = $featured_post[0];
-	        $categories = get_the_category( $fpost->ID );
-	        $cat = $categories[0];
-	        $color = get_category_color( $cat->term_id );
-	        $permalink = get_permalink( $fpost->ID );
-			?>
+			$featured_posts = get_posts( array( 'posts_per_page' => 3, 'category_name' => 'trending', 'post_type' => 'post' ) );
+			foreach( $featured_posts as $fpost ) {
+		        $categories = get_the_category( $fpost->ID );
+		        $cat = $categories[0];
+		        $color = get_category_color( $cat->term_id );
+		        $permalink = get_permalink( $fpost->ID );
+				?>
 			<div class="entry">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php print $permalink ?>"><?php print get_the_post_thumbnail( $fpost->ID, array( 768, 480 ) ); ?></a>
@@ -56,6 +56,9 @@ if ( $paged > 0 ) {
 		    		<p><?php print $fpost->post_excerpt; ?></p>
 		    	</div>
 		    </div>
+				<?php 
+			} 
+			?>
 		</div>
 	</div>
 	<?php } ?>

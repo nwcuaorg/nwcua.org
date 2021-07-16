@@ -5,10 +5,10 @@
 if ( function_exists( 'add_theme_support' ) ) {
 
 	// enable featured image
-	add_theme_support( 'post-thumbnails' ); 
+	add_theme_support( 'post-thumbnails' );
 	
 	// set the default thumbnail size
-	set_post_thumbnail_size( 500, 500, true );
+	set_post_thumbnail_size( 800, 500, true );
 
 }
 
