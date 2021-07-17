@@ -8,8 +8,8 @@ if (!session_id()) {
 
 
 global $sf_url;
-$sf_url = "https://staging-nwcua.cs14.force.com/s/";
-// $sf_url = "https://nwcua.force.com/s/";
+// $sf_url = "https://staging-nwcua.cs14.force.com/s/";
+$sf_url = "https://nwcua.force.com/s/";
 
 
 // authenticate a user
