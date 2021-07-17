@@ -136,15 +136,15 @@ function is_member() {
 
 	print "<!--";
 	print_r( $_SESSION['sf_user'] );
-	show_cmb_value( 'member-only' );
+	print get_cmb_value( 'member-only' );
 	print "-->";
 
 
 	// see if there is a member's only value
-	if ( has_cmb_value( 'members-only' )  ) {
+	if ( has_cmb_value( 'member-only' )  ) {
 
 		// if the content requires membership
-		if ( get_cmb_value( 'members-only' ) == 'on' ) {
+		if ( get_cmb_value( 'member-only' ) == 'on' ) {
 
 			return user_has_membership();
 
