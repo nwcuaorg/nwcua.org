@@ -70,7 +70,7 @@ get_header();
 		        <?php } else { ?>
 	       	<div class="entry">
 	        	<div class="entry-thumbnail">
-	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'post-thumbnail' ); ?></a>
+	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
 		    		<div class="entry-category <?php print $cat->slug ?> <?php print $color ?>"><?php print $cat->name ?></div>
 		   		</div>
 	        	<div class="entry-inner">
