@@ -134,6 +134,12 @@ function is_member() {
 		// update_post_meta( $post->ID, CMB_PREFIX . 'members-only', 'on' );
 	}
 
+	print "<!--";
+	print_r( $_SESSION['sf_user'] );
+	show_cmb_value( 'member-only' );
+	print "-->";
+
+
 	// see if there is a member's only value
 	if ( has_cmb_value( 'members-only' )  ) {
 
@@ -178,10 +184,6 @@ function user_has_membership() {
 		if ( $user['membershiptype'] != 'Non Member' ) return true;
 
 	}
-
-	print "<!--";
-	print_r( $_SESSION['sf_user'] );
-	print "-->";
 
 	// otherwise, the user isn't a member
 	return false;
