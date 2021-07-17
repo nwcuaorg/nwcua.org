@@ -37,7 +37,10 @@ the_showcase();
 				?>
 				<h1><?php the_title(); ?></h1>
 				<p class="post-date"><?php the_date(); ?></p>
-				<?php the_post_thumbnail( 'full' ); ?>
+				<div class="featured-image">
+					<?php the_post_thumbnail( 'full' ); ?>
+					<?php if ( has_cmb_value( 'caption' ) ) { ?><div class="caption"><?php show_cmb_value( 'caption' ) ?></div><?php } ?>
+				</div>
 				<?php the_content(); ?>
 				<p class="quiet">Posted in <?php print get_the_category_list( ', ' ) ?>.</p>
 				<?php

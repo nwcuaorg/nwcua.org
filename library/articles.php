@@ -98,3 +98,27 @@ function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
     echo '<div class="pagination">' . paginate_links( $pagination ) . '</div>';
 }
 
+
+
+// add a metabox for featured image caption
+function caption_metabox( $meta_boxes ) {
+
+    $showcase_metabox = new_cmb2_box( array(
+        'id' => 'caption_metabox',
+        'title' => 'Featured Image Caption',
+        'object_types' => array( 'post' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $showcase_metabox->add_field( array(
+        'name' => 'Caption',
+        'desc' => 'Enter the caption for the featured image.',
+        'id'   => CMB_PREFIX . 'caption',
+        'type' => 'text',
+    ) );
+
+}
+add_filter( 'cmb2_admin_init', 'caption_metabox' );
+
+
