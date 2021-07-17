@@ -277,6 +277,31 @@
 }
 
 
+.accordion-content .people.speakers .people-listing .person-entry {
+	@include respond-to( 500px ) {
+		flex: 1;
+		flex-basis: 47%;
+		flex-grow: 0;
+		margin: 0 3% 20px 0;
+	}
+
+	@include respond-to( 768px ) {
+		flex-basis: 31%;
+		margin-right: 2.3333%;
+	}
+
+	@include respond-to( 900px ) {
+		flex-basis: 22%;
+		margin-right: 3%;
+	}
+
+	@include respond-to( 1220px ) {
+		flex-basis: 18%;
+		margin-right: 2%;
+	}
+}
+
+
 .bio {
 	.sidebar {
 		img {

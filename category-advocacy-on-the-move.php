@@ -54,7 +54,7 @@ $category = get_the_category();
 					?>
 			<div class="entry <?php print ( in_category(86) || in_category(56) ? ' idaho' : '' ); ?><?php print ( in_category(85) || in_category(64) ? ' oregon' : '' ); ?><?php print ( in_category(68) || in_category(84) ? ' washington' : '' ); ?><?php print ( in_category(6514) ? ' regulatory' : '' ); ?>">
 	        	<div class="entry-thumbnail">
-	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
+	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'post-thumbnail' ); ?></a>
 		    		<div class="entry-category <?php print $cat->slug ?> navy">Advocacy on the Move</div>
 		   		</div>
 	        	<div class="entry-inner">
