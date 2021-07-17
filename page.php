@@ -27,7 +27,11 @@ the_page_title();
 			<?php 
 			the_accordions();
 		} else {
-			do_member_error();
+			?>
+		<div class="right-column-inner">
+			<?php do_member_error(); ?>
+		</div>
+			<?php
 		}
 		?>
 	</div>

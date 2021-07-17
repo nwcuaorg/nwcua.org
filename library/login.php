@@ -200,7 +200,7 @@ function do_member_error() {
 	// set the referrer
 	$referer = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 	?>
-	<div class="three-quarter">
+	<div class="member-notice">
 		<?php
 		if ( isset( $_SESSION['sf_user'] ) ) {
 			?>
