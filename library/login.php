@@ -179,6 +179,10 @@ function user_has_membership() {
 
 	}
 
+	print "<!--";
+	print_r( $_SESSION['sf_user'] );
+	print "-->";
+
 	// otherwise, the user isn't a member
 	return false;
 
