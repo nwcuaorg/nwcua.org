@@ -10,6 +10,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 	// set the default thumbnail size
 	set_post_thumbnail_size( 800, 500, true );
 
+    // add headshot image size
+    add_image_size( 'headshot', 500, 700, true );
+
 }
 
 

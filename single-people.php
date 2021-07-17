@@ -14,7 +14,7 @@ the_page_title();
 <div class="two-column<?php print ( has_showcase() ? '' : ' no-showcase' ) ?> bio" role="main">
 	<div class="sidebar">
 
-		<?php the_post_thumbnail() ?>
+		<?php the_post_thumbnail( 'headshot' ); ?>
 		<div class="person-info">
 			<h2><?php the_title(); ?></h2>
 			<?php if ( has_cmb_value( "person_pronouns" ) ) { ?><p class="pronouns">Pronouns: <?php print get_cmb_value( "person_pronouns" ); ?></p><?php } ?>
