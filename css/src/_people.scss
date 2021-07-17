@@ -31,7 +31,7 @@
 	.person-entry {
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 400px;
+		max-width: 50%;
 
 		.person-thumbnail {
 			flex: 1;
@@ -107,13 +107,24 @@
 }
 
 
-.person-single .person-entry {
-	max-width: 400px;
+.content-column .person-single {
+	max-width: 100%;
+	display: flex;
 
-	&.right {
-		@include respond-to( 500px ) {
-			float: right;
-			margin: 0 0 15px 15px;
+	.person-thumbnail {
+		flex: 1;
+		flex-basis: 30%;
+		max-width: 120px;
+	}
+
+	.person-info {
+		flex: 1;
+		flex-basis: 70%;
+		padding-left: 15px;
+
+		p {
+			padding: 0;
+			font-size: .9em;
 		}
 	}
 }

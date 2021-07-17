@@ -266,7 +266,6 @@ function person_shortcode( $atts ) {
 	extract( shortcode_atts( array(
 		'link' => true,
 		'id' => '',
-		'align' => 'left',
 	), $atts ) );
 
 	if ( !empty( $id ) ) {
@@ -274,16 +273,14 @@ function person_shortcode( $atts ) {
 		// set some query vars
 		$person = get_post( $id );
 
-	    $person_content = '<section class="person-single ' . $align . '">';
+	    $person_content = '<section class="person-single">';
 
-		$person_content .='<div class="person-entry visible">' . 
-			'<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') . '</div>' .
+		$person_content .='<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') . '</div>' .
 			'<div class="person-info">
 				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : ''). get_cmb_value( "person_lname", $id ) . ', ' . get_cmb_value( "person_fname", $id ) . ( $link ? '</a>' : '') . '</h4>
 				<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>
 				<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
-			</div>
-		</div>';
+			</div>';
 
 		$person_content .='</section>';
 
