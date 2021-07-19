@@ -8,30 +8,7 @@
 <title>My Account | NWCUA</title>
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="https://nwcua.org/xmlrpc.php" />
-<!--[if lt IE 9]>
-<script src="https://nwcua.org/wp-content/themes/nwcua/js/html5.js" type="text/javascript"></script>
-<![endif]-->
 
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="" />
-<meta property="og:url" content="https://nwcua.org/about/board-of-directors/" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:site_name" content="NWCUA" />
-<meta property="og:image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
-<meta property="og:image:width" content="" />
-<meta property="og:image:height" content="" />
-<meta itemprop="description" content="" />
-<meta itemprop="image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://nwcua.org/about/board-of-directors/" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
-<meta name="twitter:creator" content="@nwcua" />
-<meta name="twitter:site" content="NWCUA" />
-
-<meta name='robots' content='noindex, nofollow' />
 <link rel='stylesheet' id='wp-block-library-css' href='https://nwcua.org/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='ads-css-css' href='https://nwcua.org/wp-content/plugins/ads/ads.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='cpsh-shortcodes-css' href='https://nwcua.org/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0.1' type='text/css' media='all' />
@@ -44,7 +21,6 @@
 <link rel='shortlink' href='https://nwcua.org/?p=91155' />
 <link rel="alternate" type="application/json+oembed" href="https://nwcua.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnwcua.org%2Fabout%2Fboard-of-directors%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://nwcua.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnwcua.org%2Fabout%2Fboard-of-directors%2F&#038;format=xml" />
-<link rel="canonical" href="https://nwcua.org/about/board-of-directors/" />
 
 <link rel="stylesheet" href="https://nwcua.org/wp-content/plugins/easy-columns/css/easy-columns.css" type="text/css" media="screen, projection" />
 <link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=49" rel="stylesheet" type="text/css">
