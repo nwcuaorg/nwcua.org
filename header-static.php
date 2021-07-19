@@ -10,7 +10,6 @@
 <link rel="pingback" href="https://nwcua.org/xmlrpc.php" />
 
 <link rel='stylesheet' id='wp-block-library-css' href='https://nwcua.org/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='ads-css-css' href='https://nwcua.org/wp-content/plugins/ads/ads.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='cpsh-shortcodes-css' href='https://nwcua.org/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0.1' type='text/css' media='all' />
 <link rel='stylesheet' id='tablepress-default-css' href='https://nwcua.org/wp-content/plugins/tablepress/css/default.min.css?ver=1.13' type='text/css' media='all' />
 <script type='text/javascript' src='https://nwcua.org/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
