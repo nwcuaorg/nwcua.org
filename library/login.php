@@ -58,7 +58,7 @@ function cal_link() {
 
 		// piece together the user information from SF to pass along to CAL
 		$email = $_SESSION['sf_user']['email'];
-		$fist_name = $_SESSION['sf_user']['firstname'];
+		$first_name = $_SESSION['sf_user']['firstname'];
 		$last_name = $_SESSION['sf_user']['lastname'];
 
 	} else if ( is_user_logged_in() && current_user_can( 'administrator' ) ) {
