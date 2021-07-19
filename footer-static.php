@@ -67,6 +67,5 @@ SEATAC, WA 98188</p>
 </div>
 <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 <script type='text/javascript' src='https://nwcua.org/wp-content/themes/nwcua/js/main.js?v=16&#038;ver=5.7.2' id='main-js-js'></script>
-<script type='text/javascript' src='https://nwcua.org/wp-includes/js/wp-embed.min.js?ver=5.7.2' id='wp-embed-js'></script>
 </body>
 </html>
