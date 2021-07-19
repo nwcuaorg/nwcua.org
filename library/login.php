@@ -78,7 +78,7 @@ function cal_link() {
 	$redirect = urlencode( 'http://www.fuzeqna.com/nwcua/ext/kbdetail.aspx?kbid=468' );
 
 	if ( isset( $email ) ) {
-		return '<div class="buttons"><a href="https://www.fuzeqna.com/nwcua/membership/consumer/signon.asp?auth=' . $guid . '&uid=' . $email . '&email=' . $email . '&fname=' . $first_name . '&lname=' . $last_name . '&redir=' . $redirect . '" class="btn orange">Visit CAL</a></div>';
+		return '<div class="buttons"><a href="https://www.fuzeqna.com/nwcua/membership/consumer/signon.asp?auth=' . $guid . '&uid=' . $email . '&email=' . $email . '&fname=' . $first_name . '&lname=' . $last_name . '&redir=' . $redirect . '" class="btn orange" target="_blank">Visit CAL</a></div>';
 	} else {
 		return "<strong>Please log in to access CAL.</strong>";
 	}
