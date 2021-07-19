@@ -1,4 +1,3 @@
-<?php header( "Access-Control-Allow-Origin: *" ); ?>
 </div><!-- #content -->
 </section>
 <footer class="footer">
