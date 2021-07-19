@@ -2,7 +2,7 @@
 <!--[if IE 7]><html class="ie ie7" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8" lang="en-US"><![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!--><html lang="en-US"><!--<![endif]-->
-<head> <script type="text/javascript">if(!gform){document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0});var gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),null==t&&(t=10),gform.hooks[o][n].push({tag:i,callable:r,priority:t})},doHook:function(o,n,r){if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[o][n]){var t,i=gform.hooks[o][n];i.sort(function(o,n){return o.priority-n.priority});for(var e=0;e<i.length;e++)"function"!=typeof(t=i[e].callable)&&(t=window[t]),"action"==o?t.apply(null,r):r[0]=t.apply(null,r)}if("filter"==o)return r[0]},removeHook:function(o,n,r,t){if(null!=gform.hooks[o][n])for(var i=gform.hooks[o][n],e=i.length-1;0<=e;e--)null!=t&&t!=i[e].tag||null!=r&&r!=i[e].priority||i.splice(e,1)}}}</script>
+<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Board of Directors |  NWCUA</title>
@@ -18,16 +18,16 @@
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:site_name" content="NWCUA" />
-<meta property="og:image" content="https://test.nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
+<meta property="og:image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
 <meta itemprop="description" content="" />
-<meta itemprop="image" content="https://test.nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
+<meta itemprop="image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content="https://nwcua.org/about/board-of-directors/" />
 <meta name="twitter:title" content="" />
 <meta name="twitter:description" content="" />
-<meta name="twitter:image" content="https://test.nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
+<meta name="twitter:image" content="https://nwcua.org/wp-content/uploads/2021/07/nwcua-logo.png" />
 <meta name="twitter:creator" content="@nwcua" />
 <meta name="twitter:site" content="NWCUA" />
 
@@ -96,12 +96,12 @@ img.emoji {
 <ul class="sub-menu">
 <li id="menu-item-93050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93050"><a href="https://nwcua.org/councils/">Learn More</a></li>
 <li id="menu-item-175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="/events/?event_category=16">Meeting Dates</a></li>
-<li id="menu-item-176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-176"><a href="https://test.nwcua.org/councils/#memberships">Memberships</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-176"><a href="https://nwcua.org/councils/#memberships">Memberships</a></li>
 </ul>
 </li>
 <li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145"><a href="https://secure.e2rm.com/p2p/event/336948">CU4Kids</a>
 <ul class="sub-menu">
-<li id="menu-item-177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-177"><a href="https://test.nwcua.org/event/maxx-annual-convention/#accordion-2">Annual Auction</a></li>
+<li id="menu-item-177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-177"><a href="https://nwcua.org/event/maxx-annual-convention/#accordion-2">Annual Auction</a></li>
 <li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="https://secure.e2rm.com/p2p/donation/336948">Donate</a></li>
 <li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-178"><a href="https://secure.e2rm.com/p2p/event/336948">Learn More</a></li>
 </ul>
@@ -165,7 +165,7 @@ img.emoji {
 <li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a href="/resources/micro-communities/#accordion-2">Global Womens Leadership Network</a></li>
 <li id="menu-item-101394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101394"><a href="https://nwcua.org/micro-communities/micro-community-impact-awards/">Impact Awards</a></li>
 <li id="menu-item-92754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92754"><a href="https://nwcua.org/micro-communities/juntos-avanzamos/">Juntos Avanzamos</a></li>
-<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a href="https://test.nwcua.org/events/?event_category=6641">Upcoming Events</a></li>
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a href="https://nwcua.org/events/?event_category=6641">Upcoming Events</a></li>
 <li id="menu-item-92755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92755"><a href="https://nwcua.org/micro-communities/northwest-yp-network/">YP Network</a></li>
 </ul>
 </li>
@@ -207,7 +207,7 @@ img.emoji {
 <ul class="sub-menu">
 <li id="menu-item-93041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93041"><a href="/category/nwcua-in-the-news/">In the News</a></li>
 <li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="/category/news-releases/">News Releases</a></li>
-<li id="menu-item-101655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101655"><a href="https://test.nwcua.org/public-awareness/media-center/#accordion-2">Resources for Reporters</a></li>
+<li id="menu-item-101655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101655"><a href="https://nwcua.org/public-awareness/media-center/#accordion-2">Resources for Reporters</a></li>
 </ul>
 </li>
 <li id="menu-item-92315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92315"><a href="https://nwcua.org/anthem/submit-your-news/">Submit Your News</a></li>
