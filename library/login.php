@@ -22,7 +22,7 @@ if ( substr( $request, 0, 5 ) == '/auth' ) {
 
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
-		wp_set_auth_cookie( 141615, false );
+		wp_set_auth_cookie( 40, false );
 	}
 
 	// redirect to infosight
