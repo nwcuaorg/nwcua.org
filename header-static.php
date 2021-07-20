@@ -21,7 +21,6 @@
 
 <link rel="stylesheet" href="https://nwcua.org/wp-content/plugins/easy-columns/css/easy-columns.css" type="text/css" media="screen, projection" />
 <link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=49" rel="stylesheet" type="text/css">
-<link href="https://nwcua.org/wp-content/themes/nwcua/css/print.css" rel="stylesheet" media="print">
 </head>
 <body class="page-template-default page page-id-91155 page-child parent-pageid-91038">
 <div class="container">
