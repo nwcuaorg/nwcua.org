@@ -8,18 +8,6 @@
 <title>My Account | NWCUA</title>
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="https://nwcua.org/xmlrpc.php" />
-
-<link rel='stylesheet' id='wp-block-library-css' href='https://nwcua.org/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='cpsh-shortcodes-css' href='https://nwcua.org/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='tablepress-default-css' href='https://nwcua.org/wp-content/plugins/tablepress/css/default.min.css?ver=1.13' type='text/css' media='all' />
-<link rel="https://api.w.org/" href="https://nwcua.org/wp-json/" /><link rel="alternate" type="application/json" href="https://nwcua.org/wp-json/wp/v2/pages/91155" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nwcua.org/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://nwcua.org/wp-includes/wlwmanifest.xml" />
-<meta name="generator" content="WordPress 5.7.2" />
-<link rel='shortlink' href='https://nwcua.org/?p=91155' />
-<link rel="alternate" type="application/json+oembed" href="https://nwcua.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnwcua.org%2Fabout%2Fboard-of-directors%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://nwcua.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnwcua.org%2Fabout%2Fboard-of-directors%2F&#038;format=xml" />
-
-<link rel="stylesheet" href="https://nwcua.org/wp-content/plugins/easy-columns/css/easy-columns.css" type="text/css" media="screen, projection" />
 <link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=49" rel="stylesheet" type="text/css">
 </head>
 <body class="page-template-default page page-id-91155 page-child parent-pageid-91038">
@@ -188,9 +176,8 @@
 <div class="account-tools">
 <a href="https://nwcua.force.com/s/my-account" class='account button'>My Account</a> </div>
 </header>
-<section class="content">
 <a name="content"></a>
 <div class="page-title grey-dark">
 <h1>My Account</h1>
 </div>
-<div class="content-wide" role="main">
+</div>

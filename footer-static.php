@@ -1,5 +1,4 @@
-</div><!-- .content-wide -->
-</section>
+<div class="container">
 <footer class="footer">
 <div class="columns">
 <div class="column">
