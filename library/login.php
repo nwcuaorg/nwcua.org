@@ -1,10 +1,6 @@
 <?php
 
 
-// start a session if we don't have one already
-session_start();
-
-
 global $sf_url;
 // $sf_url = "https://staging-nwcua.cs14.force.com/s/";
 $sf_url = "https://nwcua.force.com/s/";
