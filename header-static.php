@@ -54,7 +54,7 @@
 <li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183"><a href="https://nwcua.org/events/">Calendar</a></li>
 <li id="menu-item-92651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92651"><a href="https://nwcua.org/ceo-roundtables/">CEO Roundtables</a></li>
 <li id="menu-item-92660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92660"><a href="https://nwcua.org/emerging-leaders/">Emerging Leaders</a></li>
-<li id="menu-item-186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-186"><a href="https://nwcua.org/event/executives-sunriver/"><span class="__cf_email__" data-cfemail="d792afb2b4a2a3bea1b2a49784a2b9a5bea1b2a5">[email&#160;protected]</span></a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-186"><a href="https://nwcua.org/event/executives-sunriver/"><span class="__cf_email__" data-cfemail="d792afb2b4a2a3bea1b2a49784a2b9a5bea1b2a5">Executives@Sunriver</span></a></li>
 <li id="menu-item-188" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-188"><a href="https://nwcua.org/event/maxx-annual-convention/">MAXX Annual Convention</a></li>
 </ul>
 </li>
