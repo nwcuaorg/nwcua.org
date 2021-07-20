@@ -348,8 +348,8 @@ function the_job_list( $jobs = '', $random = false ) {
 }
 
 
-add_filter( 'gform_field_value_sf_user', 'populate_sf_user' );
-function populate_sf_user( $value ) {
+add_filter( 'gform_field_value_salesforce_user', 'populate_salesforce_user' );
+function populate_salesforce_user( $value ) {
     return $_SESSION['sf_user']['email'];
 }
 
