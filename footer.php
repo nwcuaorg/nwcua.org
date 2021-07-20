@@ -45,3 +45,4 @@ vgo('process');
 <?php wp_footer(); ?>
 </body>
 </html>
+<!--<?php print_r( $_SESSION['sf_user'] ); ?>-->
