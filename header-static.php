@@ -14,7 +14,7 @@
 <div class="container">
 <header>
 <div class="logo">
-<a href="/" title="NWCUA" rel="home">
+<a href="https://nwcua.org/" title="NWCUA" rel="home">
 <img src="https://nwcua.org/wp-content/themes/nwcua/img/logo.png" alt="NWCUA">
 </a>
 </div>
@@ -32,7 +32,7 @@
 <li id="menu-item-92650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92650"><a href="https://nwcua.org/councils/">Councils</a>
 <ul class="sub-menu">
 <li id="menu-item-93050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93050"><a href="https://nwcua.org/councils/">Learn More</a></li>
-<li id="menu-item-175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="/events/?event_category=16">Meeting Dates</a></li>
+<li id="menu-item-175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="https://nwcua.org/events/?event_category=16">Meeting Dates</a></li>
 <li id="menu-item-176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-176"><a href="https://nwcua.org/councils/#memberships">Memberships</a></li>
 </ul>
 </li>
@@ -51,11 +51,11 @@
 </li>
 <li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-146"><a href="/events/">Events</a>
 <ul class="sub-menu">
-<li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183"><a href="/events/">Calendar</a></li>
+<li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183"><a href="https://nwcua.org/events/">Calendar</a></li>
 <li id="menu-item-92651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92651"><a href="https://nwcua.org/ceo-roundtables/">CEO Roundtables</a></li>
 <li id="menu-item-92660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92660"><a href="https://nwcua.org/emerging-leaders/">Emerging Leaders</a></li>
-<li id="menu-item-186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-186"><a href="/event/executives-sunriver/"><span class="__cf_email__" data-cfemail="d792afb2b4a2a3bea1b2a49784a2b9a5bea1b2a5">[email&#160;protected]</span></a></li>
-<li id="menu-item-188" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-188"><a href="/event/maxx-annual-convention/">MAXX Annual Convention</a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-186"><a href="https://nwcua.org/event/executives-sunriver/"><span class="__cf_email__" data-cfemail="d792afb2b4a2a3bea1b2a49784a2b9a5bea1b2a5">[email&#160;protected]</span></a></li>
+<li id="menu-item-188" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-188"><a href="https://nwcua.org/event/maxx-annual-convention/">MAXX Annual Convention</a></li>
 </ul>
 </li>
 </ul>
@@ -64,7 +64,7 @@
 <ul class="sub-menu">
 <li id="menu-item-92652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92652"><a href="https://nwcua.org/advocacy/">Advocacy</a>
 <ul class="sub-menu">
-<li id="menu-item-195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195"><a href="/category/advocacy-on-the-move/">Blog</a></li>
+<li id="menu-item-195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195"><a href="https://nwcua.org/category/advocacy-on-the-move/">Blog</a></li>
 <li id="menu-item-92654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92654"><a href="https://nwcua.org/advocacy/culac/">CULAC</a></li>
 <li id="menu-item-93630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93630"><a href="https://nwcua.org/advocacy/grassroots-advocacy-center/">Grassroots</a></li>
 <li id="menu-item-101940" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101940"><a href="https://nwcua.org/category/advocacy/">News</a></li>
@@ -72,22 +72,22 @@
 <li id="menu-item-101941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101941"><a href="https://nwcua.org/advocacy/advocacy-training-and-events/">Training &#038; Events</a></li>
 </ul>
 </li>
-<li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-149"><a href="/compliance/">Compliance</a>
+<li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-149"><a href="https://nwcua.org/compliance/">Compliance</a>
 <ul class="sub-menu">
 <li id="menu-item-92646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92646"><a href="https://nwcua.org/compliance/bulletins-alerts/">Bulletins &#038; Alerts</a></li>
-<li id="menu-item-201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201"><a href="/events/?event_category=6522">Calendar</a></li>
+<li id="menu-item-201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201"><a href="https://nwcua.org/events/?event_category=6522">Calendar</a></li>
 <li id="menu-item-102274" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-102274"><a href="https://nwcua.org/category/compliance/compliance-news/">News</a></li>
 <li id="menu-item-101316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101316"><a href="https://nwcua.org/compliance/compliance-resources/">Resources</a></li>
 <li id="menu-item-101350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101350"><a href="https://nwcua.org/compliance/compliance-tools/">Tools</a></li>
 </ul>
 </li>
-<li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-226"><a href="/jobs/">Credit Union Careers</a>
+<li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-226"><a href="https://nwcua.org/jobs/">Credit Union Careers</a>
 <ul class="sub-menu">
 <li id="menu-item-92718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92718"><a href="https://nwcua.org/job-post/">Post a Job</a></li>
-<li id="menu-item-93631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93631"><a href="/jobs/">View Listings</a></li>
+<li id="menu-item-93631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93631"><a href="https://nwcua.org/jobs/">View Listings</a></li>
 </ul>
 </li>
-<li id="menu-item-92578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92578"><a href="/directory/">Credit Union Directory</a></li>
+<li id="menu-item-92578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92578"><a href="https://nwcua.org/directory/">Credit Union Directory</a></li>
 <li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-208"><a href="https://nwcuf.org">Foundation</a>
 <ul class="sub-menu">
 <li id="menu-item-210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-210"><a href="https://nwcuf.org/donate/">Donate</a></li>
@@ -98,8 +98,8 @@
 </li>
 <li id="menu-item-92753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92753"><a href="https://nwcua.org/micro-communities/">Micro-Communities</a>
 <ul class="sub-menu">
-<li id="menu-item-189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189"><a href="/resources/micro-communities/#accordion-1">Chapters</a></li>
-<li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a href="/resources/micro-communities/#accordion-2">Global Womens Leadership Network</a></li>
+<li id="menu-item-189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189"><a href="https://nwcua.org/resources/micro-communities/#accordion-1">Chapters</a></li>
+<li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a href="https://nwcua.org/resources/micro-communities/#accordion-2">Global Womens Leadership Network</a></li>
 <li id="menu-item-101394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101394"><a href="https://nwcua.org/micro-communities/micro-community-impact-awards/">Impact Awards</a></li>
 <li id="menu-item-92754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92754"><a href="https://nwcua.org/micro-communities/juntos-avanzamos/">Juntos Avanzamos</a></li>
 <li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a href="https://nwcua.org/events/?event_category=6641">Upcoming Events</a></li>
@@ -135,15 +135,15 @@
 <ul class="sub-menu">
 <li id="menu-item-92664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92664"><a href="https://nwcua.org/anthem/">Anthem News</a>
 <ul class="sub-menu">
-<li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139"><a href="/category/advocacy/">Advocacy</a></li>
-<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140"><a href="/category/compliance/">Compliance</a></li>
-<li id="menu-item-92915" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92915"><a href="/category/member-news/">Member News</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139"><a href="https://nwcua.org/category/advocacy/">Advocacy</a></li>
+<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140"><a href="https://nwcua.org/category/compliance/">Compliance</a></li>
+<li id="menu-item-92915" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92915"><a href="https://nwcua.org/category/member-news/">Member News</a></li>
 </ul>
 </li>
 <li id="menu-item-92921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92921"><a href="https://nwcua.org/public-awareness__trashed/media-center/">Digital Media Center</a>
 <ul class="sub-menu">
-<li id="menu-item-93041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93041"><a href="/category/nwcua-in-the-news/">In the News</a></li>
-<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="/category/news-releases/">News Releases</a></li>
+<li id="menu-item-93041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93041"><a href="https://nwcua.org/category/nwcua-in-the-news/">In the News</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="https://nwcua.org/category/news-releases/">News Releases</a></li>
 <li id="menu-item-101655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101655"><a href="https://nwcua.org/public-awareness/media-center/#accordion-2">Resources for Reporters</a></li>
 </ul>
 </li>
@@ -151,15 +151,15 @@
 <li id="menu-item-92920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92920"><a href="https://nwcua.org/subscribe-to-mailing-lists/">Subscribe To Us</a></li>
 </ul>
 </li>
-<li id="menu-item-91062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-91062"><a href="/about/">About</a>
+<li id="menu-item-91062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-91062"><a href="https://nwcua.org/about/">About</a>
 <ul class="sub-menu">
 <li id="menu-item-92665" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-91155 current_page_item menu-item-92665"><a href="https://nwcua.org/about/board-of-directors/" aria-current="page">Board of Directors</a></li>
 <li id="menu-item-93632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93632"><a href="https://nwcua.org/about/committees-and-task-forces/">Committees/Task Forces</a></li>
 <li id="menu-item-92714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92714"><a href="https://nwcua.org/about/contact-us/">Contact Us</a></li>
 <li id="menu-item-92668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92668"><a href="https://nwcua.org/our-commitments/">Our Commitments</a>
 <ul class="sub-menu">
-<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="/our-commitments/#accordion-1">Code of Conduct</a></li>
-<li id="menu-item-163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163"><a href="/our-commitments/#accordion-2">Social Justice</a></li>
+<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="https://nwcua.org/our-commitments/#accordion-1">Code of Conduct</a></li>
+<li id="menu-item-163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163"><a href="https://nwcua.org/our-commitments/#accordion-2">Social Justice</a></li>
 </ul>
 </li>
 <li id="menu-item-92667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92667"><a href="https://nwcua.org/about/safelist-us/">Safelist Us</a></li>
