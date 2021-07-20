@@ -134,12 +134,10 @@ function is_member() {
 		// update_post_meta( $post->ID, CMB_PREFIX . 'members-only', 'on' );
 	}
 
-	/*
 	print "<!--";
 	print_r( $_SESSION['sf_user'] );
 	print get_cmb_value( 'member-only' );
 	print "-->";
-	*/
 
 	// see if there is a member's only value
 	if ( has_cmb_value( 'member-only' )  ) {
