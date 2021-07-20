@@ -28,12 +28,24 @@ $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QU
 
 // check if this is an auth request.
 if ( substr( $request, 0, 5 ) == '/auth' ) {
+
+	// set session
 	$_SESSION['sf_user'] = $_REQUEST;
+
+	print "<!--";
+	print_r( $_SESSION['sf_user'] );
+	print get_cmb_value( 'member-only' );
+	print "-->";
+
+	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
 		wp_set_auth_cookie( 141615, false );
 	}
+
+	// redirect to infosight
 	wp_redirect( 'https://nwcua.leagueinfosight.com/admin/client/is/frontend/nwcua_sso.php?' . http_build_query( $_REQUEST ) );
 	exit;
+
 }
 
 
