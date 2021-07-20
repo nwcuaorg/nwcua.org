@@ -39,9 +39,9 @@ SEATAC, WA 98188</p>
 <div class="menu-footer-resources-container"><ul id="menu-footer-resources" class="menu"><li id="menu-item-102328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102328"><a href="https://nwcua.org/advocacy/">Advocacy</a></li>
 <li id="menu-item-92691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92691"><a href="https://nwcua.org/anthem/">Anthem News</a></li>
 <li id="menu-item-102333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102333"><a href="https://nwcua.org/compliance/">Compliance</a></li>
-<li id="menu-item-92686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92686"><a href="/jobs/">Credit Union Careers</a></li>
+<li id="menu-item-92686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92686"><a href="https://nwcua.org/jobs/">Credit Union Careers</a></li>
 <li id="menu-item-102341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102341"><a href="https://secure.e2rm.com/p2p/event/336948">CU4Kids</a></li>
-<li id="menu-item-92693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92693"><a href="/events/">Events Calendar</a></li>
+<li id="menu-item-92693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92693"><a href="https://nwcua.org/events/">Events Calendar</a></li>
 <li id="menu-item-92687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92687"><a href="https://nwcua.org/public-awareness__trashed/media-center/">Digital Media Center</a></li>
 <li id="menu-item-102331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102331"><a href="https://nwcua.org/about/safelist-us/">Safelist Us</a></li>
 <li id="menu-item-92690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92690"><a href="https://airtable.com/shrv5Rsr9m6eEbWud">Speak at a Future Event</a></li>
@@ -50,16 +50,16 @@ SEATAC, WA 98188</p>
 <div class="column">
 <h3>CUSTOMIZE YOUR EXPERIENCE</h3>
 <p><em>Sign up for Anthem News, alerts, updates, event &amp; registration information.</em></p>
-<a href="https://test.nwcua.org/subscribe-to-mailing-lists/" class="btn forest" target="_top">Subscribe To Us</a>
+<a href="https://nwcua.org/subscribe-to-mailing-lists/" class="btn forest" target="_top">Subscribe To Us</a>
 <h3>SAFELIST US</h3>
 <p><em>Help us ensure that you receive all emails from us.</em></p>
-<a href="/about/safelist-us/" class="btn forest" target="_top">Learn More</a>
+<a href="https://nwcua.org/about/safelist-us/" class="btn forest" target="_top">Learn More</a>
 <h3>MEDIA CENTER</h3>
 <p><em>Check out our resources for journalists, bloggers, communicators, and marketers.</em></p>
-<a href="/public-awareness/media-center/" class="btn forest" target="_top">View More</a>
+<a href="https://nwcua.org/public-awareness/media-center/" class="btn forest" target="_top">View More</a>
 <h3>WHAT BRINGS YOU HERE?</h3>
 <p><em>Tell us how we are doing and what&#8217;s important to you! Take this 3 minute survey now.</em></p>
-<a href="https://test.nwcua.org/what-brings-you-to-our-site/" class="btn forest" target="_top">Take The Survey</a>
+<a href="https://nwcua.org/what-brings-you-to-our-site/" class="btn forest" target="_top">Take The Survey</a>
 </div>
 </div>
 </footer>
