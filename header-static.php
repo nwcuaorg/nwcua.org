@@ -20,7 +20,7 @@
 </div>
 <nav>
 <button class="menu-toggle">Show/hide Menu</button>
-<div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav-menu"><li id="menu-item-101869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-101869"><a href="#">Training &#038; Events</a>
+<div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav-menu"><li id="menu-item-101869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-101869"><a href="https://nwcua.org/events/">Training &#038; Events</a>
 <ul class="sub-menu">
 <li id="menu-item-92647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92647"><a href="https://nwcua.org/awards/">Awards</a>
 <ul class="sub-menu">
