@@ -36,6 +36,7 @@ if ( substr( $request, 0, 5 ) == '/auth' ) {
 	print_r( $_SESSION['sf_user'] );
 	print get_cmb_value( 'member-only' );
 	print "-->";
+	die;
 
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
