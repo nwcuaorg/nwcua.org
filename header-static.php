@@ -43,7 +43,7 @@
 <li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-178"><a href="https://secure.e2rm.com/p2p/event/336948">Learn More</a></li>
 </ul>
 </li>
-<li id="menu-item-180" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180"><a href="#">Education</a>
+<li id="menu-item-180" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-180"><a href="javascript:void(0);">Education</a>
 <ul class="sub-menu">
 <li id="menu-item-181" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181"><a href="https://cuphilosophyquiz.com/">Philosophy Manual &#038; Quiz</a></li>
 <li id="menu-item-182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-182"><a href="https://cuwebtraining.com/a/nwcua/category/live">Webinars</a></li>
@@ -60,7 +60,7 @@
 </li>
 </ul>
 </li>
-<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12"><a href="#">Resources</a>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12"><a href="javascript:void(0);">Resources</a>
 <ul class="sub-menu">
 <li id="menu-item-92652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92652"><a href="https://nwcua.org/advocacy/">Advocacy</a>
 <ul class="sub-menu">
@@ -106,14 +106,14 @@
 <li id="menu-item-92755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92755"><a href="https://nwcua.org/micro-communities/northwest-yp-network/">YP Network</a></li>
 </ul>
 </li>
-<li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-154"><a href="#">Public Awareness</a>
+<li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-154"><a href="javascript:void(0);">Public Awareness</a>
 <ul class="sub-menu">
 <li id="menu-item-101656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101656"><a href="https://nwcua.org/economic-community-impact-data-for-nw-credit-unions/">Community &#038; Economic Impact</a></li>
 <li id="menu-item-93558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93558"><a href="https://nwcua.org/public-awareness__trashed/marketing-resource-center/">Marketing Resource Center</a></li>
 <li id="menu-item-92676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92676"><a href="https://nwcua.org/open-your-eyes-awareness-initiative/">Open Your Eyes Awareness Initiative</a></li>
 </ul>
 </li>
-<li id="menu-item-172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-172"><a href="#">Resource Centers</a>
+<li id="menu-item-172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-172"><a href="javascript:void(0);">Resource Centers</a>
 <ul class="sub-menu">
 <li id="menu-item-101401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101401"><a href="https://nwcua.org/compliance/compliance-resources/">Compliance</a></li>
 <li id="menu-item-93560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93560"><a href="https://nwcua.org/directors-resource-center/">Directors&#8217;</a></li>
