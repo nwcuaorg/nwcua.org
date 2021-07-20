@@ -2,9 +2,7 @@
 
 
 // start a session if we don't have one already
-if (!session_id()) {
-    session_start();
-}
+session_start();
 
 
 global $sf_url;
