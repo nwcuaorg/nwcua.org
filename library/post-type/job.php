@@ -354,3 +354,9 @@ function populate_salesforce_user( $value ) {
 }
 
 
+// enable the excerpt field in advanced post creation plugin
+add_filter( 'gform_advancedpostcreation_excerpt', 'enable_excerpt', 10, 1 );
+function enable_excerpt( $enable_excerpt ){
+    return true;
+}
+
