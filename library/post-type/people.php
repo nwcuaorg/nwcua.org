@@ -277,7 +277,7 @@ function person_shortcode( $atts ) {
 
 		$person_content .='<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') . '</div>' .
 			'<div class="person-info">
-				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : ''). get_cmb_value( "person_lname", $id ) . ', ' . get_cmb_value( "person_fname", $id ) . ( $link ? '</a>' : '') . '</h4>
+				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_cmb_value( "person_fname", $id ) . ' ' . get_cmb_value( "person_lname", $id ) . ( $link ? '</a>' : '') . '</h4>
 				<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>
 				<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
 			</div>';
