@@ -19,6 +19,7 @@ the_page_title();
 			<h2><?php the_title(); ?></h2>
 			<?php if ( has_cmb_value( "person_pronouns" ) ) { ?><p class="pronouns">Pronouns: <?php print get_cmb_value( "person_pronouns" ); ?></p><?php } ?>
 			<?php if ( has_cmb_value( "person_title" ) ) { ?><h4 class="person-title"><?php print get_cmb_value( "person_title" ); ?></h4><?php } ?>
+			<?php if ( has_cmb_value( "person_organization" ) ) { ?><p><?php print get_cmb_value( "person_organization" ); ?></p><?php } ?>
 			<?php if ( has_cmb_value( "person_email" ) ) { ?><p><a href="mailto:<?php print get_cmb_value( "person_email" ); ?>"><?php print get_cmb_value( "person_email" ); ?></a></p><?php } ?>
 			<?php if ( has_cmb_value( "person_phone" ) ) { ?><p>Phone: <?php print get_cmb_value( "person_phone" ); ?></p><?php } ?>
 			<?php if ( has_cmb_value( "person_tollfree" ) ) { ?><p>Toll-free: <?php print get_cmb_value( "person_tollfree" ); ?></p><?php } ?>

@@ -109,6 +109,11 @@ function person_metaboxes() {
         'type' => 'text'
     ) );
     $person_box->add_field( array(
+        'name' => 'Organization',
+        'id' => CMB_PREFIX . 'person_organization',
+        'type' => 'text'
+    ) );
+    $person_box->add_field( array(
         'name' => 'Office Number',
         'id' => CMB_PREFIX . 'person_office',
         'type' => 'text_medium'
@@ -231,6 +236,7 @@ function people_shortcode( $atts ) {
 				'<div class="person-info">
 					<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_fname" ) . ' ' . get_cmb_value( "person_lname" ) . ( $link ? '</a>' : '' ) . '</h4>' .
 					( has_cmb_value( 'person_title' ) ? '<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>' : '' ) .
+					( has_cmb_value( 'person_organization' ) ? '<p class="person-organization">' . get_cmb_value( "person_organization" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_phone' ) ? '<p class="person-phone">Phone: ' . get_cmb_value( "person_phone" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_tollfree' ) ? '<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>' : '' ) .
@@ -277,9 +283,11 @@ function person_shortcode( $atts ) {
 
 		$person_content .='<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') . '</div>' .
 			'<div class="person-info">
-				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_cmb_value( "person_fname", $id ) . ' ' . get_cmb_value( "person_lname", $id ) . ( $link ? '</a>' : '') . '</h4>
-				<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>
-				<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
+				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_cmb_value( "person_fname", $id ) . ' ' . get_cmb_value( "person_lname", $id ) . ( $link ? '</a>' : '') . '</h4>' .
+					( has_cmb_value( 'person_title', $id ) ? '<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>' : '' ) .
+					( has_cmb_value( 'person_organization', $id ) ? '<p class="person-organization">' . get_cmb_value( "person_organization", $id ) . '</p>' : '' ) .
+
+				'<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
 			</div>';
 
 		$person_content .='</section>';

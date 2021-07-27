@@ -8,8 +8,8 @@ function get_cmb_value( $field, $id = 0 ) {
 
 
 // get CMB value
-function has_cmb_value( $field ) {
-    $cval = get_cmb_value( $field );
+function has_cmb_value( $field, $id = 0 ) {
+    $cval = get_cmb_value( $field, $id );
     return ( !empty( $cval ) ? true : false );
 }
 
