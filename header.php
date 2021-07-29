@@ -15,6 +15,15 @@
 <link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=50" rel="stylesheet" type="text/css">
 <link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-23488192-1');
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 
