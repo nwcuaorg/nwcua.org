@@ -2,6 +2,11 @@
 
 header {
 	position: relative;
+	padding-bottom: 12px;
+
+	@include respond-to( $bp-l ) {
+		padding-bottom: 0;
+	}
 
 	.logo {
 		padding: 20px 60px 30px 20px;
@@ -208,7 +213,8 @@ header {
 	}
 
 	.search-form {
-		display: none;
+		position: relative;
+		border-top: 3px solid rgba( $grey, .2 );
 
 		@include respond-to( 840px ) {
 			display: block;
@@ -232,6 +238,7 @@ header {
 			bottom: 0;
 			width: 40px;
 			height: 40px;
+			margin: 0;
 		}
 
 		input[type=text] {
@@ -245,7 +252,9 @@ header {
 	}
 
 	.account-tools {
-		display: none;
+		position: relative;
+		border-top: 3px solid rgba( $grey, .2 );
+		border-bottom: 3px solid rgba( $grey, .2 );
 
 		@include respond-to( $bp-m ) {
 			display: block;
@@ -253,17 +262,16 @@ header {
 			right: 40px;
 			bottom: 80px;
 			width: 200px;
-			border: 3px solid rgba( $grey, .2 );
+		}
 
-			a {
-				display: block;
-				line-height: 40px;
-				font-size: 15px;
-				text-transform: uppercase;
-				padding: 0 10px;
-				color: white;
-				background: $navy;
-			}
+		a {
+			display: block;
+			line-height: 40px;
+			font-size: 15px;
+			text-transform: uppercase;
+			padding: 0 10px;
+			color: white;
+			background: $navy;
 		}
 
 		@include respond-to( $bp-l ) {

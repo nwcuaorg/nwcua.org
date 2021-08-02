@@ -8,7 +8,7 @@
 <title>My Account | NWCUA</title>
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="https://nwcua.org/xmlrpc.php" />
-<link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=50" rel="stylesheet" type="text/css">
+<link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=51" rel="stylesheet" type="text/css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -176,7 +176,7 @@ gtag('config', 'UA-23488192-1');
 </li>
 </ul></div> </nav>
 <div class="search-form">
-<form role="search" method="get" id="searchform" class="searchform" action="/" _lpchecked="1">
+<form role="search" method="get" id="searchform" class="searchform" action="https://nwcua.org/" _lpchecked="1">
 <input type="text" value="" name="s" id="s" placeholder="SEARCH" title="Search our site.">
 <input type="submit" id="searchsubmit" value="Search">
 </form> </div>
