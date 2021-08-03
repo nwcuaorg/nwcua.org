@@ -23,6 +23,9 @@ if ( substr( $request, 0, 5 ) == '/auth' ) {
 	// set session
 	$_SESSION['sf_user'] = $_REQUEST;
 
+	print_r( $_REQUEST );
+	die;
+
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
 		wp_set_auth_cookie( 40, false );
