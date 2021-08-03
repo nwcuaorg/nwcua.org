@@ -18,6 +18,9 @@ $request = parse_query_string();
 // $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );
 
 
+print_r( $_SERVER ); die;
+
+
 // check if this is an auth request.
 if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 
