@@ -2,8 +2,15 @@
 
 
 global $sf_url;
-// $sf_url = "https://staging-nwcua.cs14.force.com/s/";
-$sf_url = "https://nwcua.force.com/s/";
+
+// if we're on staging
+if ( is_staging() ) {
+	// use the staging salesforce url
+	$sf_url = "https://staging-nwcua.cs14.force.com/s/";
+} else {
+	// use the live salesforce URL.
+	$sf_url = "https://nwcua.force.com/s/";
+}
 
 
 // get the request URI and remove the query string
@@ -113,24 +120,6 @@ function account_button() {
 function is_member() {
 
 	global $post;
-
-	// get old member roles meta data
-	//$roles = get_post_meta( $post->ID, '_members_access_role' );
-
-	// check for new member
-	//$new_roles = get_cmb_value( 'members-only' );
-
-	// if the old member roles are set, and the new ones aren't, let's automatically fix up the new 'members-only' meta data.
-	if ( !empty( $roles ) && empty( $new_roles ) ) {
-		// update_post_meta( $post->ID, CMB_PREFIX . 'members-only', 'on' );
-	}
-
-	/*
-	print "<!--";
-	print_r( $_SESSION['sf_user'] );
-	print get_cmb_value( 'member-only' );
-	print "-->";
-	*/
 
 	// see if there is a member's only value
 	if ( has_cmb_value( 'member-only' )  ) {

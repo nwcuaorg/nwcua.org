@@ -97,6 +97,16 @@ function is_test() {
 
 
 
+// boolean to see if it's the test site.
+function is_staging() {
+	if ( stristr( $_SERVER['HTTP_HOST'], 'staging.nwcua.org' ) ) {
+		return true;
+	}
+	return false;
+}
+
+
+
 // boolean to see if it's the live site.
 function is_live() {
 	if ( stristr( $_SERVER['HTTP_HOST'], 'nwcua.org' ) && !is_test() ) {
