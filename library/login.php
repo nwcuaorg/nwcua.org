@@ -19,7 +19,7 @@ $request = parse_query_string();
 
 
 // check if this is an auth request.
-if ( substr( $request, 0, 5 ) == '/auth' ) {
+if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 
 	// set session
 	$_SESSION['sf_user'] = $_REQUEST;
