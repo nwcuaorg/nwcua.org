@@ -121,6 +121,10 @@ function is_member() {
 
 	global $post;
 
+	print_r( $_SESSION['sf_user'] );
+	print get_cmb_value( 'member-only' );
+	die;
+
 	// see if there is a member's only value
 	if ( has_cmb_value( 'member-only' )  ) {
 
