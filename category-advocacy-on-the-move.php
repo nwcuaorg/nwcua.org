@@ -60,7 +60,7 @@ $category = get_the_category();
 		   		</div>
 	        	<div class="entry-inner">
 		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
-		    		<div class="author quiet">Posted on <?php the_date( 'n/j/Y' ); ?> by <?php print $display_name; ?></div>
+		    		<div class="author quiet">Posted by <?php print $display_name; ?></div>
 		    		<?php the_excerpt(); ?>
 		    	</div>
 			</div>
