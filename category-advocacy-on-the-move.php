@@ -51,6 +51,7 @@ $category = get_the_category();
 				while ( have_posts() ) : the_post(); 
 			        $categories = get_the_category();
 			        $cat = $categories[0];
+			        $display_name = get_the_author_meta( 'display_name', $post->post_author );
 					?>
 			<div class="entry <?php print ( in_category(86) || in_category(56) ? ' idaho' : '' ); ?><?php print ( in_category(85) || in_category(64) ? ' oregon' : '' ); ?><?php print ( in_category(68) || in_category(84) ? ' washington' : '' ); ?><?php print ( in_category(6514) ? ' regulatory' : '' ); ?>">
 	        	<div class="entry-thumbnail">
@@ -59,6 +60,7 @@ $category = get_the_category();
 		   		</div>
 	        	<div class="entry-inner">
 		    		<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+		    		<div class="author quiet">Posted on <?php the_date( 'n/j/Y' ); ?> by <?php print $display_name; ?></div>
 		    		<?php the_excerpt(); ?>
 		    	</div>
 			</div>
