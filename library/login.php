@@ -16,13 +16,13 @@ if ( is_staging() ) {
 // get the request URI and remove the query string
 $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );
 
-print "<!--" . $_SERVER["DOCUMENT_ROOT"] . "-->";
 
 // check if this is an auth request.
 if ( substr( $request, 0, 5 ) == '/auth' ) {
 
 	// log the auth request
-	file_put_contents( '../../../uploads/logs/auth.log',"\r\n" . $_SERVER['REQUEST_URI'], FILE_APPEND );
+	$logfile = $_SERVER["DOCUMENT_ROOT"] . 'wp-content/uploads/logs/auth.log';
+	file_put_contents( $logfile, "\r\n" . $_SERVER['REQUEST_URI'], FILE_APPEND );
 
 	// set session
 	$_SESSION['sf_user'] = $_REQUEST;
