@@ -16,7 +16,7 @@ if ( is_staging() ) {
 // get the request URI and remove the query string
 $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );
 
-print "<!--" . getenv ("DOCUMENT_ROOT") . "-->";
+print "<!--" . $_SERVER["DOCUMENT_ROOT"] . "-->";
 
 // check if this is an auth request.
 if ( substr( $request, 0, 5 ) == '/auth' ) {
