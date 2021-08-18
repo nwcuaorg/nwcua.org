@@ -20,6 +20,9 @@ $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QU
 // check if this is an auth request.
 if ( substr( $request, 0, 5 ) == '/auth' ) {
 
+	// log the auth request
+	file_put_contents( '../../../uploads/logs/auth.log',"\r\n" . $_SERVER['REQUEST_URI'], FILE_APPEND );
+
 	// set session
 	$_SESSION['sf_user'] = $_REQUEST;
 

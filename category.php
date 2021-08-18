@@ -16,8 +16,11 @@ get_header();
 	<div class="page-title">
 		<h1><span>Category:</span> <?php printf( single_cat_title( '', false ) ); ?></h1>
 	</div>
-	<div class="content-wide anthem-listing" role="main">
-
+	<div class="content-wide" role="main">
+		<div class="category-description">
+			
+		</div>
+		<div class="anthem-listing">
 		<?php 
 		if ( have_posts() ) : 
 
@@ -41,7 +44,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
 	</div><!-- #content -->
 
 	<?php pagination(); ?>
