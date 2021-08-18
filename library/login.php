@@ -21,7 +21,8 @@ $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QU
 if ( substr( $request, 0, 5 ) == '/auth' ) {
 
 	// log the auth request
-	$logfile = $_SERVER["DOCUMENT_ROOT"] . '/wp-content/uploads/logs/auth.log';
+	// $logfile = $_SERVER["DOCUMENT_ROOT"] . '/wp-content/uploads/logs/auth.log';
+	$logfile = '../../../../../logs/auth.log';
 	file_put_contents( $logfile, "\r\n" . $_SERVER['REQUEST_URI'], FILE_APPEND );
 
 	// set session
