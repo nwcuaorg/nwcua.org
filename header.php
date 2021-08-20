@@ -12,7 +12,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=51" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=53" rel="stylesheet" type="text/css">
 <link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
@@ -29,7 +29,7 @@ gtag('config', 'UA-23488192-1');
 <?php the_notice_bar(); ?>
 
 <div class="container">
-<header>
+<header class="main">
 	
 	<div class="logo">
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
