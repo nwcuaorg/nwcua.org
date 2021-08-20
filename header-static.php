@@ -19,7 +19,7 @@ gtag('config', 'UA-23488192-1');
 </head>
 <body class="page-template-default page page-id-91155 page-child parent-pageid-91038">
 <div class="container">
-<header>
+<header class="main">
 <div class="logo">
 <a href="https://nwcua.org/" title="NWCUA" rel="home">
 <img src="https://nwcua.org/wp-content/themes/nwcua/img/logo.png" alt="NWCUA">

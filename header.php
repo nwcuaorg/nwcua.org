@@ -29,7 +29,7 @@ gtag('config', 'UA-23488192-1');
 <?php the_notice_bar(); ?>
 
 <div class="container">
-<header>
+<header class="main">
 	
 	<div class="logo">
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
