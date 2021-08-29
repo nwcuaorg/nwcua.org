@@ -15,11 +15,6 @@ if ( is_staging() ) {
 
 // get the request URI and remove the query string
 $request = parse_query_string();
-// $request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );
-
-
-// dump the server info
-// print_r( $_SERVER ); die;
 
 
 // check if this is an auth request.
@@ -27,9 +22,6 @@ if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 
 	// set session
 	$_SESSION['sf_user'] = $request;
-
-	// print_r( $request );
-	// die;
 
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
@@ -128,10 +120,6 @@ function account_button() {
 function is_member() {
 
 	global $post;
-
-	print_r( $_SESSION['sf_user'] );
-	print get_cmb_value( 'member-only' );
-	die;
 
 	// see if there is a member's only value
 	if ( has_cmb_value( 'member-only' )  ) {
