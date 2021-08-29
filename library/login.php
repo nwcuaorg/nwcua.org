@@ -44,7 +44,7 @@ if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 
 
 // handle logout requests
-if ( substr( $request, 0, 7 ) == '/logout' ) {
+if ( substr( $_SERVER['REQUEST_URI'], 0, 7 ) == '/logout' ) {
 
 	// unset the salesforce user from session
 	unset( $_SESSION['sf_user'] );
