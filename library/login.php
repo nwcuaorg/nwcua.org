@@ -14,11 +14,11 @@ if ( is_staging() ) {
 
 
 // get the request URI and remove the query string
-$request = ( isset( $_SERVER['QUERY_STRING'] ) ? str_replace( "?" . $_SERVER['QUERY_STRING'], '',  $_SERVER['REQUEST_URI'] ) : $_SERVER['REQUEST_URI'] );
+$request = parse_query_string();
 
 
 // check if this is an auth request.
-if ( substr( $request, 0, 5 ) == '/auth' ) {
+if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 
 	// log the auth request
 	// $logfile = $_SERVER["DOCUMENT_ROOT"] . '/wp-content/uploads/logs/auth.log';
@@ -26,7 +26,7 @@ if ( substr( $request, 0, 5 ) == '/auth' ) {
 	file_put_contents( $logfile, "\r\n" . $_SERVER['REQUEST_URI'], FILE_APPEND );
 
 	// set session
-	$_SESSION['sf_user'] = $_REQUEST;
+	$_SESSION['sf_user'] = $request;
 
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
@@ -34,14 +34,14 @@ if ( substr( $request, 0, 5 ) == '/auth' ) {
 	}
 
 	// redirect to infosight
-	wp_redirect( 'https://nwcua.leagueinfosight.com/admin/client/is/frontend/nwcua_sso.php?' . http_build_query( $_REQUEST ) );
+	wp_redirect( 'https://nwcua.leagueinfosight.com/admin/client/is/frontend/nwcua_sso.php?' . http_build_query( $request ) );
 	exit;
 
 }
 
 
 // handle logout requests
-if ( substr( $request, 0, 7 ) == '/logout' ) {
+if ( substr( $_SERVER['REQUEST_URI'], 0, 7 ) == '/logout' ) {
 
 	// unset the salesforce user from session
 	unset( $_SESSION['sf_user'] );
@@ -163,11 +163,8 @@ function user_has_membership() {
 	// check if we've got a salesforce user logged in
 	if ( isset( $_SESSION['sf_user'] )  ) {
 
-		// get the salesforce user
-		$user = $_SESSION['sf_user'];
-
 		// see if the user is an editor
-		if ( $user['membershiptype'] != 'Non Member' ) return true;
+		if ( $_SESSION['sf_user']['membershiptype'] != 'Non Member' ) return true;
 
 	}
 
