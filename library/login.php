@@ -28,8 +28,8 @@ if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 	// set session
 	$_SESSION['sf_user'] = $request;
 
-	print_r( $request );
-	die;
+	// print_r( $request );
+	// die;
 
 	// log them in as 'member'
 	if ( !is_user_logged_in() ) {
@@ -170,11 +170,8 @@ function user_has_membership() {
 	// check if we've got a salesforce user logged in
 	if ( isset( $_SESSION['sf_user'] )  ) {
 
-		// get the salesforce user
-		$user = $_SESSION['sf_user'];
-
 		// see if the user is an editor
-		if ( $user['membershiptype'] != 'Non Member' ) return true;
+		if ( $_SESSION['sf_user']['membershiptype'] != 'Non Member' ) return true;
 
 	}
 
