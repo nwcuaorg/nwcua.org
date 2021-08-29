@@ -37,7 +37,7 @@ if ( substr( $_SERVER['REQUEST_URI'], 0, 5 ) == '/auth' ) {
 	}
 
 	// redirect to infosight
-	wp_redirect( 'https://nwcua.leagueinfosight.com/admin/client/is/frontend/nwcua_sso.php?' . http_build_query( $_REQUEST ) );
+	wp_redirect( 'https://nwcua.leagueinfosight.com/admin/client/is/frontend/nwcua_sso.php?' . http_build_query( $request ) );
 	exit;
 
 }
