@@ -127,6 +127,18 @@ section.content {
 	.content-column {
 		line-height: 1.4em;
 	}
+
+	.wp-caption {
+		&.alignright {
+			float: right;
+			margin: 0 0 15px 15px;
+		}
+
+		&.alignleft {
+			float: left;
+			margin: 0 15px 15px 0;
+		}
+	}
 }
 
 
