@@ -17,6 +17,7 @@ $category = get_the_category();
 		<?php if ( user_has_membership() ) { ?>
 		
 		<div class="filtering">
+			<a href="#subscribe" class="btn arrow right">Get Updates</a>
 			<label><input type="checkbox" name="idaho" value="Idaho" class="idaho-filter" /> Idaho</label>
 			<label><input type="checkbox" name="oregon" value="Oregon" class="oregon-filter" /> Oregon</label>
 			<label><input type="checkbox" name="washington" value="Washington" class="washington-filter" /> Washington</label>
@@ -47,7 +48,7 @@ $category = get_the_category();
 			
 				// Start the Loop.
 				$count = 0;
-				while ( have_posts() ) : the_post(); 
+				while ( have_posts() ) : the_post();
 			        $categories = get_the_category();
 			        $cat = $categories[0];
 			        $display_name = get_the_author_meta( 'display_name', $post->post_author );
