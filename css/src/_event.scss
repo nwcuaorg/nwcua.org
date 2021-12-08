@@ -108,6 +108,14 @@
 			background: #eee;
 		}
 
+		&.calendar-day.current-day {
+			background: #f5f5f5;
+
+			&:hover {
+				background: #eee;
+			}
+		}
+
 		.day-number {
 			text-align: right;
 		}

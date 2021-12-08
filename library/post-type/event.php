@@ -459,12 +459,17 @@ function show_month_events( $month, $year ) {
 		$days_in_this_week++;
 	endfor;
 
+	// get today
+	$today = mktime( 0, 0, 0, date( 'm' ), date( 'd' ), date( 'y' ) );
+
 	// keep going with days....
 	for ( $list_day = 1; $list_day <= $days_in_month; $list_day++ ) :
 
 		// let's check the start and end of the day
 		$day_start = mktime( 0, 0, 0, $month, $list_day, $year );
 		$day_end = mktime( 23, 59, 59, $month, $list_day, $year );
+
+		$is_today = ( $today == $day_start ? true : false );
 
 		// loop through all the events and list them for this day.
 		$day_events = '';
@@ -477,7 +482,7 @@ function show_month_events( $month, $year ) {
 		}
 
 		// start building out the day.
-		$calendar .= '<td class="calendar-day">';
+		$calendar .= '<td class="calendar-day' . ( $is_today ? ' current-day' : '' ) . '">';
 
 		// add in the day number 
 		$calendar.= '<div class="day-number">' . ( !empty( $day_events ) ? "<strong>" : '' ) . $list_day . ( !empty( $day_events ) ? "</strong>" : '' ) . '</div>';
