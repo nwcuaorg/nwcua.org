@@ -43,7 +43,6 @@ $category = get_the_category();
 		// run the query
 		query_posts( $query_args );
 
-
 			if ( have_posts() ) { 
 			
 				// Start the Loop.
@@ -53,7 +52,7 @@ $category = get_the_category();
 			        $cat = $categories[0];
 			        $display_name = get_the_author_meta( 'display_name', $post->post_author );
 					?>
-			<div class="entry <?php print ( in_category(86) || in_category(56) ? ' idaho' : '' ); ?><?php print ( in_category(85) || in_category(64) ? ' oregon' : '' ); ?><?php print ( in_category(68) || in_category(84) ? ' washington' : '' ); ?><?php print ( in_category(6514) ? ' regulatory' : '' ); ?>">
+			<div class="entry <?php print ( in_category(6664) ? ' idaho' : '' ); ?><?php print ( in_category(6667) ? ' oregon' : '' ); ?><?php print ( in_category(6673) ? ' washington' : '' ); ?><?php print ( in_category(6671) ? ' regulatory' : '' ); ?>">
 	        	<div class="entry-thumbnail">
 	        		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( null, array( 768, 480 ) ); ?></a>
 		    		<div class="entry-category <?php print $cat->slug ?> navy">Advocacy on the Move</div>
