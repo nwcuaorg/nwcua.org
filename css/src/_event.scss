@@ -122,6 +122,8 @@
 
 		.day-events {
 			display: none;
+			@include font-bold;
+			font-size: 13px;
 
 			@include respond-to( 768px ) {
 				display: block;

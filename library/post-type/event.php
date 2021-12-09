@@ -156,6 +156,12 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Do not link from calendar.',
+        'id'   => CMB_PREFIX . 'event_nolink',
+        'type' => 'checkbox',
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Registration Link',
         'id'   => CMB_PREFIX . 'event_registration',
         'desc' => 'Registration Link',
@@ -477,7 +483,7 @@ function show_month_events( $month, $year ) {
 			if ( ( $event->_p_event_start > $day_start && $event->_p_event_start < $day_end ) || 
 				 ( $event->_p_event_end > $day_start && $event->_p_event_end < $day_end ) || 
 				 ( $event->_p_event_start < $day_start && $event->_p_event_end > $day_end ) ) {
-				$day_events .= "<div class='event'><div class='event-title'><a href=\"" . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . "\">" . $event->post_title . "</a></div><div class='event-time'>" . date( "n/j g:i a", $event->_p_event_start ) . " - " . date( "g:i a", $event->_p_event_end ) . "</div><div class='event-description'>" . $event->post_excerpt . "</div></div>";
+				$day_events .= "<div class='event'><div class='event-title'>" . ( $event->_p_event_nolink == 'on' ? "" : "<a href=\"" . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . "\">" ) . $event->post_title . ( $event->_p_event_nolink == 'on' ? "" : "</a>" ) . "</div><div class='event-time'>" . date( "n/j g:i a", $event->_p_event_start ) . " - " . date( "g:i a", $event->_p_event_end ) . "</div><div class='event-description'>" . $event->post_excerpt . "</div></div>";
 			}
 		}
 
