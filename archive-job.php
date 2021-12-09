@@ -18,6 +18,24 @@ $args = array_merge( $wp_query->query_vars, array(
 ) );
 
 
+$request = parse_query_string();
+$sort = $request['sort'];
+switch ( $sort ) {
+	case 'title':
+		$args['orderby'] = 'title';
+		$args['order'] = 'ASC';
+	break;
+	case 'date-asc':
+		$args['orderby'] = 'date';
+		$args['order'] = 'ASC';
+	break;
+	case 'date-desc':
+		$args['orderby'] = 'date';
+		$args['order'] = 'DESC';
+	break;
+}
+
+
 // start building meta query for job expiration
 $today = date( 'Y-m-d' );
 $expires_query = array(
@@ -77,6 +95,7 @@ $job_count = $wp_query->found_posts;
 		<div class="right-column">
 			<div class="job-filter">
 				<div class="job-search"><label for="job-search">Search:</label> <input type="text" id="job-search" value="" placeholder="Search Jobs"></div>
+				<div class="job-sort"><form name="job-sort" action="/jobs" method="GET"><label>Sort By</label><select name="sort"><option value="expiration">Expiration Date</option><option value="title"<?php print ( $sort == 'title' ? ' selected' : '' ) ?>>Job Title</option><option value="date-desc"<?php print ( $sort == 'date-desc' ? ' selected' : '' ) ?>>Newest to Oldest</option><option value="date-asc"<?php print ( $sort == 'date-asc' ? ' selected' : '' ) ?>>Oldest to Newest</option></select></form></div>
 				<div class="job-count"><strong>Showing <?php print $job_count; ?> Job<?php print ( $job_count == 1 ? '' : 's' ) ?></strong></div>
 			</div>
 

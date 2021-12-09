@@ -37,6 +37,10 @@ jQuery(document).ready(function($){
             	$(this).show();
 		    });
 		});
+
+		$('.job-sort select').on( 'change', function(){
+			$('.job-sort form').submit();
+		});
 	}
 
 });
