@@ -29,30 +29,34 @@ get_header();
 		<div class="sidebar event-info">
 			<?php 
 			// display credit union name
+			print '<div class="event-date">';
 			if ( has_cmb_value( 'event_start' ) && has_cmb_value( 'event_end' ) ) {
 				$start = get_cmb_value( 'event_start' );
 				$end = get_cmb_value( 'event_end' );
-				print "<h4>Date</h4>";
-				if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
-					print "<p>" . date( "F j g:i a", $start ) . " -<br>";
-					print date( "F j g:i a", $end ) . " P" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
-					print "<p>" . date( "F j g:i a", $start + 3600 ) . " -<br>";
-					print date( "F j g:i a", $end + 3600 ) . " M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
-				} else {
-					print "<p>" . date( "F j", $start ) . "</p>";
-					print "<p>" . date( "g:i a", $start );
-					print " - " . date( "g:i a", $end );
-					print " P" . ( date( 'I', $start ) ? "D" : "S" ) . "T<br>";
-					print date( "g:i a", $start + 3600 );
-					print " - " . date( "g:i a", $end + 3600 );
-					print " M" . ( date( 'I', $start ) ? "D" : "S" ) . "T</p>";
-				}
-			}
 
-			// display the event duration.
-			if ( has_cmb_value( 'event_start' ) && has_cmb_value( 'event_end' ) ) {
-				print "<p><label>Duration:</label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
+				// timezone strings
+				$mst_start = "M" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
+				$mst_end = "M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
+
+				print "<h4>Date</h4>";
+
+				if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
+
+					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start)<br>";
+					print "&#8212;<br>" .
+							"<strong>" . date( "F j, Y", $end ) . "</strong><br>" . date( "g:i a", $end ) . " (" . date( "g:i a", $end + 3600 ) . " $mst_end)</p><br>";
+					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
+
+				} else {
+
+					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . 
+					date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start) &#8212;<br>";
+					print date( "g:i a", $end ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start)</p><br>";
+					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
+				}
+
 			}
+			print "</div>";
 
 			// display price
 			$early_date = get_cmb_value( 'event_early_date' );
