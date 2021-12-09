@@ -174,6 +174,11 @@ function person_metaboxes() {
         'type' => 'text',
     ) );
     $person_box->add_field( array(
+        'name' => 'Youtube',
+        'id' => CMB_PREFIX . 'person_youtube',
+        'type' => 'text',
+    ) );
+    $person_box->add_field( array(
         'name' => 'LinkedIn',
         'id' => CMB_PREFIX . 'person_linkedin',
         'type' => 'text',

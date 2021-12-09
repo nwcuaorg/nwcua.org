@@ -30,6 +30,7 @@ the_page_title();
 				<?php if ( has_cmb_value( "person_facebook" ) ) { ?><a href='<?php show_cmb_value( "person_facebook" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-facebook.png" alt="Facebook" /></a><?php } ?>
 				<?php if ( has_cmb_value( "person_twitter" ) ) { ?><a href='<?php show_cmb_value( "person_twitter" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-twitter.png" alt="Twitter" /></a><?php } ?>
 				<?php if ( has_cmb_value( "person_instagram" ) ) { ?><a href='<?php show_cmb_value( "person_instagram" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-instagram.png" alt="Instagram" /></a><?php } ?>
+				<?php if ( has_cmb_value( "person_youtube" ) ) { ?><a href='<?php show_cmb_value( "person_youtube" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-youtube.png" alt="Youtube" /></a><?php } ?>
 				<?php if ( has_cmb_value( "person_linkedin" ) ) { ?><a href='<?php show_cmb_value( "person_linkedin" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-linkedin.png" alt="LinkdIn" /></a><?php } ?>
 			</p>
 		</div>
