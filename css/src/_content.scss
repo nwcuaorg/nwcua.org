@@ -184,6 +184,11 @@ section.content {
 			margin: 0;
 		}
 	}
+
+	.category-description {
+		@include clearfix;
+		margin: -20px 0 0 10px;
+	}
 }
 
 

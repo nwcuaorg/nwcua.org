@@ -18,7 +18,7 @@ get_header();
 	</div>
 	<div class="content-wide" role="main">
 		<div class="category-description">
-			
+			<?php print apply_filters( 'the_content', category_description() ); ?>
 		</div>
 		<div class="anthem-listing">
 		<?php 
