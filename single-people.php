@@ -26,6 +26,12 @@ the_page_title();
 			<?php if ( has_cmb_value( "person_office" ) ) { ?><p>Office: <?php print get_cmb_value( "person_office" ); ?></p><?php } ?>
 			<?php if ( has_cmb_value( "person_website" ) ) { ?><p>Website: <a href='<?php show_cmb_value( "person_website" ) ?>' target='_blank'>Visit Website</a></p><?php } ?>
 			<?php if ( has_cmb_value( "person_cv" ) ) { ?><p>CV/Resume: <a href='<?php show_cmb_value( "person_cv" ) ?>' target='_blank'>Download</a></p><?php } ?>
+			<p class="person-social">
+				<?php if ( has_cmb_value( "person_facebook" ) ) { ?><a href='<?php show_cmb_value( "person_facebook" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-facebook.png" alt="Facebook" /></a><?php } ?>
+				<?php if ( has_cmb_value( "person_twitter" ) ) { ?><a href='<?php show_cmb_value( "person_twitter" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-twitter.png" alt="Twitter" /></a><?php } ?>
+				<?php if ( has_cmb_value( "person_instagram" ) ) { ?><a href='<?php show_cmb_value( "person_instagram" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-instagram.png" alt="Instagram" /></a><?php } ?>
+				<?php if ( has_cmb_value( "person_linkedin" ) ) { ?><a href='<?php show_cmb_value( "person_linkedin" ) ?>' target='_blank'><img src="<?php bloginfo('template_url') ?>/img/person-linkedin.png" alt="LinkdIn" /></a><?php } ?>
+			</p>
 		</div>
 
 	</div>

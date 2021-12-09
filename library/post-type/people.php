@@ -158,6 +158,26 @@ function person_metaboxes() {
         'type' => 'select',
         'options' => $groups
     ) );
+    $person_box->add_field( array(
+        'name' => 'Facebook',
+        'id' => CMB_PREFIX . 'person_facebook',
+        'type' => 'text',
+    ) );
+    $person_box->add_field( array(
+        'name' => 'Twitter',
+        'id' => CMB_PREFIX . 'person_twitter',
+        'type' => 'text',
+    ) );
+    $person_box->add_field( array(
+        'name' => 'Instagram',
+        'id' => CMB_PREFIX . 'person_instagram',
+        'type' => 'text',
+    ) );
+    $person_box->add_field( array(
+        'name' => 'LinkedIn',
+        'id' => CMB_PREFIX . 'person_linkedin',
+        'type' => 'text',
+    ) );
 
 }
 
