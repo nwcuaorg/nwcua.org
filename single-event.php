@@ -75,7 +75,6 @@ get_header();
 				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green large">Register Now</a></p>';
 			}
 
-
 			if ( has_cmb_value( 'event_location_text' ) ) {
 				print '<div class="event-location">';
 				print "<h4>Location</h4>";
@@ -83,10 +82,35 @@ get_header();
 				print '</div>';
 			}
 
+			// get event people group
+			$event_people_group = get_cmb_value( 'people_group' );
+			
+			// if we have a people group
+			if ( !empty( $event_people_group ) ) {
 
-			// if we have an event group
+				// get the people group title
+				$event_connect_title = get_cmb_value( 'event_connect_title' );
+
+				// show a title if we have one.
+				print ( !empty( $event_connect_title ) ? "<h4>" . $event_connect_title . "</h4>" : '' );
+
+				print '<div class="event-people">';
+				do_people_group( $event_people_group );
+				print '</div>';
+			}
+
+			// get event ad group
 			$event_ad_group = get_cmb_value( 'ad_group' );
+			
+			// if we have an ad group
 			if ( !empty( $event_ad_group ) ) {
+
+				// get the ad title
+				$event_ad_title = get_cmb_value( 'event_ad_title' );
+
+				// show a title if we have one.
+				print ( !empty( $event_ad_title ) ? "<h4>" . $event_ad_title . "</h4>" : '' );
+
 				print '<div class="event-ad">';
 				do_ad_group( $event_ad_group );
 				print '</div>';

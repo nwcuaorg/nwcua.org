@@ -198,6 +198,19 @@ function get_all_people_cats() {
 }
 
 
+// a simple function to output a people group using the shortcode
+function do_people_group( $group_name ) {
+
+	// if we have a group
+	if ( !empty( $group_name ) ) {
+
+		print do_shortcode( '[people category="' . $group_name . '" /]' );
+
+	}
+
+}
+
+
 // add a people shortcode
 function people_shortcode( $atts ) {
 

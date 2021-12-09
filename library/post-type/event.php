@@ -117,6 +117,12 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Do not link from calendar.',
+        'id'   => CMB_PREFIX . 'event_nolink',
+        'type' => 'checkbox',
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Early Bird Deadline',
         'id'   => CMB_PREFIX . 'event_early_date',
         'type' => 'text_datetime_timestamp'
@@ -147,6 +153,13 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Registration Link',
+        'id'   => CMB_PREFIX . 'event_registration',
+        'desc' => 'Registration Link',
+        'type' => 'text'
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Location Description',
         'id'   => CMB_PREFIX . 'event_location_text',
         'type' => 'wysiwyg',
@@ -156,15 +169,25 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
-        'name' => 'Do not link from calendar.',
-        'id'   => CMB_PREFIX . 'event_nolink',
-        'type' => 'checkbox',
+        'name' => 'Connect With Us Title',
+        'id'   => CMB_PREFIX . 'event_connect_title',
+        'desc' => 'If populated, and the ad group is selected, this shows above the ads.',
+        'type' => 'text'
+    ) );
+
+    $people_groups = get_all_people_cats();
+    $event_metabox->add_field( array(
+        'name' => 'People Group',
+        'desc' => 'Select a group of people for the sidebar (if empty, no group will be displayed).',
+        'id' => CMB_PREFIX . 'people_group',
+        'type' => 'select',
+        'options' => $people_groups 
     ) );
 
     $event_metabox->add_field( array(
-        'name' => 'Registration Link',
-        'id'   => CMB_PREFIX . 'event_registration',
-        'desc' => 'Registration Link',
+        'name' => 'Ad/Sponsor Title',
+        'id'   => CMB_PREFIX . 'event_ad_title',
+        'desc' => 'If populated, and the ad group is selected, this shows above the ads.',
         'type' => 'text'
     ) );
 
@@ -173,7 +196,7 @@ function event_metaboxes( $meta_boxes ) {
     ), get_ad_groups() );
     $event_metabox->add_field( array(
         'name' => 'Ad Group',
-        'desc' => 'Select an ad group for the sidebar ad (if empty, no ad group will be displayed.',
+        'desc' => 'Select an ad group for the sidebar ad (if empty, no group will be displayed).',
         'id' => CMB_PREFIX . 'ad_group',
         'type' => 'select',
         'options' => $ad_groups 
