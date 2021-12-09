@@ -109,12 +109,6 @@ function job_metaboxes( $meta_boxes ) {
     ) );
 
     $job_metabox->add_field( array(
-        'name' => 'Company',
-        'id'   => CMB_PREFIX . 'job_company',
-        'type' => 'text',
-    ) );
-
-    $job_metabox->add_field( array(
         'name' => 'Job Type',
         'id'   => CMB_PREFIX . 'job_type',
         'type' => 'select',
@@ -126,15 +120,14 @@ function job_metaboxes( $meta_boxes ) {
     ) );
 
     $job_metabox->add_field( array(
-        'name' => 'Education',
-        'id'   => CMB_PREFIX . 'job_education',
-        'type' => 'wysiwyg',
-        'options' => array( 'textarea_rows' => 7 )
+        'name' => 'Credit Union',
+        'id'   => CMB_PREFIX . 'job_company',
+        'type' => 'text',
     ) );
 
     $job_metabox->add_field( array(
-        'name' => 'Comments',
-        'id'   => CMB_PREFIX . 'job_comments',
+        'name' => 'Credit Union Summary',
+        'id'   => CMB_PREFIX . 'job_company_description',
         'type' => 'wysiwyg',
         'options' => array( 'textarea_rows' => 7 )
     ) );
