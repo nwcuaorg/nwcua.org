@@ -38,6 +38,16 @@
 		.event-date, .event-price, .event-location, .event-people, .event-ad, .event-registration {
 			padding: 10px 0 25px 0;
 		}
+
+		.event-ad {
+			img {
+				max-width: 400px;
+
+				@include respond-to( 768px ) {
+					max-width: 100%;
+				}
+			}
+		}
 	}
 }
 
