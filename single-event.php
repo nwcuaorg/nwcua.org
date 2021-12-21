@@ -58,33 +58,59 @@ get_header();
 			}
 			print "</div>";
 
-			// display price
+			// get price dates
 			$early_date = get_cmb_value( 'event_early_date' );
-			$early_price = get_cmb_value( 'event_early_price' );
-			$regular_price = get_cmb_value( 'event_price' );
 			$late_date = get_cmb_value( 'event_late_date' );
-			$late_price = get_cmb_value( 'event_late_price' );
 			$is_early = ( time() <= $early_date ? 1 : 0);
 			$is_late = ( time() >= $late_date ? 1 : 0 );
-			$current_price = ( $is_early ? $early_price : ( $is_late ? $late_price : $regular_price ) );
-			//$current_price = $regular_price;
-			if ( !empty( $current_price ) ) {
-				print '<div class="event-price">';
-				print "<h4>Price</h4>";
-				print "<p>$" . $current_price . ( $is_early ? ' (early bird price)' : ( $is_late ? ' (late registration price)' : '' ) ) . "</p>";
+
+			// get normal prices
+			$early_price = get_cmb_value( 'event_early_price' );
+			$regular_price = get_cmb_value( 'event_price' );
+			$late_price = get_cmb_value( 'event_late_price' );
+
+			// get small cu prices
+			$small_early_price = get_cmb_value( 'event_small_early_price' );
+			$small_regular_price = get_cmb_value( 'event_small_price' );
+			$small_late_price = get_cmb_value( 'event_small_late_price' );
+
+			// set current price variables for small and regular cus
+			$current_price = str_replace( '.00', '', ( $is_early ? $early_price : ( $is_late ? $late_price : $regular_price ) ) );
+			$small_current_price = str_replace( '.00', '', ( $is_early ? $small_early_price : ( $is_late ? $small_late_price : $small_regular_price ) ) );
+
+
+			// start output the pricing information
+			print '<div class="event-price">';
+			print "<h4>Pricing</h4>";
+
+			// if the small cu price is set, display with different styles
+			if ( $current_price == 0 ) {
+				print "<p>Free</p>";
+			} else if ( !empty( $small_current_price ) ) {
+				print "<p><strong>Regular Price:</strong><br>$" . $current_price . ( $is_early ? ' (early bird price)' : ( $is_late ? ' (late registration price)' : '' ) ) . "</p>";	
+				print "<p><strong>Small CU Price:</strong><br>$" . $small_current_price . ( $is_early ? ' (early bird price)' : ( $is_late ? ' (late registration price)' : '' ) ) . "</p>";	
+			} else {
+				print "<p>$" . $current_price . ( $is_early ? ' (early bird price)' : ( $is_late ? ' (late registration price)' : '' ) ) . "</p>";	
+			}
+			print '</div>';
+		
+
+			// output the registration button if there's a registration link.
+			if ( has_cmb_value( 'event_registration' ) ) {
+				print '<div class="event-registration">';
+				print '<p><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green large">Register Now</a></p>';
 				print '</div>';
 			}
-			
-			if ( has_cmb_value( 'event_registration' ) ) {
-				print '<p class="event-registration"><a href="' . get_cmb_value( 'event_registration' ) . '" class="btn green large">Register Now</a></p>';
-			}
 
+
+			// output the event location information
 			if ( has_cmb_value( 'event_location_text' ) ) {
 				print '<div class="event-location">';
 				print "<h4>Location</h4>";
 				show_cmb_wysiwyg_value( 'event_location_text' );
 				print '</div>';
 			}
+
 
 			// get event people group
 			$event_people_group = get_cmb_value( 'people_group' );
@@ -102,6 +128,7 @@ get_header();
 				do_people_group( $event_people_group );
 				print '</div>';
 			}
+
 
 			// get event ad group
 			$event_ad_group = get_cmb_value( 'ad_group' );

@@ -129,6 +129,12 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Late Registration Date',
+        'id'   => CMB_PREFIX . 'event_late_date',
+        'type' => 'text_datetime_timestamp'
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Early Bird Price',
         'id'   => CMB_PREFIX . 'event_early_price',
         'type' => 'text_money'
@@ -141,14 +147,26 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
-        'name' => 'Late Registration Date',
-        'id'   => CMB_PREFIX . 'event_late_date',
-        'type' => 'text_datetime_timestamp'
+        'name' => 'Late Registration Price',
+        'id'   => CMB_PREFIX . 'event_late_price',
+        'type' => 'text_money'
     ) );
 
     $event_metabox->add_field( array(
-        'name' => 'Late Registration Price',
-        'id'   => CMB_PREFIX . 'event_late_price',
+        'name' => 'Early Bird Price (Small CU)',
+        'id'   => CMB_PREFIX . 'event_small_early_price',
+        'type' => 'text_money'
+    ) );
+
+    $event_metabox->add_field( array(
+        'name' => 'Regular Price (Small CU)',
+        'id'   => CMB_PREFIX . 'event_small_price',
+        'type' => 'text_money'
+    ) );
+
+    $event_metabox->add_field( array(
+        'name' => 'Late Registration Price (Small CU)',
+        'id'   => CMB_PREFIX . 'event_small_late_price',
         'type' => 'text_money'
     ) );
 
