@@ -51,7 +51,7 @@ get_header();
 
 					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . 
 					date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start) &#8212;<br>";
-					print date( "g:i a", $end ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start)</p><br>";
+					print date( "g:i a", $end ) . " (" . date( "g:i a", $end + 3600 ) . " $mst_start)</p><br>";
 					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
 				}
 
