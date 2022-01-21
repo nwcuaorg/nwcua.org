@@ -75,13 +75,15 @@ function microsite2_metaboxes( $meta_boxes ) {
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Title (#1)',
         'id'   => CMB_PREFIX . 'microsite2_icon_title_1',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Content (#1)',
         'id'   => CMB_PREFIX . 'microsite2_icon_content_1',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
     
     $microsite2_metabox->add_field( array(
@@ -103,13 +105,15 @@ function microsite2_metaboxes( $meta_boxes ) {
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Title (#2)',
         'id'   => CMB_PREFIX . 'microsite2_icon_title_2',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Content (#2)',
         'id'   => CMB_PREFIX . 'microsite2_icon_content_2',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
     
     $microsite2_metabox->add_field( array(
@@ -131,13 +135,15 @@ function microsite2_metaboxes( $meta_boxes ) {
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Title (#3)',
         'id'   => CMB_PREFIX . 'microsite2_icon_title_3',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
     $microsite2_metabox->add_field( array(
         'name' => 'Icon Content (#3)',
         'id'   => CMB_PREFIX . 'microsite2_icon_content_3',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
 
@@ -199,13 +205,15 @@ function microsite2_metaboxes( $meta_boxes ) {
     $microsite2_metabox->add_field( array(
         'name' => 'Infographic Icon Title',
         'id'   => CMB_PREFIX . 'microsite2_info_icon_title',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
     $microsite2_metabox->add_field( array(
         'name' => 'Infographic Icon Conten',
         'id'   => CMB_PREFIX . 'microsite2_info_icon_content',
-        'type' => 'text'
+        'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
 
