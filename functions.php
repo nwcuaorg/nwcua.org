@@ -44,6 +44,6 @@ require_multi(
 
 	'post-type/people', 'post-type/event', 'post-type/job',
 	
-	'images', 'metabox', 'showcase', 'showcase-simple', 'icons', 'accordion', 'partner-logos', 'button', 'articles', 'category-color', 'notice', 'microsite'
+	'images', 'metabox', 'showcase', 'showcase-simple', 'icons', 'accordion', 'partner-logos', 'button', 'articles', 'category-color', 'notice', 'microsite', 'microsite-v2'
 );
 
