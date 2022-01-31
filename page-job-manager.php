@@ -20,6 +20,21 @@ if ( isset( $_GET['del'] ) ) {
 }
 
 
+// if the salesforce user is empty and the wp user is logged in
+if ( empty( $_SESSION['sf_user']['email'] ) && is_user_logged_in() ) {
+
+	// get the wp user
+	$the_user = wp_get_current_user();
+
+	// if there's an email address set
+	if ( isset( $the_user->data->user_email ) ) {
+
+		// set the salesforce email to the wp user email value
+		$_SESSION['sf_user']['email'] = $the_user->data->user_email;
+	}
+}
+
+ 
 get_header();
 
 

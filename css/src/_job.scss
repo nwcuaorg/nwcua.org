@@ -190,3 +190,13 @@
 	}
 }
 
+.job-editor {
+	padding: 20px;	
+	border-top: 1px solid #888;
+
+	@include respond-to( $bp-xl ) {
+		padding: 20px 60px 20px 40px;
+		position: relative;
+	}
+}
+

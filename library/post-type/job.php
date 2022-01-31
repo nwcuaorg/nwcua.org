@@ -203,23 +203,89 @@ add_action( 'admin_init', 'add_job_caps');
 
 
 
+// check if user owns job
+function user_owns_job( $post_id ) {
+
+	if ( isset( $_SESSION['sf_user']['email'] ) ) {
+		$email = $_SESSION['sf_user']['email'];
+	} else if ( is_user_logged_in() ) {
+		$the_user = wp_get_current_user();
+		$email = $the_user->data->user_email;
+	}
+
+	if ( get_cmb_value( 'job_creator', $post_id ) == $email || current_user_can( 'administrator' ) ) {
+		return true;
+	}
+
+	return false;
+}
+
+
+
 // edit job form
 function edit_job_form() {
 	global $post;
 
-	$user = get_current_user_id();
-	if ( $post->post_author == $user || current_user_can( 'administrator' ) ) {
-		print "<hr />";
+	// if the current user (sf or wp) owns the job
+	if ( user_owns_job( $post->ID ) ) {
 
-		//even though they are not the author
-		add_filter( 'gform_update_post/public_edit',  '__return_true' );
-
-		//update post action
-		do_action( 'gform_update_post/setup_form', array('post_id' => $post->ID, 'form_id' => 6 ) );
+		$fields = array(
+			'job_title' => $post->post_title,
+			'job_company' => get_cmb_value( 'job_company' ),
+			'job_contact_name' => get_cmb_value( 'job_contact_name' ),
+			'job_contact_email' => get_cmb_value( 'job_contact_email' ),
+			'job_contact_phone' => get_cmb_value( 'job_contact_phone' ),
+			'job_region' => get_cmb_value( 'job_region' ),
+			'job_company_description' => get_cmb_value( 'job_company_description' ),
+			'job_short_description' => $post->post_excerpt,
+			'job_full_description' => $post->post_content,
+			'job_apply_email' => get_cmb_value( 'job_apply_email' ),
+			'job_apply_link' => get_cmb_value( 'job_apply_link' ),
+			'job_expires' => get_cmb_value( 'job_expires' ),
+			'edit_job_id' => $post->ID
+		);
 
 		//actual form
-		echo gravity_form( 6, false, false );
+		gravity_form( 20, true, false, false, $fields );
+
 	}
+}
+
+
+
+// when a user submits the job editor form
+add_action( 'gform_after_submission_20', 'update_job', 10, 2 );
+function update_job( $entry, $form ) {
+ 	
+ 	// store the post ID
+ 	$post_id = $entry[29];
+
+ 	if ( user_owns_job( $post_id ) ) {
+
+	 	$post_fields = array(
+	 		'ID' => $post_id,
+	 		'post_title' => $entry[1],
+	 		'post_excerpt' => $entry[2],
+	 		'post_content' => $entry[3]
+	 	);
+	    wp_update_post( $post_fields );
+
+	    // update the post meta data
+		update_post_meta( $post_id, '_p_job_company', $entry[5] );
+		update_post_meta( $post_id, '_p_job_region', $entry[4] );
+		update_post_meta( $post_id, '_p_job_company_description', $entry[23] );
+		update_post_meta( $post_id, '_p_job_contact_name', $entry[6] );
+		update_post_meta( $post_id, '_p_job_contact_email', $entry[13] );
+		update_post_meta( $post_id, '_p_job_contact_phone', $entry[8] );
+		update_post_meta( $post_id, '_p_job_apply_email', $entry[21] );
+		update_post_meta( $post_id, '_p_job_apply_link', $entry[22] );
+		update_post_meta( $post_id, '_p_job_expires', $entry[12] );
+
+ 	}
+
+ 	$the_post = get_post( $post_id );
+ 	wp_redirect( '/job/' . $the_post->post_name );
+
 }
 
 

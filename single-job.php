@@ -90,10 +90,11 @@ get_header();
 
 				?>
 			</div>
-			<hr />
+			<?php if ( user_owns_job( get_the_ID() ) ) { ?>
 			<div class="job-editor">
-				<?php  ?>
+				<?php edit_job_form(); ?>
 			</div>
+			<?php } ?>
 		</div>
 				<?php
 			endwhile;
