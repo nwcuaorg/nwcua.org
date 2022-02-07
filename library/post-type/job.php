@@ -272,11 +272,11 @@ function update_job( $entry, $form ) {
 
 	    // update the post meta data
 		update_post_meta( $post_id, '_p_job_company', $entry[5] );
-		update_post_meta( $post_id, '_p_job_region', $entry[4] );
 		update_post_meta( $post_id, '_p_job_company_description', $entry[23] );
 		update_post_meta( $post_id, '_p_job_contact_name', $entry[6] );
 		update_post_meta( $post_id, '_p_job_contact_email', $entry[13] );
 		update_post_meta( $post_id, '_p_job_contact_phone', $entry[8] );
+		update_post_meta( $post_id, '_p_job_region', $entry[4] );
 		update_post_meta( $post_id, '_p_job_apply_email', $entry[21] );
 		update_post_meta( $post_id, '_p_job_apply_link', $entry[22] );
 		update_post_meta( $post_id, '_p_job_expires', $entry[12] );

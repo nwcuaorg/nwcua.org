@@ -8,6 +8,7 @@ function articles_shortcode( $atts ) {
 		'tags' => '',
 		'cats' => '',
 		'category__not_in' => '',
+		'post_type' => 'post',
 		'posts_per_page' => 4
 	), $atts );
 
