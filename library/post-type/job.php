@@ -257,8 +257,6 @@ function edit_job_form() {
 add_action( 'gform_after_submission_20', 'update_job', 10, 2 );
 function update_job( $entry, $form ) {
  	
-	print_r( $entry ); die;
-
  	// store the post ID
  	$post_id = $entry[29];
 
