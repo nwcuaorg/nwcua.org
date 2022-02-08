@@ -257,6 +257,8 @@ function edit_job_form() {
 add_action( 'gform_after_submission_20', 'update_job', 10, 2 );
 function update_job( $entry, $form ) {
  	
+	print_r( $entry ); die;
+
  	// store the post ID
  	$post_id = $entry[29];
 
@@ -264,10 +266,11 @@ function update_job( $entry, $form ) {
 
 	 	$post_fields = array(
 	 		'ID' => $post_id,
-	 		'post_title' => $entry[1],
-	 		'post_excerpt' => $entry[2],
-	 		'post_content' => $entry[3]
+	 		'post_title' => $entry[30],
+	 		'post_excerpt' => $entry[31],
+	 		'post_content' => $entry[32]
 	 	);
+
 	    wp_update_post( $post_fields );
 
 	    // update the post meta data
@@ -409,7 +412,23 @@ function the_job_list( $jobs = '', $random = false ) {
 
 add_filter( 'gform_field_value_salesforce_user', 'populate_salesforce_user' );
 function populate_salesforce_user( $value ) {
-    return $_SESSION['sf_user']['email'];
+
+	if ( isset( $_SESSION['sf_user']['email'] ) ) {
+
+		// if it's a salesforce user, get the email
+		return $_SESSION['sf_user']['email'];
+
+	} else if ( is_user_logged_in() ) {
+
+		// if it's a wordpress user
+		$the_user = wp_get_current_user();
+		return $the_user->data->user_email;
+
+	}
+
+	// otherwise, return nothing
+    return '';
+
 }
 
 
