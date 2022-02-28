@@ -1,0 +1,165 @@
+
+
+// breakpoints
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 1024px;
+$bp-xl: 1150px;
+$bp-xxl: 1440px;
+
+
+// colors
+$teal: #1192BC;
+$river: #09416d;
+$navy: #004D77;
+$orange: #f8981d;
+$lime: #75A25D;
+$forest: #0D4431;
+$gold: #9baf2c;
+$green: #83a53e;
+$red: #e15829;
+$yellow: #D6CE49;
+$grey: #9C9FA0;
+$grey-dark: #60605b;
+$aqua: #2dc6d2;
+$seafoam: #64cac8;
+$stone: $grey-dark;
+
+$seafoam: #92ACAD;
+$grey-dark: #6D6E71;
+$green: #ABB24F;
+$orange: #F1572B;
+
+
+@import 'mixins';
+@import 'reset';
+@import 'grid';
+@import 'fonts';
+@import 'content';
+@import 'base';
+@import 'button';
+@import 'magnific';
+
+
+body {
+	@include font;
+}
+
+header {
+	img {
+		display: block;
+	}
+}
+
+.page-template-page-microsite-merger {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0;
+
+	.microsite-container {
+		max-width: 1220px;
+		margin: 0 auto;
+		border: 1px solid $grey;
+		border-top: 0;
+		border-bottom: 0; 
+		box-shadow: 0 0 20px rgba( $grey, .2 );
+	}
+
+	.microsite-header {
+		padding: 20px;
+		@include clearfix;
+
+		img {
+			max-width: 400px;
+
+			@include respond-to( 768px ) {
+				float: left;
+			}
+
+			&.nwcua {
+				max-width: 275px;
+
+				@include respond-to( 768px ) {
+					float: right;
+				}
+			}
+		}
+	}
+
+	.microsite-content, .section-content {
+		padding: 20px;
+		@extend .content-style;
+
+		h2 {
+			color: $navy;
+			font-size: 2.2em;
+			line-height: 1.2em;
+		}
+
+		@include respond-to( 768px ) {
+			padding: 30px 40px;
+		}
+	}
+
+	.section {
+		.section-title {
+			padding: 20px 20px;
+			color: white;
+			position: relative;
+
+			@include respond-to( 768px ) {
+				padding: 30px 40px;
+			}
+
+			h4 {
+				line-height: 25px;
+				font-size: 18px;
+
+				@include respond-to( 768px ) {
+					font-size: 25px;
+				}
+			}
+
+			img {
+				background-color: white;
+				border-radius: 50%;
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				width: 90px;
+				margin-top: -45px;
+
+				@include respond-to( 1024px ) {
+					width: 120px;
+					margin-top: -60px;
+				}
+			}
+		}
+
+		&.navy .section-title {
+			background-color: $navy;
+
+			img { border: 4px solid $navy; }
+		}
+
+		&.lime .section-title {
+			background-color: $lime;
+
+			img { border: 4px solid $lime; }
+		}
+
+		&.teal .section-title {
+			background-color: $teal;
+
+			img { border: 4px solid $teal; }
+		}
+
+		&.forest .section-title {
+			background-color: $forest;
+
+			img { border: 4px solid $forest; }
+		}
+	}
+
+}
+
