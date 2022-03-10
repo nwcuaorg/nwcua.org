@@ -135,6 +135,12 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Pricing Coming Soon',
+        'id'   => CMB_PREFIX . 'event_pricing_upcoming',
+        'type' => 'checkbox'
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Early Bird Price',
         'id'   => CMB_PREFIX . 'event_early_price',
         'type' => 'text_money'

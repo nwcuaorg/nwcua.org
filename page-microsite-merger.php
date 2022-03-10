@@ -23,6 +23,13 @@ Template Name: Microsite (Merger)
 
 <?php wp_head(); ?>
 <link href="<?php bloginfo( "template_url" ) ?>/css/micro-merger.css?v=3" rel="stylesheet" type="text/css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-23488192-1');
+</script>
 
 </head>
 <body <?php body_class(); ?>>
