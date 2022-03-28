@@ -96,7 +96,7 @@ function page_title_metabox( $meta_boxes ) {
 
     $page_settings_metabox->add_field( array(
         'name' => 'Ad Time (in Seconds)',
-        'desc' => 'Default: 5 seconds',
+        'desc' => 'Default: 5',
         'id'   => CMB_PREFIX . 'page-ad-time',
         'type' => 'text'
     ) );
