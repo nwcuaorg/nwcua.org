@@ -66,6 +66,8 @@ the_page_title();
 
 
 		$group = get_cmb_value( 'page-ad-group' );
+		$time = ( has_cmb_value( 'page-ad-time' ) ? get_cmb_value( 'page-ad-time' ) : 5 );
+
 		if ( !empty( $group ) ) {
 			if ( has_cmb_value( 'page-ad-title' ) ) { ?>
 			<div class="widget-title">
@@ -73,7 +75,7 @@ the_page_title();
 			</div>
 			<?php } ?>
 			<div class="widget widget_media_image">
-				<?php do_ad_group( $group ); ?>
+				<?php do_ad_group( $group, $time ); ?>
 			</div>
 			<?php 
 		}

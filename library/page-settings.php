@@ -95,6 +95,13 @@ function page_title_metabox( $meta_boxes ) {
     ) );
 
     $page_settings_metabox->add_field( array(
+        'name' => 'Ad Time (in Seconds)',
+        'desc' => 'Default: 5 seconds',
+        'id'   => CMB_PREFIX . 'page-ad-time',
+        'type' => 'text'
+    ) );
+
+    $page_settings_metabox->add_field( array(
         'name' => 'People',
         'id'   => CMB_PREFIX . 'page-people',
         'type' => 'select',
