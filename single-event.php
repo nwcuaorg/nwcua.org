@@ -35,6 +35,8 @@ get_header();
 				$end = get_cmb_value( 'event_end' );
 
 				// timezone strings
+				$pst_start = "P" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
+				$pst_end = "P" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
 				$mst_start = "M" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
 				$mst_end = "M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
 
@@ -42,9 +44,9 @@ get_header();
 
 				if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
 
-					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start)<br>";
+					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . date( "g:i a", $start ) . " $pst_start (" . date( "g:i a", $start + 3600 ) . " $mst_start)<br>";
 					print "&#8212;<br>" .
-							"<strong>" . date( "F j, Y", $end ) . "</strong><br>" . date( "g:i a", $end ) . " (" . date( "g:i a", $end + 3600 ) . " $mst_end)</p><br>";
+							"<strong>" . date( "F j, Y", $end ) . "</strong><br>" . date( "g:i a", $end ) . " $pst_end (" . date( "g:i a", $end + 3600 ) . " $mst_end)</p><br>";
 					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
 
 				} else {

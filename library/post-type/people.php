@@ -224,6 +224,7 @@ function people_shortcode( $atts ) {
 		'category' => '',
 		'link' => 1,
 		'show_search' => 0,
+		'show_org' => 1,
 		'style' => 'list', // cards, list
 		'exclude' => 0
 	), $atts ));
@@ -274,7 +275,7 @@ function people_shortcode( $atts ) {
 				'<div class="person-info">
 					<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_fname" ) . ' ' . get_cmb_value( "person_lname" ) . ( $link ? '</a>' : '' ) . '</h4>' .
 					( has_cmb_value( 'person_title' ) ? '<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>' : '' ) .
-					( has_cmb_value( 'person_organization' ) ? '<p class="person-organization">' . get_cmb_value( "person_organization" ) . '</p>' : '' ) .
+					( has_cmb_value( 'person_organization' ) && $show_org ? '<p class="person-organization">' . get_cmb_value( "person_organization" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_phone' ) ? '<p class="person-phone">Phone: ' . get_cmb_value( "person_phone" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_tollfree' ) ? '<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>' : '' ) .
