@@ -28,34 +28,42 @@ get_header();
 	<div class="two-column event" role="main">
 		<div class="sidebar event-info">
 			<?php 
-			// display credit union name
+			// display event date information
 			print '<div class="event-date">';
 			if ( has_cmb_value( 'event_start' ) && has_cmb_value( 'event_end' ) ) {
+
+				// get the event start and end datetimes
 				$start = get_cmb_value( 'event_start' );
 				$end = get_cmb_value( 'event_end' );
 
-				// timezone strings
-				$pst_start = "P" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
-				$pst_end = "P" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
-				$mst_start = "M" . ( date( 'I', $start ) ? "D" : "S" ) . "T";
-				$mst_end = "M" . ( date( 'I', $end ) ? "D" : "S" ) . "T";
+				// get daylight savings times
+				$dt_start = get_cmb_value( 'event_start_dt' );
+				$dt_end = get_cmb_value( 'event_end_dt' );
 
+				// daylight time by default
+				if ( empty( $dt_start ) ) $dt_start = 'DT';
+				if ( empty( $dt_end ) ) $dt_end = 'DT';
+
+				// show a title
 				print "<h4>Date</h4>";
 
 				if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
 
-					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . date( "g:i a", $start ) . " $pst_start (" . date( "g:i a", $start + 3600 ) . " $mst_start)<br>";
+					// if the event doesn't end on the same day as it starts
+					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . date( "g:i a", $start ) . " P" . $dt_start . " (" . date( "g:i a", $start + 3600 ) . " M" . $dt_start . ")<br>";
 					print "&#8212;<br>" .
-							"<strong>" . date( "F j, Y", $end ) . "</strong><br>" . date( "g:i a", $end ) . " $pst_end (" . date( "g:i a", $end + 3600 ) . " $mst_end)</p><br>";
+							"<strong>" . date( "F j, Y", $end ) . "</strong><br>" . date( "g:i a", $end ) . " P" . $dt_end. " (" . date( "g:i a", $end + 3600 ) . " M" . $dt_end . ")</p><br>";
 					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
 
 				} else {
 
+					// if the event ends the same day as it starts
 					print "<p><strong>" . date( "F j, Y", $start ) . "</strong><br>" . 
-					date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " $mst_start) &#8212;<br>";
-					print date( "g:i a", $end ) . " (" . date( "g:i a", $end + 3600 ) . " $mst_start)</p><br>";
+					date( "g:i a", $start ) . " (" . date( "g:i a", $start + 3600 ) . " M" . $dt_start . ") &#8212;<br>";
+					print date( "g:i a", $end ) . " (" . date( "g:i a", $end + 3600 ) . " M" . $dt_start . ")</p><br>";
 					print "<p><label><strong>Duration:</strong></label><br>" . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
 				}
+
 
 			}
 			print "</div>";

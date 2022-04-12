@@ -104,9 +104,31 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'Start Daylight/Standard Time',
+        'id'   => CMB_PREFIX . 'event_start_dt',
+        'type' => 'radio',
+        'options' => array(
+        	'DT' => 'Daylight',
+        	'ST' => 'Standard'
+        ),
+        'default' => 'st'
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'End Date/Time',
         'id'   => CMB_PREFIX . 'event_end',
         'type' => 'text_datetime_timestamp'
+    ) );
+
+    $event_metabox->add_field( array(
+        'name' => 'End Daylight/Standard Time',
+        'id'   => CMB_PREFIX . 'event_end_dt',
+        'type' => 'radio',
+        'options' => array(
+        	'DT' => 'Daylight',
+        	'ST' => 'Standard'
+        ),
+        'default' => 'st'
     ) );
 
     $event_metabox->add_field( array(
