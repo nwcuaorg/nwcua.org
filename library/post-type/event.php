@@ -331,22 +331,33 @@ function get_month_events( $m, $y, $category='' ) {
 
 	$args = array(
 		'meta_query' => array(
-			'relation' => 'AND',
+			'relation' => 'OR',
 			array(
-				'key' => '_p_event_start',
-				'value' => $timestamp_today,
-				'compare' => '>='
+				'relation' => 'AND',
+				array(
+					'key' => '_p_event_start',
+					'value' => $timestamp_start,
+					'compare' => '>='
+				),
+				array(
+					'key' => '_p_event_start',
+					'value' => $timestamp_end,
+					'compare' => '<='
+				)
 			),
 			array(
-				'key' => '_p_event_start',
-				'value' => $timestamp_start,
-				'compare' => '>='
+				'relation' => 'AND',
+				array(
+					'key' => '_p_event_end',
+					'value' => $timestamp_start,
+					'compare' => '>='
+				),
+				array(
+					'key' => '_p_event_end',
+					'value' => $timestamp_end,
+					'compare' => '<='
+				)
 			),
-			array(
-				'key' => '_p_event_start',
-				'value' => $timestamp_end,
-				'compare' => '<='
-			)
 		),
 		'tax_query' => array(
 			array(
@@ -550,8 +561,8 @@ function show_month_events( $month, $year ) {
 		$day_events = '';
 		foreach ( $events as $event ) {
 			if ( ( $event->_p_event_start > $day_start && $event->_p_event_start < $day_end ) || 
-				 ( $event->_p_event_end > $day_start && $event->_p_event_end < $day_end ) || 
-				 ( $event->_p_event_start < $day_start && $event->_p_event_end > $day_end ) ) {
+				 ( $event->_p_event_end > $day_start && $event->_p_event_end < $day_end ) /* || 
+				 ( $event->_p_event_start < $day_start && $event->_p_event_end > $day_end ) */ ) {
 				$day_events .= "<div class='event'><div class='event-title'>" . ( $event->_p_event_nolink == 'on' ? "" : "<a href=\"" . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . "\">" ) . $event->post_title . ( $event->_p_event_nolink == 'on' ? "" : "</a>" ) . "</div><div class='event-time'>" . date( "n/j g:i a", $event->_p_event_start ) . " - " . date( "g:i a", $event->_p_event_end ) . "</div><div class='event-description'>" . $event->post_excerpt . "</div></div>";
 			}
 		}
