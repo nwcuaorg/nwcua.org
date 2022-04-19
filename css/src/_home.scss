@@ -69,5 +69,28 @@
 			padding: 37px 0 0 15px;
 		}
 	}
+
+	.showcase .countdown-clock {
+		padding: 5px 0;
+
+		.countdown-column {
+			background: none;
+			padding: 0;
+
+			.number {
+				color: white;
+				padding-bottom: 0px;
+
+				@include respond-to( 768px ) {
+					font-size: 3.5em;
+					padding-bottom: 10px;
+				}
+			}
+
+			.label {
+				color: rgba( white, .7 );
+			}
+		}
+	}
 }
 

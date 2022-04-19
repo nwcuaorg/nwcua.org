@@ -9,7 +9,7 @@ get_header();
 ?>
 
 	<?php the_showcase(); ?>
-	
+
 	<div class="content-pad">
 
 		<div class="articles">
