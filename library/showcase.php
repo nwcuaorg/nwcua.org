@@ -20,11 +20,18 @@ function the_showcase() {
 				$content = ( isset( $slide["content"] ) ? $slide["content"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
 				$image = $slide['image'];
+				$video = $slide['video'];
 				$title = ( isset( $slide['title'] ) ? $slide['title'] : '' );
 
 				?>
 			<div class="slide slide-<?php print ( $key==0 ? ' visible' : '' ); ?>" data-id="<?php print $key; ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
 				
+				<?php if ( stristr( $video, '.webm' ) ) { ?>
+				<video class="slide-video" autoplay muted loop>
+					<source src="<?php print $video; ?>" type="video/webm">
+				</video>
+				<?php } ?>
+
 				<?php if ( !empty( $content ) ) { ?>
 				<div class="slide-content">
 				<?php 
@@ -134,8 +141,16 @@ function showcase_metabox( $meta_boxes ) {
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(
-        'name' => 'Image/Video',
+        'name' => 'Image',
         'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 200, 100 )
+    ) );
+
+    $showcase_metabox->add_group_field( $showcase_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Upload a .webm video file to use on large screens.',
         'type' => 'file',
         'preview_size' => array( 200, 100 )
     ) );

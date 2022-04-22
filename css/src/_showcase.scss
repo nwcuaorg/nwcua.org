@@ -60,6 +60,25 @@
 			padding: 0 50% 0 80px;
 		}
 
+		video {
+			display: none;
+
+			@include respond-to( 1025px ) {
+				display: block;
+			    position: absolute;
+			    left: 50%; /* % of surrounding element */
+			    top: 50%;
+			    -webkit-transform: translate(-50%, -50%);
+			    transform: translate(-50%, -50%);
+				min-width: 100%; 
+				min-height: 100%; 
+				width: auto; 
+				height: auto;
+				z-index: 5; 
+				overflow: hidden;			
+			}
+	  	}
+
 		&.visible {
 			opacity: 1;
 			z-index: 6;
