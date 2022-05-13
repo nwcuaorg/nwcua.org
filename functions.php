@@ -42,7 +42,7 @@ function require_multi( $files ) {
 require_multi( 
 	'core', 'metabox', 'page-settings', 'login', 'admin',
 
-	'post-type/people', 'post-type/event', 'post-type/job',
+	'post-type/people', 'post-type/event', 'post-type/job', 'post-type/partner',
 	
 	'images', 'metabox', 'showcase', 'showcase-simple', 'icons', 'accordion', 'partner-logos', 'button', 'articles', 'category-color', 'notice', 'microsite', 'microsite-v2', 'microsite-merger'
 );
