@@ -245,7 +245,7 @@ function partners_shortcode( $atts ) {
 
 	return $partner_content;
 }
-add_shortcode( 'people', 'partner_shortcode' );
+add_shortcode( 'partners', 'partner_shortcode' );
 
 
 
@@ -284,6 +284,6 @@ function partner_shortcode( $atts ) {
 		return '';
 	}
 }
-add_shortcode( 'person', 'partner_shortcode' );
+add_shortcode( 'partner', 'partner_shortcode' );
 
 
