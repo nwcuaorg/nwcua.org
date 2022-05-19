@@ -82,6 +82,14 @@ header {
 				background: $navy;
 				z-index: 100;
 
+				&.sli {
+					background: $teal;
+
+					&:after {
+						background: $teal;
+					}
+				}
+
 				&:after {
 					position: absolute;
 					left: -30px;
@@ -94,6 +102,10 @@ header {
 					transform: skew( 45deg );
 					z-index: 99;
 				}
+			}
+
+			&.sli {
+				background: $teal;
 			}
 
 			li {

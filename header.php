@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php 
+
+global $sli;
+
+?><!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7" <?php language_attributes(); ?>><![endif]-->
 <!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
@@ -39,7 +43,13 @@ gtag('config', 'UA-23488192-1');
 
 	<nav>
 		<button class="menu-toggle">Show/hide Menu</button>
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+		<?php 
+		if ( $sli ) {
+			wp_nav_menu( array( 'theme_location' => 'main-menu-sli', 'menu_class' => 'nav-menu sli' ) );
+		} else {
+			wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) );
+		}
+		?>
 	</nav>
 
 	<div class="search-form">

@@ -21,6 +21,7 @@ function parse_query_string() {
 // register a couple nav menus
 register_nav_menus( array(
 	'main-menu' => 'Main',
+	'main-menu-sli' => 'Main (SLI)',
 	'anthem-categories' => 'Anthem - Featured Categories',
 	'footer-links' => 'Footer - Links',
 	'footer-resources' => 'Footer - Resources'

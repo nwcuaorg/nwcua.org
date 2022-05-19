@@ -12,6 +12,10 @@ define( 'PURE', true );
 define( 'CMB_PREFIX', '_p_' );
 
 
+global $sli;
+$sli = false;
+
+
 // set up the colors
 global $colors;
 $colors = array(

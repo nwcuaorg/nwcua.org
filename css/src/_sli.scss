@@ -1,0 +1,19 @@
+
+
+.partner-social {
+	@include clearfix;
+
+	a {
+		float: left;
+		margin-right: 3px;
+
+		&.btn {
+			margin-right: 15px;
+		}
+	}
+
+	img {
+
+	}
+}
+

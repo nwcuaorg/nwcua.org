@@ -40,7 +40,7 @@ function partner_post_type() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'rewrite' => array(
-				'slug' => 'bio'
+				'slug' => 'partner'
 			),
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions' )
 		) /* end of options */
@@ -157,7 +157,15 @@ function do_partner_group( $group_name ) {
 		print do_shortcode( '[people category="' . $group_name . '" /]' );
 
 	}
+}
 
+
+// retreive a partner social link as html
+function partner_social_link( $network, $partner_id = 0 ) {
+	if ( empty( $partner_id ) ) $partner_id = get_the_ID();
+	if ( has_cmb_value( 'partner_' . $network, $partner_id ) ) {
+		return '<a href="' . get_cmb_value( 'partner_' . $network ) . '" target="_blank"><img src="' . get_bloginfo( 'template_url' ) . '/img/partner-social-' . $network . '.png" /></a>';
+	}
 }
 
 
@@ -287,3 +295,6 @@ function partner_shortcode( $atts ) {
 add_shortcode( 'partner', 'partner_shortcode' );
 
 
+function do_sli() {
+	add_action( 'template_redirect', function(){ global $sli; } );
+}
