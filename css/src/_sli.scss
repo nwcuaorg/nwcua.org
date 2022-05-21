@@ -1,5 +1,16 @@
 
 
+.single-partner {
+	.partner-title {
+		text-transform: uppercase;
+	}
+
+	.partner-video {
+		text-align: center;
+		padding: 10px 0;
+	}
+}
+
 .partner-social {
 	@include clearfix;
 

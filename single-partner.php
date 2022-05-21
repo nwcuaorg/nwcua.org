@@ -38,30 +38,27 @@ the_showcase();
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); 
 					the_content();
+
+					if ( has_cmb_value( 'partner_video' ) ) {
+						print '<div class="partner-video">' . wp_oembed_get( get_cmb_value( 'partner_video' ) ) . '</div>';
+					}
 				endwhile;
 			endif;
 
-			the_icons();
-
-			?>
-		</div>
-			<?php 
-			the_accordions();
 		} else {
-			do_member_error(); ?>
-		</div>
-			<?php
+			do_member_error(); 
 		}
 		?>
+		</div>
 	</div>
 
 </div><!-- #content -->
 
 <?php
-if ( has_cmb_value( 'page-articles' ) ) {
+if ( has_cmb_value( 'partner_tag' ) ) {
 	?>
 <div class="page-articles">
-	<?php print do_shortcode( '[articles cats="' . get_cmb_value('page-articles') . '" posts_per_page=3 /]' ); ?>
+	<?php print do_shortcode( '[articles tags="' . get_cmb_value('partner_tag') . '" posts_per_page=3 /]' ); ?>
 </div>
 	<?php
 }

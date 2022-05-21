@@ -47,7 +47,7 @@ function partner_post_type() {
 	); /* end of register post type */
 	
 	// add post tags to our cpt
-	register_taxonomy_for_object_type( 'post_tag', 'people' );
+	register_taxonomy_for_object_type( 'post_tag', 'partner' );
 	
 }
 
@@ -60,7 +60,7 @@ add_action( 'init', 'partner_post_type');
 // now let's add custom categories (these act like categories)
 register_taxonomy( 'partner_cat', 
 	array('partner'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	array('hierarchical' => true,     /* if this is true, it acts like categories */
+	array('hierarchical' => true, /* if this is true, it acts like categories */
 		'labels' => array(
 			'name' => __( 'Partner Categories', 'ptheme' ), /* name of the custom taxonomy */
 			'singular_name' => __( 'Partner Category', 'ptheme' ), /* single taxonomy name */
@@ -83,6 +83,13 @@ register_taxonomy( 'partner_cat',
 // People metabox
 add_action( 'cmb2_admin_init', 'partner_metaboxes' );
 function partner_metaboxes() {
+
+	// get all the article tags and put them in an array for a select field.
+	$all_tags = get_tags();
+	$select_tags = array();
+	foreach ( $all_tags as $a_tag ) {
+		$select_tags[ $a_tag->slug ] = $a_tag->name;
+	}
 
     // area of interest information
     $partner_box = new_cmb2_box( array(
@@ -128,17 +135,24 @@ function partner_metaboxes() {
         'id' => CMB_PREFIX . 'partner_products',
         'type' => 'textarea'
     ) );
+    $partner_box->add_field( array(
+        'name' => 'Articles Tag',
+        'id' => CMB_PREFIX . 'partner_tag',
+        'type' => 'select',
+        'options' => $select_tags
+    ) );
+
     
 }
 
 
 // a small function to get all the people categories
 function get_all_partner_cats() {
-	$partner_cats = get_categories('taxonomy=partner_cat&type=people');
+	$partner_cats = get_categories('taxonomy=partner_cat&type=partner');
 
 	// loop through them
 	$return_cats = array(
-		'' => '- select a group of people -'
+		'' => '- select a group of partners -'
 	);
 	foreach ( $partner_cats as $pcat ) {
 		$return_cats[$pcat->slug] = $pcat->name;
@@ -154,7 +168,7 @@ function do_partner_group( $group_name ) {
 	// if we have a group
 	if ( !empty( $group_name ) ) {
 
-		print do_shortcode( '[people category="' . $group_name . '" /]' );
+		print do_shortcode( '[partner category="' . $group_name . '" /]' );
 
 	}
 }
@@ -186,9 +200,8 @@ function partners_shortcode( $atts ) {
 	// set some query vars
 	$vars = array( 
 		"posts_per_page" => 200,
-		"post_type" => 'people',
-		"orderby" => 'meta_value',
-		"meta_key" => CMB_PREFIX . 'partner_lname',
+		"post_type" => 'partner',
+		"orderby" => 'title',
 		"order" => 'ASC'
 	);
 
@@ -243,7 +256,7 @@ function partners_shortcode( $atts ) {
 
 	else :
 		
-		$partner_content .= '<p>No people found in database.</p>';
+		$partner_content .= '<p>No partners found in database.</p>';
 
 	endif;
 
