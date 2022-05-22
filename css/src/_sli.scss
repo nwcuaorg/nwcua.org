@@ -1,23 +1,35 @@
 
+.partner-thumbnail {
+	text-align: center;
 
-.single-partner {
-	.partner-title {
-		text-transform: uppercase;
-	}
-
-	.partner-video {
-		text-align: center;
-		padding: 10px 0;
+	img {
+		max-width: 350px;
 	}
 }
 
+.partner-title {
+	text-transform: uppercase;
+}
+
+.partner-video {
+	text-align: center;
+	padding: 25px 0;
+}
+
 .partner-buttons {
+	@include clearfix;
+
 	.btn {
 		width: 45%;
 		margin-left: 5%;
+		float: left;
 
 		&:first-child {
 			margin-left: 0;
+		}
+
+		&:nth-child( 2 ) {
+			width: 48%;
 		}
 	}
 }

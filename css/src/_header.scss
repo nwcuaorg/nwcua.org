@@ -16,7 +16,6 @@ header {
 		}
 
 		img {
-
 			@include respond-to( 1024px ) {
 				max-width: 350px;
 			}
@@ -311,7 +310,7 @@ body.scrolled header nav {
 	right: 0;
 	left: 0;
 
-	.menu-main-menu-container {
+	.menu-main-menu-container, .menu-main-menu-sli-container {
 		position: relative;
 		max-width: 1440px;
 		margin: 0 auto;
