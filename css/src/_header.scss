@@ -108,6 +108,14 @@ header {
 
 				li ul.sub-menu {
 					background: $teal;
+
+					@include respond-to( $bp-m ) {
+						width: 280px;
+					}
+
+					@include respond-to( $bp-l ) {
+						width: 300px;
+					}
 				}
 			}
 
