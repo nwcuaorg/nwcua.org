@@ -47,7 +47,7 @@ function partner_post_type() {
 	); /* end of register post type */
 	
 	// add post tags to our cpt
-	register_taxonomy_for_object_type( 'post_tag', 'partner' );
+	// register_taxonomy_for_object_type( 'post_tag', 'partner' );
 	
 }
 
