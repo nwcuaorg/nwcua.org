@@ -105,6 +105,10 @@ header {
 
 			&.sli {
 				background: $teal;
+
+				li ul.sub-menu {
+					background: $teal;
+				}
 			}
 
 			li {
