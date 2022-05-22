@@ -11,20 +11,61 @@
 	}
 }
 
-.partner-social {
+.partner-buttons {
+	.btn {
+		width: 45%;
+		margin-left: 5%;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.partner-links {
 	@include clearfix;
+	display: flex;
 
-	a {
-		float: left;
-		margin-right: 3px;
+	.partner-website {
+		flex: 1;
+		flex-basis: 50%;
 
-		&.btn {
-			margin-right: 15px;
+		.btn {
+			width: 90%;
 		}
 	}
 
-	img {
+	.partner-social {
+		flex: 1;
+		flex-basis: 50%;
 
+		img {
+			max-width: 23%;
+		}
+	}
+}
+
+.partner-products-title {
+	color: $teal;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+.partner-products {
+	padding: 5px 0;
+
+	@include respond-to( 768px ) {
+		display: flex;
+	}
+
+	.products-column {
+		@include respond-to( 768px ) {
+			flex: 1;
+		}
+
+		ul {
+			padding: 0 0 0 30px !important;
+		}
 	}
 }
 
