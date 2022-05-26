@@ -1,9 +1,10 @@
 
 .partner-thumbnail {
-	text-align: center;
+	margin: 0 0 20px 0;
 
 	img {
-		max-width: 350px;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 20px #ddd;		
 	}
 }
 
@@ -35,6 +36,7 @@
 }
 
 .partner-links {
+	padding-top: 10px;
 	@include clearfix;
 	display: flex;
 
