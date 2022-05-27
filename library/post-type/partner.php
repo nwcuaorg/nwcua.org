@@ -311,3 +311,10 @@ add_shortcode( 'partner', 'partner_shortcode' );
 function do_sli() {
 	add_action( 'template_redirect', function(){ global $sli; } );
 }
+
+
+function get_partner_cats() {
+	return get_terms( 'partner_cat', array(
+	    'hide_empty' => 0,
+	) );
+}

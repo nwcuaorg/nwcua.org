@@ -1,4 +1,7 @@
 
+
+// single partner template styles
+
 .partner-thumbnail {
 	margin: 0 0 20px 0;
 
@@ -83,3 +86,83 @@
 	}
 }
 
+
+// partners listing template styles
+
+.partners-intro {
+	@include respond-to( 768px ) {
+		display: flex;
+
+		.partners-intro-content {
+			flex: 1;
+			flex-basis: 65%;
+		}
+
+		.partners-intro-filters {
+			flex: 1;
+			flex-basis: 35%;
+		}
+	}
+
+	.partners-intro-filters {
+		padding: 20px 40px;
+
+		h4 {
+			text-transform: uppercase;
+			color: $navy;
+		}
+
+		label {
+			display: block;
+			padding: 5px;
+		}
+	}
+}
+
+
+.partner-heading {
+	
+}
+
+
+.partners-listing {
+	@include respond-to( 500px ) {
+		display: flex;
+		margin-right: -2%;
+		flex-wrap: wrap;
+	}
+
+	.partner-entry {
+		@include respond-to( 500px ) {
+			flex: 1;
+			flex-basis: 48%;
+			margin: 0 2% 2% 0;
+			flex-grow: 0;
+		}
+
+		@include respond-to( 768px ) {
+			flex-basis: 31.3333%;
+			margin: 0 2% 2% 0;
+		}
+
+		@include respond-to( 1024px ) {
+			flex-basis: 23%;
+			margin: 0 2% 2% 0;
+		}
+
+		@include respond-to( 1220px ) {
+			flex-basis: 18%;
+			margin: 0 2% 2% 0;
+		}
+
+		img {
+			border: 1px solid #ccc;
+			box-shadow: 0 0 20px #ddd;
+		}
+	}
+}
+
+
+.partner-overlay-hidden {
+	display: none;
+}

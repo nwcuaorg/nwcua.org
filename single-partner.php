@@ -15,7 +15,7 @@ the_showcase();
 <div class="two-column single-partner <?php print ( has_showcase() ? '' : ' no-showcase' ) ?>" role="main">
 	<div class="sidebar">
 		<div class="partner-thumbnail">
-			<?php the_post_thumbnail( 'full' ); ?>
+			<?php the_post_thumbnail( array( 500, 500 ) ); ?>
 		</div>
 		<h3 class="partner-title"><?php the_title(); ?></h3>
 		<p>For more information on this solution please reach out to the Strategic Link team below.</p>
