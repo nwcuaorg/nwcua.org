@@ -33,14 +33,16 @@ the_page_title();
 
 			// loop through the partner categories
 			foreach ( $partner_cats as $part_cat ) {
-				print '<label><input type="checkbox" name="partner-filter" value="' . $part_cat->slug . '" /> ' . $part_cat->name . '</label>';
+				print '<label><input type="checkbox" name="partner-filter" class="partner-filter" value="' . $part_cat->slug . '" /> ' . $part_cat->name . '</label>';
 			}
 
 			?>
 		</div>
 	</div>
+<!--
 </div>
 <div class="content-wide archive-partners no-showcase" role="main">
+-->
 	<?php
 	$vars['post_type'] = 'partner';
 
@@ -53,9 +55,23 @@ the_page_title();
 		// Start the Loop.
 		while ( $p->have_posts() ) : $p->the_post();
 			$partner_id = get_the_ID();
-			$partner_meta = get_post_meta( $partner_id );
+
+			// get the partner terms
+			$partner_terms = get_the_terms( $partner_id, 'partner_cat' );
+
+			// get array of partner term slugs
+			$part_terms = array();
+			if ( !empty( $partner_terms ) ) {
+				foreach ( $partner_terms as $part_term ) {
+					$part_terms[] = $part_term->slug;
+				}
+			}
+
+			// compile a string of classes
+			$part_terms_string = implode( ' ', $part_terms );
+
 			?>
-			<div class="partner-entry" id="partner-<?php print $partner_id; ?>">
+			<div class="partner-entry visible <?php print $part_terms_string ?>" id="partner-<?php print $partner_id; ?>">
 				<a href=""><?php the_post_thumbnail( array( 400, 400 ) ) ?></a>
 			</div>
 			
