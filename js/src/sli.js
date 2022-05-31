@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
 				partners_show.push( $(this).val() );
 			}
 		});
-		
+
 		// hide all partners
 		$('.partner-entry').removeClass( 'visible' );
 
@@ -47,9 +47,27 @@ jQuery(document).ready(function($){
 
 	}
 	
-	//
-	$('.partner-filter').on( 'click', function() {
+	// handle clicks on a partner filter
+	$('.partner-filter').on( 'click', function(){
 		update_partner_filters();
+	});
+
+
+	// handle clicks on a partner
+	$('.partner-entry').on( 'click', function(){
+		var partner_id = '#partner-' + $(this).data('id');
+		if ( $(window).width() < 768 ) {
+			location.href = '/partner/' + $(this).data('slug');
+		} else {
+			$( partner_id ).show();
+			$.magnificPopup.open({
+				items: {
+					src: partner_id
+				},
+				type: 'inline'
+			});
+		}
+
 	});
 
 });

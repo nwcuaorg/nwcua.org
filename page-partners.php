@@ -71,12 +71,13 @@ the_page_title();
 			$part_terms_string = implode( ' ', $part_terms );
 
 			?>
-			<div class="partner-entry visible <?php print $part_terms_string ?>" id="partner-<?php print $partner_id; ?>">
-				<a href=""><?php the_post_thumbnail( array( 400, 400 ) ) ?></a>
+			<div class="partner-entry visible <?php print $part_terms_string ?>" data-id="<?php print $partner_id; ?>" data-slug="<?php print $post->post_name; ?>">
+				<?php the_post_thumbnail( array( 400, 400 ) ) ?>
 			</div>
 			
 			<!-- start partner hidden info -->
-			<div class="partner-overlay-hidden two-column single-partner <?php print ( has_showcase() ? '' : ' no-showcase' ) ?>" id="<?php print $partner_id ?>" role="main">
+			<div class="partner-overlay-hidden" id="partner-<?php print $partner_id ?>">
+			<div class="two-column single-partner <?php print ( has_showcase() ? '' : ' no-showcase' ) ?>" role="main">
 				<div class="sidebar">
 					<div class="partner-thumbnail">
 						<?php the_post_thumbnail( array( 500, 500 ) ); ?>
@@ -154,6 +155,7 @@ the_page_title();
 					</div>
 				</div>
 
+			</div>
 			</div>
 			<!-- end partner hidden info -->
 
