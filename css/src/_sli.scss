@@ -175,17 +175,12 @@
 .page-template-page-partners .mfp-content {
 	background: white;
 	max-width: 1220px;
-	height: 90%;
-	max-height: 900px;
+	height: 80%;
+	max-height: 700px;
 	overflow: auto;
-
-	.two-column {
-		min-height: 100%;
-	}
 }
 
 
 .partner-overlay-hidden {
 	display: none;
-	min-height: 100%;
 }
