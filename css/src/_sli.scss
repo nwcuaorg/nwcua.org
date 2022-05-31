@@ -176,8 +176,12 @@
 	background: white;
 	max-width: 1150px;
 	height: 90%;
-	max-height: 700px;
+	max-height: 900px;
 	overflow: auto;
+
+	.two-column {
+		min-height: 100%;
+	}
 }
 
 
