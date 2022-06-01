@@ -67,7 +67,7 @@ function simple_showcase_metabox( $meta_boxes ) {
         'id' => 'simple_showcase_metabox',
         'title' => 'Simple Showcase',
         'object_types' => array( 'page' ), // post type
-        'show_on' => array( 'key' => 'page-template', 'value' => 'page-front.php' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array( 'page-front.php', 'page-front-sli.php' ) ),
         'context' => 'normal',
         'priority' => 'high',
     ) );

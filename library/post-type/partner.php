@@ -321,3 +321,43 @@ function get_partner_cats() {
 	    'hide_empty' => 0,
 	) );
 }
+
+
+// add a people shortcode
+function get_partners() {
+
+	// set some query vars
+	$vars = array( 
+		"posts_per_page" => 200,
+		"post_type" => 'partner',
+		"orderby" => 'title',
+		"order" => 'ASC'
+	);
+
+	// run the query
+    $p = new WP_Query( $vars );
+
+    // start array
+    $partners_arr = array();
+
+	if ( $p->have_posts() ) : 
+
+		// Start the Loop.
+		while ( $p->have_posts() ) : $p->the_post();
+
+			// get all post data
+			global $post;
+
+			// store this partner
+			$partners_arr[] = $post;
+
+		endwhile;
+
+	endif;
+
+	wp_reset_postdata();
+
+	return $partners_arr;
+}
+
+

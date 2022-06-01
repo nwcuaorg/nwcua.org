@@ -1,6 +1,6 @@
 
 
-.home {
+.home, .page-template-page-front-sli {
 	.content-pad {
 		@include respond-to( 768px ) {
 			display: flex;
