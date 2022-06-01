@@ -86,7 +86,9 @@ function partner_metaboxes() {
 
 	// get all the article tags and put them in an array for a select field.
 	$all_tags = get_tags();
-	$select_tags = array();
+	$select_tags = array(
+		'' => '- no tag selected -'
+	);
 	foreach ( $all_tags as $a_tag ) {
 		$select_tags[ $a_tag->slug ] = $a_tag->name;
 	}
@@ -139,6 +141,7 @@ function partner_metaboxes() {
         'name' => 'Articles Tag',
         'id' => CMB_PREFIX . 'partner_tag',
         'type' => 'select',
+        'default' => '',
         'options' => $select_tags
     ) );
 
