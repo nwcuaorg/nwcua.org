@@ -16,7 +16,7 @@ global $sli;
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=75" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=76" rel="stylesheet" type="text/css">
 <link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>

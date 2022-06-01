@@ -67,8 +67,11 @@ jQuery(document).ready(function($){
 				type: 'inline'
 			});
 		}
-
 	});
+
+
+	// if on small screen
+	$( '.single-partner .right-column' ).fitVids();
 
 });
 
