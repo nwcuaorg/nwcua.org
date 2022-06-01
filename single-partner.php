@@ -19,7 +19,7 @@ the_showcase();
 		</div>
 		<h3 class="partner-title"><?php the_title(); ?></h3>
 		<p>For more information on this solution please reach out to the Strategic Link team below.</p>
-		<p class="partner-buttons"><?php print do_shortcode( '[button url="mailto:strategic@nwcua.org" class="teal"]Email Us[/button] [button url="tel:8009959064" class="teal"]Call Us[/button]' ); ?></p>
+		<p class="partner-buttons"><?php print do_shortcode( '[button url="mailto:strategiclink@nwcua.org" class="teal"]Email Us[/button] [button url="tel:8009959064" class="teal"]Call Us[/button]' ); ?></p>
 		<p>Learn more about <?php the_title(); ?> by visiting their social media accounts or website below.</p>
 		<div class="partner-links">
 			<div class="partner-website">
