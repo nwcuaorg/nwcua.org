@@ -45,7 +45,7 @@ the_page_title();
 -->
 	<?php
 	$vars['post_type'] = 'partner';
-	$vars['numberposts'] = -1;
+	$vars['posts_per_page'] = -1;
 	$vars['orderby'] = 'title';
 	$vars['order'] = 'ASC';
 
