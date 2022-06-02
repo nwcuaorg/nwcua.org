@@ -36,13 +36,15 @@ gtag('config', 'UA-23488192-1');
 <header class="main">
 	
 	<div class="logo">
-		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<?php if ( $sli ) { ?>
+		<?php if ( $sli ) { ?>
+		<a href="/service-corporation/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-sli.png" alt="<?php bloginfo( 'name' ); ?>">
-			<?php } else { ?>
-			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
-			<?php } ?>
 		</a>
+		<?php } else { ?>
+		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+		</a>
+		<?php } ?>
 	</div>
 
 	<nav>
