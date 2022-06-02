@@ -21,7 +21,7 @@ header {
 			}
 		}
 
-		.page-template-page-front-sli & {
+		.sli & {
 
 			@include respond-to( $bp-l ) {
 				padding: 20px 60px 30px 30px;

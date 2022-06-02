@@ -28,7 +28,7 @@ gtag('config', 'UA-23488192-1');
 
 <?php the_notice_bar(); ?>
 
-<div class="container">
+<div class="container<?php print ( $sli ? ' sli' : '' ); ?>">
 <header class="main">
 	
 	<div class="logo">
