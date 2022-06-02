@@ -214,6 +214,19 @@
 }
 
 
+.sli-breadcrumbs {
+	padding: 0 0 10px 0;
+	a {
+		color: $teal;
+		font-weight: bold;
+	}
+
+	span {
+		padding: 0 5px;
+	}
+}
+
+
 .simple-showcase-single {
 	display: block;
 }

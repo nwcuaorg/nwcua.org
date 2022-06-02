@@ -35,6 +35,9 @@ the_showcase();
 	</div>
 	<div class="right-column">
 		<div class="right-column-inner">
+		<div class="sli-breadcrumbs">
+			<a href="/service-corporation/solutions/" class="teal">All Solutions</a> <span>&raquo;</span> <?php the_title() ?>
+		</div>
 		<?php 
 
 		if ( is_member() ) {
