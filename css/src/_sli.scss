@@ -96,11 +96,21 @@
 
 		.partners-intro-content {
 			flex: 1;
-			flex-basis: 65%;
+			flex-basis: 50%;
 		}
 
 		.partners-intro-filters {
 			flex: 1;
+			flex-basis: 50%;
+		}
+	}
+
+	@include respond-to( $bp-l ) {
+		.partners-intro-content {
+			flex-basis: 65%;
+		}
+
+		.partners-intro-filters {
 			flex-basis: 35%;
 		}
 	}
