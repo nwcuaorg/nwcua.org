@@ -106,12 +106,6 @@ the_page_title();
 					<?php 
 					the_content();
 
-					// if we have a video
-					if ( has_cmb_value( 'partner_video' ) ) {
-						// output the video and process the oembed
-						print '<div class="partner-video">' . wp_oembed_get( get_cmb_value( 'partner_video' ) ) . '</div>';
-					}
-
 					// if we have products
 					if ( has_cmb_value( 'partner_products' ) ) {
 
@@ -154,6 +148,8 @@ the_page_title();
 						}
 
 					}
+
+					print '<div class="partner-full-link">' . do_shortcode( '[button url="/partner/' . $post->post_name . '" class="teal large"]Visit Full Partner Page[/button]' ) . '</div>';
 					?>
 					</div>
 				</div>
