@@ -4,8 +4,11 @@
 Template Name: Strategic Link Partners
 */
 
-global $sli;
 $sli = true;
+
+// get the filter parameter and split them up
+$filter = $_REQUEST['filter'];
+$filters = explode( ',', $filter );
 
 get_header();
 
@@ -33,7 +36,7 @@ the_page_title();
 
 			// loop through the partner categories
 			foreach ( $partner_cats as $part_cat ) {
-				print '<label><input type="checkbox" name="partner-filter" class="partner-filter" value="' . $part_cat->slug . '" /> ' . $part_cat->name . '</label>';
+				print '<label><input type="checkbox" name="partner-filter" class="partner-filter" value="' . $part_cat->slug . '" ' . ( in_array( $part_cat->slug, $filters ) ? 'checked' : '' ) . ' /> ' . $part_cat->name . '</label>';
 			}
 
 			?>

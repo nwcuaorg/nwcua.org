@@ -53,6 +53,10 @@ jQuery(document).ready(function($){
 	});
 
 
+	// process the filters on page load
+	update_partner_filters();
+
+
 	// handle clicks on a partner
 	$('.partner-entry').on( 'click', function(){
 		var partner_id = '#partner-' + $(this).data('id');
