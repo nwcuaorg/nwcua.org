@@ -33,14 +33,25 @@ gtag('config', 'UA-23488192-1');
 	
 	<div class="logo">
 		<?php if ( $sli ) { ?>
-		<a href="/service-corporation/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<a href="/service-corporation/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-main">
 			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-sli.png" alt="<?php bloginfo( 'name' ); ?>">
+		</a>
+		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-aux">
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 		<?php } else { ?>
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 		<?php } ?>
+	</div>
+
+	<div class="search-form">
+		<?php get_search_form(); ?>
+	</div>
+
+	<div class="account-tools">
+		<?php account_button() ?>
 	</div>
 
 	<nav>
@@ -53,14 +64,6 @@ gtag('config', 'UA-23488192-1');
 		}
 		?>
 	</nav>
-
-	<div class="search-form">
-		<?php get_search_form(); ?>
-	</div>
-
-	<div class="account-tools">
-		<?php account_button() ?>
-	</div>
 	
 </header>
 

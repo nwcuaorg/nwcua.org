@@ -9,16 +9,93 @@ header {
 	}
 
 	.logo {
-		padding: 20px 60px 30px 20px;
+		padding: 15px 60px 15px 20px;
 
-		@include respond-to( 1220px ) {
+		@include respond-to( $bp-l ) {
 			padding: 20px 60px 30px 50px;
 		}
 
 		img {
-			@include respond-to( 1024px ) {
-				max-width: 350px;
+			@include respond-to( $bp-l ) {
+				max-width: 325px;
 			}
+		}
+
+		.page-template-page-front-sli & {
+
+			@include respond-to( $bp-l ) {
+				padding: 20px 60px 30px 30px;
+			}
+
+			.logo-main {
+				display: inline-block;
+
+				@include respond-to( $bp-s ) {
+					max-width: 55%;
+					padding-right: 20px;
+					border-right: 1px solid rgba( $navy, .4 );
+				}
+
+				@include respond-to( $bp-l ) {
+					max-width: 35%;
+				}
+
+				img {
+					display: block;
+					max-width: 100%;
+
+					@include respond-to( $bp-m ) {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+
+		.logo-aux {
+			filter: grayscale(1);
+			opacity: .5;
+			display: inline-block;
+
+			@include respond-to( $bp-s ) {
+				max-width: 35%;
+				padding-left: 20px;
+			}
+
+			@include respond-to( $bp-l ) {
+				max-width: 20%;
+			}
+
+			&:hover {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+
+			img {
+				max-width: 140px;
+				margin-top: 10px;
+
+				@include respond-to( $bp-s ) {
+					max-width: 160px;
+					margin-top: 0;
+				}
+
+				@include respond-to( $bp-m ) {
+					max-width: 200px;
+				}
+
+				@include respond-to( $bp-l ) {
+					max-width: 140px;
+				}
+
+				@include respond-to( $bp-xl ) {
+					max-width: 200px;
+				}
+
+				@include respond-to( 1300px ) {
+					max-width: 240px;
+				}
+			}
+
 		}
 	}
 
@@ -40,7 +117,7 @@ header {
 		button {
 			position: absolute;
 			right: 10px;
-			top: -60px;
+			top: -150px;
 			width: 40px;
 			height: 40px;
 			border: 0;
@@ -52,6 +129,7 @@ header {
 			text-indent: 1000px;
 			
 			@include respond-to( $bp-s ) {
+				top: -100px;
 				right: 20px;
 			}
 
@@ -239,17 +317,19 @@ header {
 		position: relative;
 		border-top: 3px solid rgba( $grey, .2 );
 
-		@include respond-to( 840px ) {
-			display: block;
-			position: absolute;
-			right: 250px;
-			bottom: 80px;
-			width: 200px;
+		@include respond-to( $bp-s ) {
+			float: left;
+			width: 50%;
 			border: 3px solid rgba( $grey, .2 );
 		}
 
 		@include respond-to( $bp-l ) {
-			bottom: 40px;
+			float: none;
+			display: block;
+			position: absolute;
+			right: 230px;
+			bottom: 30px;
+			width: 200px;
 		}
 
 		input[type=submit] {
@@ -279,11 +359,17 @@ header {
 		border-top: 3px solid rgba( $grey, .2 );
 		border-bottom: 3px solid rgba( $grey, .2 );
 
-		@include respond-to( $bp-m ) {
+		@include respond-to( $bp-s ) {
+			float: left;
+			width: 50%;
+		}
+
+		@include respond-to( $bp-l ) {
+			float: none;
 			display: block;
 			position: absolute;
-			right: 40px;
-			bottom: 80px;
+			right: 20px;
+			bottom: 30px;
 			width: 200px;
 		}
 
@@ -295,10 +381,6 @@ header {
 			padding: 0 10px;
 			color: white;
 			background: $navy;
-		}
-
-		@include respond-to( $bp-l ) {
-			bottom: 40px;
 		}
 
 		&:after {
