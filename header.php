@@ -37,7 +37,11 @@ gtag('config', 'UA-23488192-1');
 	
 	<div class="logo">
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<?php if ( $sli ) { ?>
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-sli.png" alt="<?php bloginfo( 'name' ); ?>">
+			<?php } else { ?>
 			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+			<?php } ?>
 		</a>
 	</div>
 
