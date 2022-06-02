@@ -116,7 +116,11 @@
 	}
 
 	.partners-intro-filters {
-		padding: 20px 40px;
+		padding: 10px 0;
+
+		@include respond-to( 768px ) {
+			padding: 20px 40px;
+		}
 
 		h4 {
 			text-transform: uppercase;
