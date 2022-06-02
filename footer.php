@@ -8,13 +8,34 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+
 $admin_email = get_option( 'admin_email' );
+
+global $sli;
+
 ?>
 	
 	</section>
 	
 	<footer class="footer">
 		<div class="columns">
+			<?php if ( $sli ) { ?>
+			<div class="column">
+				<?php print do_shortcode( '[snippet slug="footer-address-sli" /]' ); ?>
+				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> NWCUA. All Rights Reserved.</div>
+			</div>
+			<div class="column">
+				<h3>Links</h3>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-links-sli' ) ) ?>
+			</div>
+			<div class="column">
+				<h3>Resources</h3>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-resources-sli' ) ) ?>
+			</div>
+			<div class="column">
+				<?php print do_shortcode( '[snippet slug="footer-sli" /]' ); ?>
+			</div>
+			<?php } else { ?>
 			<div class="column">
 				<?php print do_shortcode( '[snippet slug="footer-address" /]' ); ?>
 				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> NWCUA. All Rights Reserved.</div>
@@ -30,6 +51,7 @@ $admin_email = get_option( 'admin_email' );
 			<div class="column">
 				<?php print do_shortcode( '[snippet slug="footer-subscribe" /]' ); ?>
 			</div>
+			<?php } ?>
 		</div>
 
 	</footer>

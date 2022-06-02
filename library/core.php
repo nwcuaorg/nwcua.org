@@ -24,7 +24,9 @@ register_nav_menus( array(
 	'main-menu-sli' => 'Main (SLI)',
 	'anthem-categories' => 'Anthem - Featured Categories',
 	'footer-links' => 'Footer - Links',
-	'footer-resources' => 'Footer - Resources'
+	'footer-links-sli' => 'Footer - Links (SLI)',
+	'footer-resources' => 'Footer - Resources',
+	'footer-resources-sli' => 'Footer - Resources (SLI)'
 ) );
 
 
