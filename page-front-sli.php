@@ -48,7 +48,7 @@ get_header();
 			<a href="/events" class="all-events">All Events</a>
 			<?php print do_shortcode( '[events limit=3 category="featured-events" /]' ); ?>
 
-			<?php do_ad_group( 'sidebar' ) ?>
+			<?php do_ad_group( 'strategic-link' ) ?>
 		</div>
 
 	</div>
