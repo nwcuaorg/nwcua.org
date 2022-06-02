@@ -53,7 +53,18 @@ get_header();
 
 	</div>
 
-	<?php the_simple_showcase(); ?>
+	<?php 
+
+	// get the slides
+	$slides = get_post_meta( get_the_ID(), "simple_showcase", 1 );
+
+	if ( !empty( $slides ) ) {
+		?>
+		<img src="<?php print $slides[0]['image'] ?>" class="simple-showcase-single" />
+		<?php
+	}
+
+	?>
 
 <?php
 
