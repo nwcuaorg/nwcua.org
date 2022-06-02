@@ -59,8 +59,13 @@ get_header();
 	$slides = get_post_meta( get_the_ID(), "simple_showcase", 1 );
 
 	if ( !empty( $slides ) ) {
+		$link = $slides[0]['link'];
+		$image = $slides[0]['image'];
+
 		?>
-		<img src="<?php print $slides[0]['image'] ?>" class="simple-showcase-single" />
+		<?php if ( !empty( $link ) ) print '<a href="' . $link . '">'; ?>
+		<img src="<?php print $image ?>" class="simple-showcase-single" />
+		<?php if ( !empty( $link ) ) print '</a>'; ?>
 		<?php
 	}
 
