@@ -215,7 +215,10 @@
 
 
 .sli-breadcrumbs {
-	padding: 0 0 10px 0;
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+
 	a {
 		color: $teal;
 		font-weight: bold;
