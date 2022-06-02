@@ -41,7 +41,7 @@ get_header();
 	<div class="content-pad">
 
 		<div class="articles">
-			<?php print do_shortcode( '[articles category__not_in="83,88,4358,6097" /]' ); ?>
+			<?php print do_shortcode( '[articles cats="strategic-link" /]' ); ?>
 		</div>
 
 		<div class="events">
