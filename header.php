@@ -33,7 +33,7 @@ gtag('config', 'UA-23488192-1');
 	
 	<div class="logo">
 		<?php if ( $sli ) { ?>
-		<a href="/service-corporation/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-main">
+		<a href="/solutions/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-main">
 			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-sli.png" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-aux">
