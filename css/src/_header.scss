@@ -44,6 +44,10 @@ header {
 					max-width: 35%;
 				}
 
+				@include respond-to( $bp-xl ) {
+					max-width: 30%;
+				}
+
 				img {
 					display: block;
 					max-width: 100%;
@@ -69,6 +73,10 @@ header {
 				max-width: 20%;
 			}
 
+			@include respond-to( $bp-xl ) {
+				max-width: 15%;
+			}
+
 			&:hover {
 				filter: grayscale(0);
 				opacity: 1;
@@ -92,11 +100,11 @@ header {
 				}
 
 				@include respond-to( $bp-xl ) {
-					max-width: 200px;
+					max-width: 170px;
 				}
 
 				@include respond-to( 1300px ) {
-					max-width: 240px;
+					max-width: 200px;
 				}
 			}
 
