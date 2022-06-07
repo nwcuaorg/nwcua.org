@@ -8,7 +8,7 @@
 <title>My Account | NWCUA</title>
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="https://nwcua.org/xmlrpc.php" />
-<link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=78" rel="stylesheet" type="text/css">
+<link href="https://nwcua.org/wp-content/themes/nwcua/css/main.css?v=81" rel="stylesheet" type="text/css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
