@@ -49,8 +49,11 @@ the_page_title();
 	<?php
 	$vars['post_type'] = 'partner';
 	$vars['posts_per_page'] = -1;
-	$vars['orderby'] = 'title';
-	$vars['order'] = 'ASC';
+	$vars['meta_key'] = '_p_partner_sort';
+	$vars['orderby'] = array( 
+       '_p_partner_sort' => 'ASC',
+       'title' => 'ASC'
+    );
 
     $p = new WP_Query( $vars );
 

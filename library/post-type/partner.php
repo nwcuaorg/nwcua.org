@@ -144,6 +144,12 @@ function partner_metaboxes() {
         'default' => '',
         'options' => $select_tags
     ) );
+    $partner_box->add_field( array(
+        'name' => 'Sort',
+        'id' => CMB_PREFIX . 'partner_sort',
+        'type' => 'text_small',
+        'default' => '99'
+    ) );
 
     
 }
