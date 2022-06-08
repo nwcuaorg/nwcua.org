@@ -36,7 +36,7 @@ the_showcase();
 	<div class="right-column">
 		<div class="right-column-inner">
 		<div class="sli-breadcrumbs">
-			<a href="/service-corporation/solutions/" class="teal">All Solutions</a> <span>&raquo;</span> <?php the_title() ?>
+			<a href="/solutions/partners/" class="teal">All Solutions</a> <span>&raquo;</span> <?php the_title() ?>
 		</div>
 		<?php 
 
