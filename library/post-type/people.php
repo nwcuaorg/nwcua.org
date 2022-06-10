@@ -239,7 +239,7 @@ function people_shortcode( $atts ) {
 		"order" => 'ASC'
 	);
 
-	// 
+	// exclude specific posts
 	if ( $exclude > 0 ) $vars['post__not_in'] = explode( ',', $exclude );
 
 	if ( !empty( $category ) ) {
@@ -248,6 +248,7 @@ function people_shortcode( $atts ) {
 	            'taxonomy' => 'people_cat',
 	            'field' => 'slug',
 	            'terms' => $category,
+	            'include_children' => false
 	        )
 	    );
 	}
@@ -304,7 +305,7 @@ add_shortcode( 'people', 'people_shortcode' );
 
 
 
-// add a people shortcode
+// add a person shortcode
 function person_shortcode( $atts ) {
 
 	// set default params and override with those in shortcode

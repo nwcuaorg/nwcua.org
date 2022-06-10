@@ -21,14 +21,14 @@ function partner_post_type() {
 				'add_new_item' => __( 'Add New Partner', 'ptheme' ), /* Add New Display Title */
 				'edit' => __( 'Edit', 'ptheme' ), /* Edit Dialog */
 				'edit_item' => __( 'Edit Partner', 'ptheme' ), /* Edit Display Title */
-				'new_item' => __( 'New Person', 'ptheme' ), /* New Display Title */
-				'view_item' => __( 'View Person', 'ptheme' ), /* View Display Title */
-				'search_items' => __( 'Search People', 'ptheme' ), /* Search Custom Type Title */ 
+				'new_item' => __( 'New Partner', 'ptheme' ), /* New Display Title */
+				'view_item' => __( 'View Partner', 'ptheme' ), /* View Display Title */
+				'search_items' => __( 'Search Partner', 'ptheme' ), /* Search Custom Type Title */ 
 				'not_found' =>  __( 'Nothing found in the database.', 'ptheme' ), /* This displays if there are no entries yet */ 
 				'not_found_in_trash' => __( 'Nothing found in Trash', 'ptheme' ), /* This displays if there is nothing in the trash */
 				'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Manage the people directory.', 'ptheme' ), /* Custom Type Description */
+			'description' => __( 'Manage the partner directory.', 'ptheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -80,7 +80,7 @@ register_taxonomy( 'partner_cat',
 );
 
 
-// People metabox
+// Partner metabox
 add_action( 'cmb2_admin_init', 'partner_metaboxes' );
 function partner_metaboxes() {
 
@@ -155,7 +155,7 @@ function partner_metaboxes() {
 }
 
 
-// a small function to get all the people categories
+// a small function to get all the artner categories
 function get_all_partner_cats() {
 	$partner_cats = get_categories('taxonomy=partner_cat&type=partner');
 
@@ -171,7 +171,7 @@ function get_all_partner_cats() {
 }
 
 
-// a simple function to output a people group using the shortcode
+// a simple function to output a partner group using the shortcode
 function do_partner_group( $group_name ) {
 
 	// if we have a group
@@ -192,7 +192,7 @@ function partner_social_link( $network, $partner_id = 0 ) {
 }
 
 
-// add a people shortcode
+// add a partner shortcode
 function partners_shortcode( $atts ) {
 
 	// set default params and override with those in shortcode
@@ -279,7 +279,7 @@ add_shortcode( 'partners', 'partner_shortcode' );
 
 
 
-// add a people shortcode
+// add a partner shortcode
 function partner_shortcode( $atts ) {
 
 	// set default params and override with those in shortcode
@@ -329,7 +329,7 @@ function get_partner_cats() {
 }
 
 
-// add a people shortcode
+// partner
 function get_partners() {
 
 	// set some query vars
