@@ -16,6 +16,14 @@ global $sli;
 ?>
 	
 	</section>
+
+	<?php 
+	if ( $sli ) {
+		gowest_solutions_lightbox();
+	} else {
+		gowest_association_lightbox();
+	}
+	?>
 	
 	<footer class="footer">
 		<div class="columns">

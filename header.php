@@ -12,7 +12,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=81" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=82" rel="stylesheet" type="text/css">
 <link href="<?php bloginfo( "template_url" ) ?>/css/print.css" rel="stylesheet" media="print">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23488192-1"></script>
@@ -26,6 +26,15 @@ gtag('config', 'UA-23488192-1');
 </head>
 <body <?php body_class(); ?>>
 
+<?php 
+if ( $sli ) {
+	gowest_solutions_bar();
+} else {
+	gowest_association_bar(); 
+}
+
+?>
+
 <?php the_notice_bar(); ?>
 
 <div class="container<?php print ( $sli ? ' sli' : '' ); ?>">
@@ -33,15 +42,12 @@ gtag('config', 'UA-23488192-1');
 	
 	<div class="logo">
 		<?php if ( $sli ) { ?>
-		<a href="/solutions/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-main">
-			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-sli.png" alt="<?php bloginfo( 'name' ); ?>">
-		</a>
-		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-aux">
-			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+		<a href="/solutions/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"\>
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-lockup-sli.png" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 		<?php } else { ?>
 		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+			<img src="<?php bloginfo( "template_url" ) ?>/img/logo-lockup.png" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 		<?php } ?>
 	</div>
