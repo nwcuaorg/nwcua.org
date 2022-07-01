@@ -279,7 +279,7 @@ function people_shortcode( $atts ) {
 					( has_cmb_value( 'person_organization' ) && $show_org ? '<p class="person-organization">' . get_cmb_value( "person_organization" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_phone' ) ? '<p class="person-phone">Phone: ' . get_cmb_value( "person_phone" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_tollfree' ) ? '<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>' : '' ) .
-					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>' : '' ) .
+					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '">' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '</a></p>' : '' ) .
 					'<p class="person-excerpt">' . get_the_excerpt() . '</p>' .
 					'<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>
 				</div>
@@ -327,7 +327,7 @@ function person_shortcode( $atts ) {
 					( has_cmb_value( 'person_title', $id ) ? '<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_organization', $id ) ? '<p class="person-organization">' . get_cmb_value( "person_organization", $id ) . '</p>' : '' ) .
 
-				'<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
+				'<p class="person-email"><a href="mailto:' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email", $id ) ) . '">' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email", $id ) ) . '</a></p>
 			</div>';
 
 		$person_content .='</section>';
