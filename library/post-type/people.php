@@ -272,17 +272,17 @@ function people_shortcode( $atts ) {
 			$post = get_the_ID();
 
 			$people_content .='<div class="person-entry visible">' . 
-				'<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_the_post_thumbnail() . ( $link ? '</a>' : '' ) . "</div>" .
+				'<div class="person-thumbnail">' . /* ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . */ get_the_post_thumbnail() . /* ( $link ? '</a>' : '' ) . */ "</div>" .
 				'<div class="person-info">
-					<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_fname" ) . ' ' . get_cmb_value( "person_lname" ) . ( $link ? '</a>' : '' ) . '</h4>' .
+					<h4>' . /* ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . */ get_cmb_value( "person_fname" ) . ' ' . get_cmb_value( "person_lname" ) . /* ( $link ? '</a>' : '' ) . */ '</h4>' .
 					( has_cmb_value( 'person_title' ) ? '<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_organization' ) && $show_org ? '<p class="person-organization">' . get_cmb_value( "person_organization" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_phone' ) ? '<p class="person-phone">Phone: ' . get_cmb_value( "person_phone" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_tollfree' ) ? '<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '">' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '</a></p>' : '' ) .
 					'<p class="person-excerpt">' . get_the_excerpt() . '</p>' .
-					'<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>
-				</div>
+					/* '<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>' */
+				'</div>
 			</div>';
 
 		endwhile;
@@ -323,7 +323,7 @@ function person_shortcode( $atts ) {
 
 		$person_content .='<div class="person-thumbnail">' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') . '</div>' .
 			'<div class="person-info">
-				<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_cmb_value( "person_fname", $id ) . ' ' . get_cmb_value( "person_lname", $id ) . ( $link ? '</a>' : '') . '</h4>' .
+				<h4>' . /* ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . */ get_cmb_value( "person_fname", $id ) . ' ' . get_cmb_value( "person_lname", $id ) . /* ( $link ? '</a>' : '') . */ '</h4>' .
 					( has_cmb_value( 'person_title', $id ) ? '<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_organization', $id ) ? '<p class="person-organization">' . get_cmb_value( "person_organization", $id ) . '</p>' : '' ) .
 
