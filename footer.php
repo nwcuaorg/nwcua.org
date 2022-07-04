@@ -46,7 +46,7 @@ global $sli;
 			<?php } else { ?>
 			<div class="column">
 				<?php print do_shortcode( '[snippet slug="footer-address" /]' ); ?>
-				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> NWCUA. All Rights Reserved.</div>
+				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> GoWest Association.<br>All Rights Reserved.</div>
 			</div>
 			<div class="column">
 				<h3>Links</h3>
