@@ -30,7 +30,7 @@ global $sli;
 			<?php if ( $sli ) { ?>
 			<div class="column">
 				<?php print do_shortcode( '[snippet slug="footer-address-sli" /]' ); ?>
-				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> NWCUA. All Rights Reserved.</div>
+				<div class="copyright">Copyright &copy; <?php print date( 'Y' ) ?> GoWest Association. All Rights Reserved.</div>
 			</div>
 			<div class="column">
 				<h3>Links</h3>
