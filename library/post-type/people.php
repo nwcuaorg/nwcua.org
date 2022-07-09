@@ -281,7 +281,7 @@ function people_shortcode( $atts ) {
 					( has_cmb_value( 'person_tollfree' ) ? '<p class="person-tollfree">Toll-free: ' . get_cmb_value( "person_tollfree" ) . '</p>' : '' ) .
 					( has_cmb_value( 'person_email' ) ? '<p class="person-email"><a href="mailto:' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '">' . str_replace( '@nwcua.org', '@gowest.org', get_cmb_value( "person_email" ) ) . '</a></p>' : '' ) .
 					'<p class="person-excerpt">' . get_the_excerpt() . '</p>' .
-					'<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>'
+					'<p class="person-bio-link"><a href="' . get_the_permalink() . '" class="btn navy">Learn More</a></p>' .
 				'</div>
 			</div>';
 
