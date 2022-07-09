@@ -93,7 +93,7 @@ the_page_title();
 			?>
 		<div class="widget widget_text">
 			<div class="widget-title"><h4>Connect With Us</h4></div>
-			<?php print do_shortcode( '[people category="' . $sidebar_people . '" /]' ) ?>
+			<?php print do_shortcode( '[people category="' . $sidebar_people . '" link=0 /]' ) ?>
 		</div>
 			<?php 
 		} else {
