@@ -195,6 +195,7 @@ function do_member_error() {
 			?>
 		<h3>A membership is required to view this content.</h3>
 		<p>Please <a href="<?php print $sf_url; ?>redirect-with-url-params?url=<?php print $referer ?>">log in</a> to view this content.</p>
+		<iframe src="https://nwcua.force.com/secur/logout.jsp" style="width: 0; height: 0;"></iframe>
 			<?php
 		}
 		?> 
