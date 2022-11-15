@@ -82,8 +82,10 @@ add_theme_support('title-tag');
 
 // boolean to see if it's the dev site.
 function is_dev() {
-	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.test' ) ) {
-		return true;
+	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
+		if ( stristr( $_SERVER['HTTP_HOST'], 'nwcua.test' ) ) {
+			return true;
+		}
 	}
 	return false;
 }
@@ -92,8 +94,10 @@ function is_dev() {
 
 // boolean to see if it's the test site.
 function is_test() {
-	if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.org' ) ) {
-		return true;
+	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
+		if ( stristr( $_SERVER['HTTP_HOST'], 'test.nwcua.org' ) ) {
+			return true;
+		}
 	}
 	return false;
 }
@@ -102,8 +106,10 @@ function is_test() {
 
 // boolean to see if it's the test site.
 function is_staging() {
-	if ( stristr( $_SERVER['HTTP_HOST'], 'staging.nwcua.org' ) ) {
-		return true;
+	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
+		if ( stristr( $_SERVER['HTTP_HOST'], 'staging.nwcua.org' ) ) {
+			return true;
+		}
 	}
 	return false;
 }
@@ -112,8 +118,10 @@ function is_staging() {
 
 // boolean to see if it's the live site.
 function is_live() {
-	if ( stristr( $_SERVER['HTTP_HOST'], 'nwcua.org' ) && !is_test() ) {
-		return true;
+	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
+		if ( stristr( $_SERVER['HTTP_HOST'], 'nwcua.org' ) && !is_test() ) {
+			return true;
+		}
 	}
 	return false;
 }
