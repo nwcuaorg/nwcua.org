@@ -88,6 +88,29 @@ register_taxonomy( 'job_cat',
 
 
 
+// add capabilities
+function add_job_caps() {
+
+    // gets the author role
+    $role = get_role( 'administrator' );
+
+    // This only works, because it accesses the class instance.
+    // would allow the author to edit others' posts for current theme only
+    $role->add_cap( 'read_job' );
+    $role->add_cap( 'edit_job' );
+    $role->add_cap( 'delete_job' );
+    $role->add_cap( 'edit_jobs' );
+    $role->add_cap( 'edit_others_jobs' );
+    $role->add_cap( 'publish_jobs' );
+    $role->add_cap( 'read_private_jobs' );
+    $role->add_cap( 'edit_private_jobs' );
+    $role->add_cap( 'edit_published_jobs' );
+
+}
+add_action( 'admin_init', 'add_job_caps');
+
+
+
 // add metabox(es)
 function job_metaboxes( $meta_boxes ) {
 
@@ -177,29 +200,6 @@ function job_metaboxes( $meta_boxes ) {
 
 }
 add_filter( 'cmb2_admin_init', 'job_metaboxes' );
-
-
-
-// add capabilities
-function add_job_caps() {
-
-    // gets the author role
-    $role = get_role( 'administrator' );
-
-    // This only works, because it accesses the class instance.
-    // would allow the author to edit others' posts for current theme only
-    $role->add_cap( 'read_job' );
-    $role->add_cap( 'edit_job' );
-    $role->add_cap( 'delete_job' );
-    $role->add_cap( 'edit_jobs' );
-    $role->add_cap( 'edit_others_jobs' );
-    $role->add_cap( 'publish_jobs' );
-    $role->add_cap( 'read_private_jobs' );
-    $role->add_cap( 'edit_private_jobs' );
-    $role->add_cap( 'edit_published_jobs' );
-
-}
-add_action( 'admin_init', 'add_job_caps');
 
 
 

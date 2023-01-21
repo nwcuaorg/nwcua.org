@@ -44,7 +44,6 @@ jQuery(document).ready(function($){
 				});
 			});
 		}
-
 	}
 	
 	// handle clicks on a partner filter

@@ -45,6 +45,7 @@ jQuery(document).ready(function($){
 	$( window ).on('resize',function() {
 		contentPosition = $('section.content').offset();
 	});
+	
 
 	$( window ).on( 'scroll', function(){
     	scrollPosition = $(this).scrollTop();
