@@ -9,7 +9,7 @@ if ( is_staging() ) {
 	$sf_url = "https://staging-nwcua.cs14.force.com/s/";
 } else {
 	// use the live salesforce URL.
-	$sf_url = "https://gowest.force.com/s/";
+	$sf_url = "https://members.gowest.org/s/";
 }
 
 
@@ -195,7 +195,7 @@ function do_member_error() {
 			?>
 		<h3>A membership is required to view this content.</h3>
 		<p>Please <a href="<?php print $sf_url; ?>redirect-with-url-params?url=<?php print $referer ?>">log in</a> to view this content.</p>
-		<iframe src="https://gowest.force.com/secur/logout.jsp" style="width: 0; height: 0;"></iframe>
+		<iframe src="https://members.gowest.org/s/logout.jsp" style="width: 0; height: 0;"></iframe>
 			<?php
 		}
 		?> 
