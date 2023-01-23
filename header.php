@@ -26,15 +26,6 @@ gtag('config', 'UA-23488192-1');
 </head>
 <body <?php body_class(); ?>>
 
-<?php 
-if ( $sli ) {
-	gowest_solutions_bar();
-} else {
-	gowest_association_bar(); 
-}
-
-?>
-
 <?php the_notice_bar(); ?>
 
 <div class="container<?php print ( $sli ? ' sli' : '' ); ?>">
